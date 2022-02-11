@@ -1,7 +1,7 @@
 <script>
   import dialogs from '../data/dialogs.json'
   import pictures from '../data/pictures.json'
-  import { picture } from "../lib/stores.js";
+  import { picture, nextPicture } from "../lib/stores.js";
 
   export let first;
   let current = first;
@@ -10,6 +10,10 @@
   function next() {
     current += 1;
     $picture = pictures[dialogs[current].picture];
+    let nextDialog = dialogs[current+1];
+    if(nextDialog){
+      $nextPicture = pictures[nextDialog.picture];
+    }
 
     p_text.style.animation = 'none';
     p_text.offsetHeight; /* trigger reflow */
