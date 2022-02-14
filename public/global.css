@@ -61,3 +61,14 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+@keyframes zoom {
+	0%{
+		background-size: var(--bgsize-prev);
+		background-position: var(--bgpos-prev);
+	}
+	100% {
+		background-size: var(--bgsize);
+		background-position: var(--bgpos);
+	}
+}

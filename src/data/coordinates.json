@@ -3,6 +3,16 @@
     "x": 23.59,
     "y": 55,
     "w": 12.32,
-    "h": 31.25
+    "h": 31.25,
+    "backgroundSize": "296%",
+    "backgroundPosition": "-35vw -42vw"
+  },
+  "orange": {
+    "x": 12.30,
+    "y": 50,
+    "w": 12.32,
+    "h": 31.25,
+    "backgroundSize": "296%",
+    "backgroundPosition": "-6vw -55vw"
   }
 }
