@@ -4,15 +4,13 @@
     "y": 55,
     "w": 12.32,
     "h": 31.25,
-    "backgroundSize": "296%",
-    "backgroundPosition": "-35vw -42vw"
+    "transform": "scale(3) translate(21vw, 10vw)"
   },
   "orange": {
     "x": 12.30,
     "y": 50,
     "w": 12.32,
     "h": 31.25,
-    "backgroundSize": "296%",
-    "backgroundPosition": "-6vw -55vw"
+    "transform": "scale(3) translate(30vw, 6vw)"
   }
 }

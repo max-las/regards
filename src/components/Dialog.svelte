@@ -1,6 +1,7 @@
 <script>
   import dialogs from '../data/dialogs.json'
   import { currentDialogIndex } from "../lib/stores.js";
+  import { animationReflow } from "../lib/helpers.js";
 
   export let first;
   $currentDialogIndex = first;
@@ -8,10 +9,7 @@
 
   function next() {
     $currentDialogIndex += 1;
-
-    p_text.style.animation = 'none';
-    p_text.offsetHeight; /* trigger reflow */
-    p_text.style.animation = null; 
+    animationReflow(p_text);
   }
 </script>
 

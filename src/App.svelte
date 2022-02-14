@@ -9,22 +9,14 @@
 	let mainPictureBg;
 	let nextPictureSafe = pictures[dialogs[$currentDialogIndex+1].picture];
 	let pictureSafe = pictures[dialogs[$currentDialogIndex].picture];
-
 	let clickCoords = null;
-	let zoomCoords = null;
-	let zoomCoordsPrev = null;
 	let opacityTransitionOn = false;
+	let transform = "scale(1) translate(0vw, 0vw)";
 
 	$: {
 		if($currentDialogIndex){
 			if(pictures[dialogs[$currentDialogIndex].picture] !== pictureSafe){
 				pictureTransition();
-			}else if(zoomCoords || zoomCoordsPrev){
-				try {
-					mainPictureBg.style.animation = 'none';
-					mainPictureBg.offsetHeight; /* trigger reflow */
-					mainPictureBg.style.animation = null; 
-				} catch(err) {}
 			}
 		}
 	}
@@ -39,10 +31,9 @@
 
 	$: {
 		if(typeof dialogs[$currentDialogIndex].zoom !== "undefined"){
-			zoomCoordsPrev = zoomCoords;
-			zoomCoords = coordinates[dialogs[$currentDialogIndex].zoom];
+			transform = coordinates[dialogs[$currentDialogIndex].zoom].transform;
 		}else{
-			zoomCoords = null;
+			transform = "scale(1) translate(0vw, 0vw)";
 		}
 	}
 
@@ -70,22 +61,21 @@
 </script>
 
 <main>
-	<div class="pictureBg" style="background-image: url('/img/pictures/{nextPictureSafe}')"></div>
+	<div 
+		class="pictureBg"
+		style="
+			background-image: url('/img/pictures/{nextPictureSafe}');
+	">
+	</div>
 	<div 
 		class="pictureBg"
 		class:opacityTransition="{opacityTransitionOn}"
 		bind:this={mainPictureBg}
 		style="
-			background-image: url('/img/pictures/{pictureSafe}'); 
-			{zoomCoords || zoomCoordsPrev ? `
-				--bgpos: ${zoomCoords ? zoomCoords.backgroundPosition : "center" };
-				--bgsize: ${zoomCoords ? zoomCoords.backgroundSize : "100%"};
-				--bgpos-prev: ${zoomCoordsPrev ? zoomCoordsPrev.backgroundPosition : "center"};
-				--bgsize-prev: ${zoomCoordsPrev ? zoomCoordsPrev.backgroundSize : "100%"};
-				animation: zoom 2s forwards;
-			` : "" }
-		"
-	></div>
+			background-image: url('/img/pictures/{pictureSafe}');
+			--transform: {transform};
+	">
+	</div>
 	{#if dialogs[$currentDialogIndex].text !== ""}
 		<Dialog first={$currentDialogIndex} />
 	{:else if clickCoords}
@@ -107,7 +97,9 @@
 		top: 0;
 		left: 0;
 		background-position: center;
-		background-size: 100%;
+		background-size: cover;
+		transform: var(--transform);
+		transition: transform 2s;
 		&.opacityTransition {
 			transition: opacity 1s;
 		}
