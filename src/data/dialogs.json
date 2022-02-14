@@ -1,17 +1,23 @@
 [
   {
-    "character": "",
-    "text": "Tout commence au musée des beaux arts de Bordeaux.",
-    "picture": "museum_inside"
+    "character": "leo",
+    "text": "Leo : L’homme avec une grande barbe grise semble cacher quelque chose... ",
+    "picture": "framed"
+  },
+  {
+    "character": "leo",
+    "text": "Leo : Je pense que ...",
+    "picture": "framed"
   },
   {
     "character": "",
-    "text": "Trois enfants sont en visite : Léo, André et Camille.",
-    "picture": "children"
+    "text": "",
+    "picture": "christ",
+    "click": "barbu"
   },
   {
     "character": "",
-    "text": "Ils s’arrêtent devant un tableau qui les intrigue...",
+    "text": "J'ai réussi !",
     "picture": "children"
   }
 ]
