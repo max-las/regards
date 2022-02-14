@@ -14,10 +14,13 @@
 				"framed.png",
 				"museum_inside.jpg"
 			],
+			deco: [
+				"refresh-ccw.svg"
+			],
 			other: [
-				"/global.css",
 				"/build/bundle.css",
-				"/build/bundle.js"
+				"/build/bundle.js",
+				"https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@400;500&display=swap",
 			]
 		};
 		let assetsCount = assets.characters.length + assets.pictures.length + assets.other.length;
@@ -29,6 +32,9 @@
 			}
 			for (const iconFile of assets.characters) {
 				preloadWithProgress(`/img/characters/${iconFile}`);
+			}
+			for (const imgFile of assets.deco) {
+				preloadWithProgress(`/img/deco/${imgFile}`);
 			}
 			for (const otherFile of assets.other) {
 				preloadWithProgress(otherFile);
@@ -69,7 +75,6 @@
 	<title>Svelte app</title>
 
 	<link rel='icon' type='image/png' href='/favicon.png'>
-	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
 
 	<script defer src='/build/bundle.js'></script>

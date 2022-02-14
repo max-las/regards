@@ -18,6 +18,8 @@
 </div>
 
 <style lang="scss">
+  @import "../scss/variables.scss";
+
   .dialog {
     background-color: rgba(1,1,1,0.3);
     width: 100vw;
@@ -28,7 +30,7 @@
   }
 
   p {
-    color: white;
+    color: $main-color;
     margin: 0;
     text-align: center;
 
