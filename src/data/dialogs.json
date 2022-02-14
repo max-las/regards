@@ -30,23 +30,23 @@
     "picture": "children"
   },
   {
-    "character": "",
-    "text": "« Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois. »",
+    "character": "Leo",
+    "text": "Leo : Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "« Ils se regardent tous comme s'ils discutaient entre eux. »",
+    "text": "Camille : Ils se regardent tous comme s'ils discutaient entre eux.",
     "picture": "children"
   },
   {
     "character": "Leo",
-    "text": "« L’homme avec une grande barbe grise semble cacher quelque chose... »",
+    "text": "Leo : L’homme avec une grande barbe grise semble cacher quelque chose...",
     "picture": "children"
   },
   {
-    "character": "",
-    "text": "« Moi, j’ai l'impression que… »",
+    "character": "Leo",
+    "text": "Leo : Moi, j’ai l'impression que…",
     "picture": "framed"
   },
   {
@@ -131,17 +131,17 @@
   },
   {
     "character": "André",
-    "text": "« Ppfffffft n’importe quoi ton histoire ! »",
+    "text": "André : Ppfffffft n’importe quoi ton histoire !",
     "picture": "children"
   },
   {
     "character": "André",
-    "text": "« Regarde plutôt l’homme au fond. Il paraît louche. »",
+    "text": "André : Regarde plutôt l’homme au fond. Il paraît louche.",
     "picture": "children"
   },
   {
     "character": "André",
-    "text": "« Pour moi l’histoire de ce tableau, c’est clairement… »",
+    "text": "André : Pour moi l’histoire de ce tableau, c’est clairement…",
     "picture": "framed"
   },
   {
@@ -211,17 +211,17 @@
   },
   {
     "character": "André",
-    "text": "« Et heureusement, elle est sauvée et n’a plus de dettes. »",
+    "text": "André : Et heureusement, elle est sauvée et n’a plus de dettes.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "« Mais non, gros bêta, ils sont en train de débattre pour construire un village. »",
+    "text": "Camille : Mais non, gros bêta, ils sont en train de débattre pour construire un village.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "« Donc ce qu’il se passe réellement… »",
+    "text": "Camille : Donc ce qu’il se passe réellement…",
     "picture": "framed"
   },
   {
@@ -326,42 +326,42 @@
   },
   {
     "character": "Camille",
-    "text": "« Et ils purent dormir tous au chaud ! »",
+    "text": "Camille : Et ils purent dormir tous au chaud !",
     "picture": "children"
   },
   {
     "character": "Leo",
-    "text": "« Moi, je préfère mon histoire, elle était plus simple ! »",
+    "text": "Leo : Moi, je préfère mon histoire, elle était plus simple !",
     "picture": "children"
   },
   {
     "character": "André",
-    "text": "« Oui, elle était sympa mais moi elle était plus sérieuse. »",
+    "text": "André : Oui, elle était sympa mais moi elle était plus sérieuse.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "« Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante. »",
+    "text": "Camille : Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",
     "picture": "children"
   },
   {
     "character": "Intervenante",
-    "text": "« Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...  »",
+    "text": "Intervenante : Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",
     "picture": "framed"
   },
   {
     "character": "Leo",
-    "text": "« Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte… »",
+    "text": "Leo : Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",
     "picture": "children"
   },
   {
     "character": "Intervenante",
-    "text": "« Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie. »",
+    "text": "Intervenante : Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",
     "picture": "framed"
   },
   {
     "character": "Intervenante",
-    "text": "« Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original. »",
+    "text": "Intervenante : Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",
     "picture": "framed"
   },
   {
