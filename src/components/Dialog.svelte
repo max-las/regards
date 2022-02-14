@@ -1,19 +1,13 @@
 <script>
   import dialogs from '../data/dialogs.json'
-  import pictures from '../data/pictures.json'
-  import { picture, nextPicture } from "../lib/stores.js";
+  import { currentDialogIndex } from "../lib/stores.js";
 
   export let first;
-  let current = first;
+  $currentDialogIndex = first;
   let p_text;
 
   function next() {
-    current += 1;
-    $picture = pictures[dialogs[current].picture];
-    let nextDialog = dialogs[current+1];
-    if(nextDialog){
-      $nextPicture = pictures[nextDialog.picture];
-    }
+    $currentDialogIndex += 1;
 
     p_text.style.animation = 'none';
     p_text.offsetHeight; /* trigger reflow */
@@ -22,7 +16,7 @@
 </script>
 
 <div class="dialog" on:click={next}>
-  <p bind:this={p_text}>{dialogs[current].text}</p>
+  <p bind:this={p_text}>{dialogs[$currentDialogIndex].text}</p>
 </div>
 
 <style lang="scss">
