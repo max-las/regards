@@ -80,7 +80,7 @@
 
     .underline{
       border-bottom: 2px solid $main-color;
-      animation: underline 1s ease-in-out 0s infinite alternate;
+      animation: underline 3s ease-in-out 0s infinite alternate;
     }
   }
 </style>

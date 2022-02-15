@@ -81,6 +81,6 @@
 
   .underline {
     border-bottom: 1px solid $main-color;
-    animation: underline 2s infinite alternate;
+    animation: underline 3s ease-in-out 0s infinite alternate;
   }
 </style>
