@@ -19,7 +19,7 @@
 			pictureTransition();
 		}
 
-		if($currentDialogIndex >= 28 && $currentDialogIndex <= 40){
+		if($currentDialogIndex >= 25 && $currentDialogIndex <= 40){
 			bgpos = "top";
 		}else{
 			bgpos = "center";
@@ -69,17 +69,17 @@
 	}
 </script>
 
-<div class="pictureBg">
-	<img src="/img/pictures/{nextPictureSafe}" class:center={bgpos === "center"} alt>
-</div>
-<div class="pictureBg" class:opacityTransition="{opacityTransitionOn}" bind:this={mainPictureBg} style="--transform: {transform};">
-	<img src="/img/pictures/{pictureSafe}" class:center={bgpos === "center"} alt>
-</div>
-{#if dialogs[$currentDialogIndex].text !== ""}
-	<Dialog first={$currentDialogIndex} />
-{:else if clickCoords}
-	<div class="clickDiv" on:click={handleClickDiv} style="width: {clickCoords.w}%; height: {clickCoords.h}%; bottom: {clickCoords.y}%; left: {clickCoords.x}%;"></div>
-{/if}
+<main>
+	<div class="pictureBg" style="background-image: url('/img/pictures/{nextPictureSafe}');">
+	</div>
+	<div class="pictureBg" class:opacityTransition="{opacityTransitionOn}" bind:this={mainPictureBg} style="background-image: url('/img/pictures/{pictureSafe}'); --transform: {transform}; --bgpos: {bgpos};">
+	</div>
+	{#if dialogs[$currentDialogIndex].text !== ""}
+		<Dialog first={$currentDialogIndex} />
+	{:else if clickCoords}
+		<div class="clickDiv" on:click={handleClickDiv} style="width: {clickCoords.w}%; height: {clickCoords.h}%; bottom: {clickCoords.y}%; left: {clickCoords.x}%;"></div>
+	{/if}
+</main>
 
 <style lang="scss">
 	.pictureBg {
@@ -88,18 +88,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		background-position: var(--bgpos);
+		background-size: cover;
 		transform: var(--transform);
 		transition: transform 2s;
 		&.opacityTransition {
 			transition: opacity 1s;
-		}
-		img {
-			width: 100%;
-			position: relative;
-			&.center {
-				top: 50%;
-				transform: translateY(-50%);
-			}
 		}
 	}
 

@@ -104,25 +104,26 @@
   {
     "character": "Hommeorange",
     "text": "« Euuuh et bien… »",
-    "picture": "christ"
+    "picture": "christ",
+    "zoom": "Barbegrisebandeau"
   },
   {
     "character": "",
     "text": "",
     "picture": "christ",
-    "click": "Hommeorange"
+    "click": "MaindelHommeOrange"
   },
   {
     "character": "",
     "text": "",
     "picture": "christ",
-    "zoom": "MaindelHommeOrange"
+    "zoom": "MaindelHommeOrange",
+    "click": "MaindelHommeOrangeZoom"
   },
   {
     "character": "Jesus",
     "text": "« Ah ah ! Pris la main dans le sac ! »",
-    "picture": "christ",
-    "zoom": "Jesus"
+    "picture": "christ"
   },
   {
     "character": "",
@@ -226,7 +227,7 @@
     "character": "FemmeDenudée",
     "text": "« Me voilà soulagée ! Merci garde ! »",
     "picture": "christ",
-    "zoom":"FemmeDenudée"
+    "zoom":"FemmeDenudéeTop"
   },
   {
     "character": "André",
@@ -264,7 +265,8 @@
   {
     "character": "FemmeDenudée",
     "text": "« Quelqu’un à une idée ? »",
-    "picture": "christ"
+    "picture": "christ",
+    "zoom": "Hommeauchapeau"
   },
   {
     "character": "",
@@ -282,14 +284,13 @@
     "character": "",
     "text": "",
     "picture": "christ",
-    "click":"Garde"
-    
+    "click":"GardeCenter"
   },
   {
     "character": "Garde",
     "text": "« N’oubliez pas le prisonnier, il nous faut une prison. »",
     "picture": "christ",
-    "zoom":"Garde"
+    "zoom":"GardeCenter"
   },
   {
     "character": "",
@@ -312,14 +313,14 @@
   {
     "character": "FemmeDenudée",
     "text": "« Il faut qu’une personne neutre tranche. »",
-    "picture": "christ"
+    "picture": "christ",
+    "zoom": "FemmeDenudée"
   },
   {
     "character": "",
     "text": "",
     "picture": "christ",
     "click":"HommeDuFond"
-    
   },
   {
     "character": "HommeDuFond",
@@ -343,13 +344,13 @@
     "character": "",
     "text": "",
     "picture": "christ",
-    "click":"Garde"
+    "click":"GardeCenter"
   },
   {
     "character": "Garde",
     "text": "« Il en est hors de question ! »",
     "picture": "christ",
-    "zoom":"Garde"
+    "zoom":"GardeCenter"
   },
   {
     "character": "Hommeauchapeau",

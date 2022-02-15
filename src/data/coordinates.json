@@ -20,6 +20,78 @@
     "x": 23.25,
     "y": 27,
     "w": 12.32,
-    "h": 23.25
+    "h": 23.25,
+    "transform": "scale(3) translate(20vw, -5vw)"
+  },
+  "MaindelHommeOrangeZoom": {
+    "x": 39.25,
+    "y": 23,
+    "w": 25.32,
+    "h": 34.25
+  },
+  "FemmeDenudée": {
+    "x": 72.25,
+    "y": 27,
+    "w": 24.32,
+    "h": 55.25,
+    "transform": "scale(3) translate(-27vw, 7vw)"
+  },
+  "HommeDuFond": {
+    "x": 63.25,
+    "y": 77,
+    "w": 12.32,
+    "h": 23.25,
+    "transform": "scale(5) translate(-19vw, 35vh)"
+  },
+  "Dameauxperles": {
+    "x": 58,
+    "y": 67,
+    "w": 11.32,
+    "h": 20.25,
+    "transform": "scale(4) translate(-14vw, 14vw)"
+  },
+  "Garde": {
+    "x": 82.25,
+    "y": 52,
+    "w": 10.32,
+    "h": 27.25,
+    "transform": "scale(3) translate(-31vw, 6vw)"
+  },
+  "Femmevoilerose": {
+    "transform": "scale(4) translate(-22vw, 12vw)"
+  },
+  "FemmeDenudéeTop": {
+    "transform": "scale(3) translate(-27vw, 2vw)"
+  },
+  "Hommeauchapeau": {
+    "x": 61.25,
+    "y": 54,
+    "w": 11.32,
+    "h": 27.25,
+    "transform": "scale(3) translate(-17vw, 7vw)"
+  },
+  "Barbegriseprofil": {
+    "x": 0.25,
+    "y": 54,
+    "w": 12.32,
+    "h": 29.25,
+    "transform": "scale(3) translate(32vw, 8vw)"
+  },
+  "GardeCenter": {
+    "x": 82.25,
+    "y": 62,
+    "w": 11.32,
+    "h": 27.25,
+    "transform": "scale(3) translate(-30vw, 12vw)"
+  },
+  "HommeLouche": {
+    "x": 48.25,
+    "y": 57,
+    "w": 9.32,
+    "h": 24.25,
+    "transform": "scale(3) translate(-3vw, 8vw)"
+  },
+  "FemmeLouche": {
+    "transform": "scale(3) translate(-8vw, 8vw)"
   }
 }
