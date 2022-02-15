@@ -2,55 +2,70 @@
   import { isCredits } from "../lib/stores.js";
 </script>
 
-<div class="credits font-cinzel">
-  <div class="dark"></div>
-  <div class="top">
-    <h1>CREDITS</h1>
+<div class="credits">
+  <div class="top font-cinzel">
+    <h1>Crédits</h1>
     <div class="button">
-      <p on:click={() => {$isCredits = false;}}>RETOUR</p>
+      <p on:click={() => {$isCredits = false;}}>Retour</p>
       <div class="underline"></div>
     </div>
   </div>
+
   <div class="bottom">
     <div class="left">
-      <div>
-        <p class="large">Le Christ et la Femme Adultère</p>
-        <p>PORTA dit SALVIATI Le Jeune Guiseppe Della</p>
+      <div class="block">
+        <h2>Le Christ et la femme adultère</h2>
+        <p>PORTA dit SALVIATI Le Jeune Giuseppe Della</p>
         <p>16e siècle</p>
       </div>
-      <div>
-        <p class="large">Pierre, Jeanne et André enfants</p>
+
+      <div class="block">
+        <h2>Pierre, Jeanne et André enfants</h2>
         <p>SCHNEGG Gaston</p>
         <p>1911</p>
       </div>
-      <div>
-        <p class="large">PORTRAIT DE FEMME</p>
-        <p>Dupin Edmond Louis</p>
+
+      <div class="block">
+        <h2>Portrait de femme</h2>
+        <p>DUPAIN Edmond Louis</p>
         <p>1886</p>
       </div>
+
+      <div class="block">
+        <h2>Remerciements</h2>
+        <p>Musée des beaux-arts & sara la dame du musée</p>
+        <p>Alexis Benoit, Clément Casanas, Thibault Charron & Bastien De L’hermite</p>
+      </div>
     </div>
-    <div class="line"></div>
+
+    <div class="separator"></div>
+
     <div class="right">
-      <div>
-        <p class="large">NOTRE EQUIPE</p>
-        <div class="right-top">
-          <div>
+      <div class="block music">
+        <h2>Musiques</h2>
+        <p>Vivaldi Winter</p>
+        <p>Violin Concerto in A Minor RV356 presto</p>
+        <p>Schumann - Les 13 Scènes d'enfants</p>
+        <p>schubert symphony inachevée</p>
+      </div>
+
+      <div class="block">
+        <h2>Notre équipe</h2>
+
+        <div class="columns">
+          <div class="column">
             <p>Maxime LASSERRE</p>
             <p>Samuel LABAGNERE</p>
             <p>Naja DALMAGNE</p>
             <p>Martin DUCONSEIL</p>
           </div>
-          <div>
+  
+          <div class="column">
             <p>Léa RAULT</p>
             <p>Emma FOUILLAT</p>
             <p>Enzo DURET</p>
           </div>
         </div>
-      </div>
-      <div>
-        <p class="large">REMERCIEMENTS</p>
-        <p>Musée des Beaux Arts & Sarah Choux</p>
-        <p>Alexis Benoît, Clément Casanas, Thibault Charron & Bastien de l'Hermite</p>
       </div>
     </div>
   </div>
@@ -59,105 +74,86 @@
 <style lang="scss">
   @import "../scss/variables.scss";
 
-  .credits{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-
-    background-image: url("/img/pictures/christ.png");
-    background-position: center;
-    background-size: 100%;
-
-    font-size: 12px;
+  .credits {
     color: $main-color;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
 
-    .dark{
-      background-color: black;
-      opacity: 0.7;
-      position: absolute;
-      top: 0;
-      left: 0;
+  .top {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottom {
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    .left, .right {
+      width: 45%;
       height: 100%;
-      width: 100%;
-    }
-
-    .large{
-      font-size: 18px;
-    }
-
-    h1{
-      font-size: 36px;
-    }
-
-    .top{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: flex-start;
-      width: 90%;
-      position: relative;
+    }
 
-      .button{
-        font-size: 18px;
-        width: fit-content;
-
-        p{
-          margin: 0;
-          margin-top: 15px;
-        }
-
-        .underline{
-          border-bottom: 2px solid $main-color;
-          animation: underline 3s ease-in-out 0s infinite alternate;
-        }
+    .right {
+      .columns {
+        display: flex;
+        justify-content: space-between;
       }
     }
 
-    .bottom{
-      width: 100%;
-      height: 50%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      position: relative;
+    .separator {
+      height: 100%;
+      border-left: 2px solid $main-color;
+    }
+  }
 
+  .block {
+    h2 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 0;
+      font-weight: 100;
+      font-size: 16px;
+    }
+    p {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+    }
+    &.music {
       p {
-        margin: 0;
-      }
-
-      .line{
-        border-left: 2px solid $main-color;
-      }
-
-      .left{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 45%;
-      }
-
-      .right{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 45%;
-
-        .large{
-          margin-bottom: 10px;
-        }
-
-        .right-top{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
   }
 
+  .button{
+      font-size: 18px;
+      width: fit-content;
+
+      p{
+        margin: 0;
+        margin-top: 15px;
+      }
+
+      .underline{
+        border-bottom: 2px solid $main-color;
+        animation: underline 3s ease-in-out 0s infinite alternate;
+      }
+    }
+
+  h1 {
+    font-weight: 100;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
 </style>
