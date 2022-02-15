@@ -1,14 +1,51 @@
 {
-  "leo": {
+  "Leo": {
     "icon": "leo.png"
   },
-  "andre": {
+  "Andre": {
     "icon": "andre.png"
   },
-  "camille": {
+  "Camille": {
     "icon": "camille.png"
   },
-  "barbu": {
-    "icon": "barbu.png"
+  "Barbegrisebandeau": {
+    "icon": "Barbegrisebandeau.png"
+  },
+  "Barbegriseprofil": {
+    "icon": "barbegriseprofil.png"
+  },
+  "Dameauxperles": {
+    "icon": "Dameauxperles.png"
+  },
+  "FemmeDenudée": {
+    "icon": "FemmeDenudée.png"
+  },
+  "FemmeLouche": {
+    "icon": "FemmeLouche.png"
+  },
+  "Femmevoilerose": {
+    "icon": "Femmevoilerose.png"
+  },
+  "Garde": {
+    "icon": "garde.png"
+  },
+  "Hommeauchapeau": {
+    "icon": "Hommeauchapeau.png"
+  },
+  "HommeDuFond": {
+    "icon": "HommeDuFond.png"
+  },
+  "HommeLouche": {
+    "icon": "HommeLouche.png"
+  },
+  "Hommeorange": {
+    "icon": "Hommeorange.png"
+  },
+  "Hommeturbanfond": {
+    "icon": "Hommeturbanfond.png"
+  },
+  "Jesus": {
+    "icon": "Jesus.png"
   }
+  
 }
