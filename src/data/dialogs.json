@@ -52,17 +52,20 @@
   {
     "character": "",
     "text": "",
-    "picture": "christ"
+    "picture": "christ",
+    "click": "barbu"
   },
   {
     "character": "",
     "text": "« Je sais que c’est vous ! Je vous ai vu ! »",
-    "picture": "christ"
+    "picture": "christ",
+    "zoom": "barbu"
   },
   {
     "character": "",
     "text": "« Comment osez-vous ?! »",
-    "picture": "christ"
+    "picture": "christ",
+    "zoom": "orange"
   },
   {
     "character": "",
@@ -77,12 +80,14 @@
   {
     "character": "",
     "text": "",
-    "picture": "christ"
+    "picture": "christ",
+    "click": "orange"
   },
   {
     "character": "",
     "text": "« Très bien, j’avoue, je l’ai vu lui voler sa bourse ! C’est lui le fourbe ! »",
-    "picture": "christ"
+    "picture": "christ",
+    "zoom": "orange"
   },
   {
     "character": "",
