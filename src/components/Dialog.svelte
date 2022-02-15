@@ -1,21 +1,27 @@
 <script>
   import dialogs from '../data/dialogs.json'
   import { currentDialogIndex } from "../lib/stores.js";
-  import { animationReflow } from "../lib/helpers.js";
 
   export let first;
   $currentDialogIndex = first;
-  let p_text;
+
+  let canContinue = true;
 
   function next() {
-    $currentDialogIndex += 1;
+    if(canContinue){
+      $currentDialogIndex += 1;
+      canContinue = false;
+      setTimeout(() => {
+        canContinue = true;
+      }, 1000);
+    }
   }
 </script>
 
 <div class="dialog" on:click={next}>
   <div class="content">
     <img class="character" src="img/characters/andre.png" alt="" />
-    <p class="font-montserrat text" bind:this={p_text}>{dialogs[$currentDialogIndex].text}</p>
+    <p class="font-montserrat text">{dialogs[$currentDialogIndex].text}</p>
     <div style="width: fit-content;">
       <p class="font-cinzel nextButton">SUIVANT</p>
       <div class="underline"></div>
@@ -61,11 +67,15 @@
 
   p {
     color: $main-color;
-    font-size: 18px;
     margin: 0;
+
+    &.nextButton {
+      font-size: 18px;
+    }
 
     &.text{
       width: 60%;
+      font-size: 16px;
     }
   }
 

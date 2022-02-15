@@ -1,6 +1,9 @@
 <script>
 	import Adventure from "./components/Adventure.svelte";
 	import PleaseTurn from "./components/PleaseTurn.svelte";
+	import HomePage from "./components/HomePage.svelte";
+	import Credits from "./components/Credits.svelte";
+	import { isAdventure, isCredits } from "./lib/stores.js";
 
 	let mustTurn;
 	checkScreen();
@@ -20,7 +23,13 @@
 	{#if mustTurn}
 		<PleaseTurn />
 	{:else}
-		<Adventure />
+		{#if $isAdventure}
+			<Adventure />
+		{:else if $isCredits}
+			<Credits />
+		{:else}
+			<HomePage />
+		{/if}
 	{/if}
 </main>
 
