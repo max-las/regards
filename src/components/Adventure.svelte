@@ -15,9 +15,7 @@
 
 	$: {
 		if($currentDialogIndex){
-			if(pictures[dialogs[$currentDialogIndex].picture] !== pictureSafe){
-				pictureTransition();
-			}
+			pictureTransition();
 		}
 	}
 
@@ -43,13 +41,16 @@
 
 	async function pictureTransition(){
 		try {
-			opacityTransitionOn = true;
-			mainPictureBg.style.opacity = 0;
-			await wait(1000);
-			opacityTransitionOn = false;
-			pictureSafe = pictures[dialogs[$currentDialogIndex].picture];
-			await wait(100); // fix flash on transition
-			mainPictureBg.style.opacity = null;
+			if(pictures[dialogs[$currentDialogIndex].picture] !== pictureSafe){
+				opacityTransitionOn = true;
+				mainPictureBg.style.opacity = 0;
+				await wait(1000);
+				opacityTransitionOn = false;
+				pictureSafe = pictures[dialogs[$currentDialogIndex].picture];
+				await wait(100); // fix flash on transition
+				mainPictureBg.style.opacity = null;
+			}
+
 			let nextDialog = dialogs[$currentDialogIndex+1];
 			if(nextDialog){
 				if(nextDialog.picture){
@@ -61,20 +62,9 @@
 </script>
 
 <main>
-	<div 
-		class="pictureBg"
-		style="
-			background-image: url('/img/pictures/{nextPictureSafe}');
-	">
+	<div class="pictureBg" style="background-image: url('/img/pictures/{nextPictureSafe}');">
 	</div>
-	<div 
-		class="pictureBg"
-		class:opacityTransition="{opacityTransitionOn}"
-		bind:this={mainPictureBg}
-		style="
-			background-image: url('/img/pictures/{pictureSafe}');
-			--transform: {transform};
-	">
+	<div class="pictureBg" class:opacityTransition="{opacityTransitionOn}" bind:this={mainPictureBg} style="background-image: url('/img/pictures/{pictureSafe}'); --transform: {transform};">
 	</div>
 	{#if dialogs[$currentDialogIndex].text !== ""}
 		<Dialog first={$currentDialogIndex} />
@@ -101,6 +91,17 @@
 
 	.clickDiv {
 		position: absolute;
-		border: 2px solid red;
+		border-radius: 50px;
+		background-color: rgb(196,196,196);
+		animation: blink 1s ease-in-out 0s infinite alternate;
+	}
+
+	@keyframes blink {
+		from {
+			opacity: 0.3;
+		}
+		to {
+			opacity: 0.1;
+		}
 	}
 </style>
