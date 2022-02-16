@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+
+	<script defer src='/build/bundle.js'></script>
+
+	<style>
+		.preloadProgress {
+			width: 100vw;
+			height: 100vh;
+			background-color: black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.preloadProgress p {
+			color: white;
+			font-size: 40px;
+		}
+
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="preloadProgress">
+		<p>0%</p>
+	</div>
+
+	<div id="svelte" class="hidden"></div>
+	
 	<script>
 		const assets = {
 			characters: [
 				"andre.png",
+				"Barbegrisebandeau.png",
+				"barbegriseprofil.png",
 				"camille.png",
+				"Dameauxperles.png",
+				"FemmeDenudée.png",
+				"FemmeLouche.png",
+				"Femmevoilerose.png",
+				"garde.png",
+				"Hommeauchapeau.png",
+				"HommeDuFond.png",
+				"HommeLouche.png",
+				"Hommeorange.png",
+				"Hommeturbanfond.png",
+				"Jesus.png",
 				"leo.png"
 			],
 			pictures: [
 				"children.jpg",
 				"christ.png",
 				"framed.png",
+				"Intervenante.png",
 				"museum_inside.jpg"
 			],
 			deco: [
+				"cadre_decors.png",
 				"refresh-ccw.svg"
 			],
 			other: [
 				"/build/bundle.css",
-				"/build/bundle.js",
-				"https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@400;500&display=swap",
+				"/build/bundle.js"
 			]
 		};
-		let assetsCount = assets.characters.length + assets.pictures.length + assets.other.length;
+		let assetsCount = assets.characters.length + assets.pictures.length + assets.other.length + assets.deco.length;
 		let assetsLoaded = 0;
 		let percent = 0;
 		function runPreloadProgress(){
@@ -67,44 +118,7 @@
 				document.querySelector(".preloadProgress p").innerHTML = `${Math.floor(percent)}%`;
 			}
 		}
+		runPreloadProgress();
 	</script>
-
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
-
-	<title>Svelte app</title>
-
-	<link rel='icon' type='image/png' href='/favicon.png'>
-	<link rel='stylesheet' href='/build/bundle.css'>
-
-	<script defer src='/build/bundle.js'></script>
-
-	<style>
-		.preloadProgress {
-			width: 100vw;
-			height: 100vh;
-			background-color: black;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.preloadProgress p {
-			color: white;
-			font-size: 40px;
-		}
-
-		.hidden {
-			display: none;
-		}
-	</style>
-</head>
-<body>
-	<div class="preloadProgress">
-		<p>0%</p>
-	</div>
-
-	<div id="svelte" class="hidden"></div>
-	<script>runPreloadProgress();</script>
 </body>
 </html>
