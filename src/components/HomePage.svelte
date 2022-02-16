@@ -1,8 +1,16 @@
 <script>
-  import { isAdventure, isCredits } from "../lib/stores";
+  import { isAdventure, isCredits, musicMenu, menuClick, musicMuseeExt, musicMuseeExtAmbiance } from "../lib/stores";
   import { iOS } from "../lib/helpers";
 
+  $: {
+    $musicMenu?.play();
+  }
+
   function handleStart(){
+    $menuClick?.play();
+    $musicMenu?.pause();
+    $musicMuseeExt?.play();
+    $musicMuseeExtAmbiance?.play();
     if(!iOS()){
       document.body.requestFullscreen();
     }

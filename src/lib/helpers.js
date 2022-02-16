@@ -37,3 +37,9 @@ export const iOS = () => {
   // iPad on iOS 13 detection
   || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 }
+
+export const stopAllMusic = () => {
+  for (const audio of document.querySelectorAll("audio")) {
+    audio.pause();
+  }
+}

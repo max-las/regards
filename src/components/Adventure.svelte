@@ -3,8 +3,8 @@
 	import pictures from '../data/pictures.json';
 	import dialogs from '../data/dialogs.json';
 	import coordinates from '../data/coordinates.json'
-	import { currentDialogIndex } from "../lib/stores.js";
-	import { wait, dialogIndexToBgpos } from "../lib/helpers.js";
+	import { currentDialogIndex, musicMuseeExtAmbiance, musicMuseeExt, musicMuseeAmbiance, musicLeo, musicAndre } from "../lib/stores.js";
+	import { wait, dialogIndexToBgpos, stopAllMusic } from "../lib/helpers.js";
 
 	let mainPictureBg;
 	let nextPictureSafe = pictures[dialogs[$currentDialogIndex+1].picture];
@@ -19,6 +19,30 @@
 	$: {
 		if($currentDialogIndex){
 			pictureTransition();
+		}
+
+		stopAllMusic();
+
+		switch($currentDialogIndex){
+			case 3:
+				$musicMuseeExtAmbiance?.pause();
+				$musicMuseeAmbiance?.play();
+				break;
+			case 10:
+				$musicMuseeExt?.pause();
+				$musicMuseeAmbiance?.pause();
+				$musicLeo?.play();
+				break;
+			case 25:
+				$musicLeo?.pause();
+				$musicMuseeExt?.play();
+				$musicMuseeAmbiance?.play();
+				break;
+			case 28:
+				$musicMuseeExt?.pause();
+				$musicMuseeAmbiance?.pause();
+				$musicAndre.play();
+				break;
 		}
 	}
 
