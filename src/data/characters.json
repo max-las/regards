@@ -1,54 +1,70 @@
 {
   "Leo": {
-    "icon": "leo.png"
+    "icon": "leo.png",
+    "size": "normal"
   },
   "Andre": {
-    "icon": "andre.png"
+    "icon": "andre.png",
+    "size": "normal"
   },
   "Camille": {
-    "icon": "camille.png"
+    "icon": "camille.png",
+    "size": "normal"
   },
   "Barbegrisebandeau": {
-    "icon": "Barbegrisebandeau.png"
+    "icon": "Barbegrisebandeau.png",
+    "size": "small"
   },
   "Barbegriseprofil": {
-    "icon": "barbegriseprofil.png"
+    "icon": "barbegriseprofil.png",
+    "size": "small"
   },
   "Dameauxperles": {
-    "icon": "Dameauxperles.png"
+    "icon": "Dameauxperles.png",
+    "size": "small"
   },
   "FemmeDenudée": {
-    "icon": "FemmeDenudée.png"
+    "icon": "FemmeDenudée.png",
+    "size": "small"
   },
   "FemmeLouche": {
-    "icon": "FemmeLouche.png"
+    "icon": "FemmeLouche.png",
+    "size": "small"
   },
   "Femmevoilerose": {
-    "icon": "Femmevoilerose.png"
+    "icon": "Femmevoilerose.png",
+    "size": "small"
   },
   "Garde": {
-    "icon": "garde.png"
+    "icon": "garde.png",
+    "size": "small"
   },
   "Hommeauchapeau": {
-    "icon": "Hommeauchapeau.png"
+    "icon": "Hommeauchapeau.png",
+    "size": "small"
   },
   "HommeDuFond": {
-    "icon": "HommeDuFond.png"
+    "icon": "HommeDuFond.png",
+    "size": "small"
   },
   "HommeLouche": {
-    "icon": "HommeLouche.png"
+    "icon": "HommeLouche.png",
+    "size": "small"
   },
   "Hommeorange": {
-    "icon": "Hommeorange.png"
+    "icon": "Hommeorange.png",
+    "size": "small"
   },
   "Hommeturbanfond": {
-    "icon": "Hommeturbanfond.png"
+    "icon": "Hommeturbanfond.png",
+    "size": "small"
   },
   "Jesus": {
-    "icon": "Jesus.png"
+    "icon": "Jesus.png",
+    "size": "small"
   },
   "Intervenante": {
-    "icon": "Intervenante.png"
+    "icon": "Intervenante.png",
+    "size": "small"
   }
-  
 }

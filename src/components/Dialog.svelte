@@ -1,5 +1,6 @@
 <script>
-  import dialogs from '../data/dialogs.json'
+  import dialogs from '../data/dialogs.json';
+  import characters from '../data/characters.json';
   import { currentDialogIndex } from "../lib/stores.js";
 
   export let first;
@@ -13,14 +14,18 @@
       canContinue = false;
       setTimeout(() => {
         canContinue = true;
-      }, 1000);
+      }, 1100);
     }
   }
 </script>
 
 <div class="dialog" on:click={next}>
   <div class="content">
-    <img class="character" src="img/characters/andre.png" alt="" />
+    <div class="character">
+      {#if dialogs[$currentDialogIndex].character !== ""}
+        <img class={characters[dialogs[$currentDialogIndex].character].size} src="img/characters/{characters[dialogs[$currentDialogIndex].character].icon}" alt="" />
+      {/if}
+    </div>
     <p class="font-montserrat text">{dialogs[$currentDialogIndex].text}</p>
     <div style="width: fit-content;">
       <p class="font-cinzel nextButton">SUIVANT</p>
@@ -51,6 +56,13 @@
 
       .character{
         width: 10%;
+        z-index: 10;
+        img {
+          width: 100%;
+          &.small {
+            width: 80%;
+          }
+        }
       }
     }
 

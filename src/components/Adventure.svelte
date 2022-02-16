@@ -4,7 +4,7 @@
 	import dialogs from '../data/dialogs.json';
 	import coordinates from '../data/coordinates.json'
 	import { currentDialogIndex } from "../lib/stores.js";
-	import { wait } from "../lib/helpers.js";
+	import { wait, dialogIndexToBgpos } from "../lib/helpers.js";
 
 	let mainPictureBg;
 	let nextPictureSafe = pictures[dialogs[$currentDialogIndex+1].picture];
@@ -12,38 +12,45 @@
 	let clickCoords = null;
 	let opacityTransitionOn = false;
 	let transform = "scale(1) translate(0vw, 0vw)";
-	let bgpos = "center";
+	let backImgPos = dialogIndexToBgpos($currentDialogIndex+1);
+	let frontImgPos = dialogIndexToBgpos($currentDialogIndex);
+	let displayClickDiv = false;
 
 	$: {
 		if($currentDialogIndex){
 			pictureTransition();
 		}
-
-		if($currentDialogIndex >= 28 && $currentDialogIndex <= 40){
-			bgpos = "top";
-		}else{
-			bgpos = "center";
-		}
 	}
 
 	$: {
-		if(typeof dialogs[$currentDialogIndex].click !== "undefined"){
-			clickCoords = coordinates[dialogs[$currentDialogIndex].click];
-		}else{
-			clickCoords = null;
-		}
-	}
-
-	$: {
+		let prevTransform = transform;
 		if(typeof dialogs[$currentDialogIndex].zoom !== "undefined"){
-			console.log(dialogs[$currentDialogIndex].zoom);
 			transform = coordinates[dialogs[$currentDialogIndex].zoom].transform;
 		}else{
 			transform = "scale(1) translate(0vw, 0vw)";
 		}
+
+		if(typeof dialogs[$currentDialogIndex].click !== "undefined"){
+			clickCoords = coordinates[dialogs[$currentDialogIndex].click];
+			if(prevTransform !== transform){
+				setTimeout(() => {
+					displayClickDiv = true;
+				}, 2000);
+			}else if(pictures[dialogs[$currentDialogIndex].picture] !== pictureSafe){
+				setTimeout(() => {
+					displayClickDiv = true;
+				}, 1000);
+			}else{
+				displayClickDiv = true;
+			}
+		}else{
+			clickCoords = null;
+			displayClickDiv = false;
+		}
 	}
 
 	function handleClickDiv() {
+		displayClickDiv = false;
 		$currentDialogIndex += 1;
 	}
 
@@ -55,14 +62,18 @@
 				await wait(1000);
 				opacityTransitionOn = false;
 				pictureSafe = pictures[dialogs[$currentDialogIndex].picture];
+				frontImgPos = dialogIndexToBgpos($currentDialogIndex);
 				await wait(100); // fix flash on transition
 				mainPictureBg.style.opacity = null;
+			}else{
+				frontImgPos = dialogIndexToBgpos($currentDialogIndex);
 			}
 
 			let nextDialog = dialogs[$currentDialogIndex+1];
 			if(nextDialog){
 				if(nextDialog.picture){
 					nextPictureSafe = pictures[nextDialog.picture];
+					backImgPos = dialogIndexToBgpos($currentDialogIndex+1);
 				}
 			}
 		} catch (err) {}
@@ -70,14 +81,14 @@
 </script>
 
 <div class="pictureBg">
-	<img src="/img/pictures/{nextPictureSafe}" class:center={bgpos === "center"} alt>
+	<img src="/img/pictures/{nextPictureSafe}" class:center={backImgPos === "center"} alt>
 </div>
 <div class="pictureBg" class:opacityTransition="{opacityTransitionOn}" bind:this={mainPictureBg} style="--transform: {transform};">
-	<img src="/img/pictures/{pictureSafe}" class:center={bgpos === "center"} alt>
+	<img src="/img/pictures/{pictureSafe}" class:center={frontImgPos === "center"} alt>
 </div>
 {#if dialogs[$currentDialogIndex].text !== ""}
 	<Dialog first={$currentDialogIndex} />
-{:else if clickCoords}
+{:else if displayClickDiv}
 	<div class="clickDiv" on:click={handleClickDiv} style="width: {clickCoords.w}%; height: {clickCoords.h}%; bottom: {clickCoords.y}%; left: {clickCoords.x}%;"></div>
 {/if}
 

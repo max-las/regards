@@ -8,7 +8,7 @@
   },
   "Hommeorange": {
     "x": 10.59,
-    "y": 43,
+    "y": 45,
     "w": 18.32,
     "h": 35.25,
     "transform": "scale(3) translate(30vw, 6vw)"
@@ -17,7 +17,7 @@
     "transform": "scale(3) translate(6vw, 10vw)"
   },
   "MaindelHommeOrange": {
-    "x": 23.25,
+    "x": 24.25,
     "y": 27,
     "w": 12.32,
     "h": 23.25,
@@ -43,25 +43,28 @@
     "h": 23.25,
     "transform": "scale(5) translate(-19vw, 35vh)"
   },
+  "HommeDuFondCenter": {
+    "transform": "scale(5) translate(-19vw, 35vh)"
+  },
   "Dameauxperles": {
     "x": 58,
-    "y": 67,
+    "y": 65,
     "w": 11.32,
-    "h": 20.25,
-    "transform": "scale(4) translate(-14vw, 14vw)"
+    "h": 23.25,
+    "transform": "scale(4) translate(-14vw, 23vh)"
   },
   "Garde": {
     "x": 82.25,
-    "y": 52,
+    "y": 49,
     "w": 10.32,
-    "h": 27.25,
+    "h": 24.25,
     "transform": "scale(3) translate(-31vw, 6vw)"
   },
   "Femmevoilerose": {
-    "transform": "scale(4) translate(-22vw, 12vw)"
+    "transform": "scale(4) translate(-22vw, 20vh)"
   },
   "FemmeDenudéeTop": {
-    "transform": "scale(3) translate(-27vw, 2vw)"
+    "transform": "scale(3) translate(-27vw, 0vh)"
   },
   "Hommeauchapeau": {
     "x": 61.25,
@@ -86,7 +89,7 @@
   },
   "HommeLouche": {
     "x": 48.25,
-    "y": 57,
+    "y": 59,
     "w": 9.32,
     "h": 24.25,
     "transform": "scale(3) translate(-3vw, 8vw)"
