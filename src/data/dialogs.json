@@ -31,22 +31,22 @@
   },
   {
     "character": "Leo",
-    "text": "Leo : Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",
+    "text": "<span style=\"font-weight: 800\">Léo :</span> Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "Camille : Ils se regardent tous comme s'ils discutaient entre eux.",
+    "text": "<span style=\"font-weight: 800\">Camille :</span> Ils se regardent tous comme s'ils discutaient entre eux.",
     "picture": "children"
   },
   {
     "character": "Leo",
-    "text": "Leo : L’homme avec une grande barbe grise semble cacher quelque chose...",
+    "text": "<span style=\"font-weight: 800\">Léo :</span> L’homme avec une grande barbe grise semble cacher quelque chose...",
     "picture": "children"
   },
   {
     "character": "Leo",
-    "text": "Leo : Moi, j’ai l'impression que…",
+    "text": "<span style=\"font-weight: 800\">Léo :</span> Moi, j’ai l'impression que…",
     "picture": "framed"
   },
   {
@@ -139,17 +139,17 @@
   },
   {
     "character": "André",
-    "text": "André : Ppfffffft n’importe quoi ton histoire !",
+    "text": "<span style=\"font-weight: 800\">André :</span> Ppfffffft n’importe quoi ton histoire !",
     "picture": "children"
   },
   {
     "character": "André",
-    "text": "André : Regarde plutôt l’homme au fond. Il paraît louche.",
+    "text": "<span style=\"font-weight: 800\">André :</span> Regarde plutôt l’homme au fond. Il paraît louche.",
     "picture": "children"
   },
   {
     "character": "André",
-    "text": "André : Pour moi l’histoire de ce tableau, c’est clairement…",
+    "text": "<span style=\"font-weight: 800\">André :</span> Pour moi l’histoire de ce tableau, c’est clairement…",
     "picture": "framed"
   },
   {
@@ -231,17 +231,17 @@
   },
   {
     "character": "André",
-    "text": "André : Et heureusement, elle est sauvée et n’a plus de dettes.",
+    "text": "<span style=\"font-weight: 800\">André :</span> Et heureusement, elle est sauvée et n’a plus de dettes.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "Camille : Mais non, gros bêta, ils sont en train de débattre pour construire un village.",
+    "text": "<span style=\"font-weight: 800\">Camille :</span> Mais non, gros bêta, ils sont en train de débattre pour construire un village.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "Camille : Donc ce qu’il se passe réellement…",
+    "text": "<span style=\"font-weight: 800\">Camille :</span> Donc ce qu’il se passe réellement…",
     "picture": "framed"
   },
   {
@@ -360,42 +360,42 @@
   },
   {
     "character": "Camille",
-    "text": "Camille : Et ils purent dormir tous au chaud !",
+    "text": "<span style=\"font-weight: 800\">Camille :</span> Et ils purent dormir tous au chaud !",
     "picture": "children"
   },
   {
     "character": "Leo",
-    "text": "Leo : Moi, je préfère mon histoire, elle était plus simple !",
+    "text": "<span style=\"font-weight: 800\">Léo :</span> Moi, je préfère mon histoire, elle était plus simple !",
     "picture": "children"
   },
   {
     "character": "André",
-    "text": "André : Oui, elle était sympa mais moi elle était plus sérieuse.",
+    "text": "<span style=\"font-weight: 800\">André :</span> Oui, elle était sympa mais moi elle était plus sérieuse.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "Camille : Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",
+    "text": "<span style=\"font-weight: 800\">Camille :</span> Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",
     "picture": "children"
   },
   {
     "character": "Intervenante",
-    "text": "Intervenante : Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",
+    "text": "<span style=\"font-weight: 800\">Intervenante :</span> Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",
     "picture": "Intervenante"
   },
   {
     "character": "Leo",
-    "text": "Leo : Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",
+    "text": "<span style=\"font-weight: 800\">Léo :</span> Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",
     "picture": "children"
   },
   {
     "character": "Intervenante",
-    "text": "Intervenante : Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",
+    "text": "<span style=\"font-weight: 800\">Intervenante :</span> Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",
     "picture": "framed"
   },
   {
     "character": "Intervenante",
-    "text": "Intervenante : Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",
+    "text": "<span style=\"font-weight: 800\">Intervenante :</span> Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",
     "picture": "framed"
   }
 ]

@@ -30,7 +30,7 @@
         <img class={characters[dialogs[$currentDialogIndex].character].size} src="img/characters/{characters[dialogs[$currentDialogIndex].character].icon}" alt="" />
       {/if}
     </div>
-    <p class="font-montserrat text">{dialogs[$currentDialogIndex].text}</p>
+    <p class="font-montserrat text">{@html dialogs[$currentDialogIndex].text}</p>
     <div style="width: fit-content;" class="nextButtonContainer" class:canContinue={canContinue}>
       <p class="font-cinzel nextButton">SUIVANT</p>
       <div class="underline"></div>
