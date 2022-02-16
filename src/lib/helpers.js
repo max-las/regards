@@ -10,13 +10,6 @@ export const animationReflow = (domElem) => {
   domElem.style.animation = null; 
 };
 
-export const styleObjToStr = (style) => {
-  let styleStr = "";
-  for (const [key, value] of Object.entries(style)) {
-    styleStr += `${key}: ${value}; `;
-  }
-};
-
 export const dialogIndexToBgpos = (index) => {
   if((index >= 28 && index <= 40) || index == 56 || index == 62){
     return "top";
@@ -38,8 +31,57 @@ export const iOS = () => {
   || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 }
 
-export const stopAllMusic = () => {
+export const pauseAllMusic = () => {
   for (const audio of document.querySelectorAll("audio")) {
     audio.pause();
+  }
+}
+
+export const audioFadeIn = (audio) => {
+  if(audio){
+    audio.volume = 0;
+    audio.loop = true;
+    audio.play();
+    let interval = setInterval(function(){
+      let newVolume = audio.volume + 0.1;
+      if(newVolume >= 1){
+        newVolume = 1;
+        clearInterval(interval);
+      }
+      audio.volume = newVolume;
+    }, 300);
+    if(typeof audio.fadeInterval !== "undefined"){
+      clearInterval(audio.fadeInterval);
+      audio.fadeInterval = interval;
+    }else{
+      Object.defineProperty(audio, "fadeInterval", {
+        value: interval,
+        writable: true
+      });
+    }
+  }
+}
+
+export const audioFadeOut = (audio) => {
+  if(audio){
+    let interval = setInterval(function(){
+      let newVolume = audio.volume - 0.1;
+      if(newVolume <= 0){
+        newVolume = 0;
+        clearInterval(interval);
+        audio.pause();
+        audio.loop = false;
+      }
+      audio.volume = newVolume;
+    }, 300);
+    if(typeof audio.fadeInterval !== "undefined"){
+      clearInterval(audio.fadeInterval);
+      audio.fadeInterval = interval;
+    }else{
+      Object.defineProperty(audio, "fadeInterval", {
+        value: interval,
+        writable: true
+      });
+    }
   }
 }

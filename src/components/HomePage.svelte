@@ -1,19 +1,16 @@
 <script>
   import { isAdventure, isCredits, musicMenu, menuClick, musicMuseeExt, musicMuseeExtAmbiance } from "../lib/stores";
-  import { iOS } from "../lib/helpers";
+  import { audioFadeIn, audioFadeOut } from "../lib/helpers";
 
   $: {
-    $musicMenu?.play();
+    audioFadeIn($musicMenu);
   }
 
   function handleStart(){
     $menuClick?.play();
-    $musicMenu?.pause();
-    $musicMuseeExt?.play();
-    $musicMuseeExtAmbiance?.play();
-    if(!iOS()){
-      document.body.requestFullscreen();
-    }
+    audioFadeOut($musicMenu);
+    audioFadeIn($musicMuseeExt);
+    audioFadeIn($musicMuseeExtAmbiance);
     $isAdventure = true;
   }
 </script>

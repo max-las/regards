@@ -3,8 +3,8 @@
 	import pictures from '../data/pictures.json';
 	import dialogs from '../data/dialogs.json';
 	import coordinates from '../data/coordinates.json'
-	import { currentDialogIndex, musicMuseeExtAmbiance, musicMuseeExt, musicMuseeAmbiance, musicLeo, musicAndre } from "../lib/stores.js";
-	import { wait, dialogIndexToBgpos, stopAllMusic } from "../lib/helpers.js";
+	import { currentDialogIndex, musicMuseeExtAmbiance, musicMuseeExt, musicMuseeAmbiance, musicLeo, musicAndre, musicCamille, musicIntervenante } from "../lib/stores.js";
+	import { wait, dialogIndexToBgpos, pauseAllMusic, audioFadeIn, audioFadeOut } from "../lib/helpers.js";
 
 	let mainPictureBg;
 	let nextPictureSafe = pictures[dialogs[$currentDialogIndex+1].picture];
@@ -21,27 +21,44 @@
 			pictureTransition();
 		}
 
-		stopAllMusic();
-
 		switch($currentDialogIndex){
 			case 3:
-				$musicMuseeExtAmbiance?.pause();
-				$musicMuseeAmbiance?.play();
+				audioFadeOut($musicMuseeExtAmbiance);
+				audioFadeIn($musicMuseeAmbiance);
 				break;
 			case 10:
-				$musicMuseeExt?.pause();
-				$musicMuseeAmbiance?.pause();
-				$musicLeo?.play();
+				audioFadeOut($musicMuseeExt);
+				audioFadeOut($musicMuseeAmbiance);
+				audioFadeIn($musicLeo);
 				break;
 			case 25:
-				$musicLeo?.pause();
-				$musicMuseeExt?.play();
-				$musicMuseeAmbiance?.play();
+				audioFadeIn($musicMuseeExt);
+				audioFadeIn($musicMuseeAmbiance);
+				audioFadeOut($musicLeo);
 				break;
 			case 28:
-				$musicMuseeExt?.pause();
-				$musicMuseeAmbiance?.pause();
-				$musicAndre.play();
+				audioFadeOut($musicMuseeExt);
+				audioFadeOut($musicMuseeAmbiance);
+				audioFadeIn($musicAndre);
+				break;
+			case 41:
+				audioFadeIn($musicMuseeExt);
+				audioFadeIn($musicMuseeAmbiance);
+				audioFadeOut($musicAndre);
+				break;
+			case 44:
+				audioFadeOut($musicMuseeExt);
+				audioFadeOut($musicMuseeAmbiance);
+				audioFadeIn($musicCamille);
+				break;
+			case 63:
+				audioFadeIn($musicMuseeExt);
+				audioFadeIn($musicMuseeAmbiance);
+				audioFadeOut($musicCamille);
+				break;
+			case 67:
+				audioFadeOut($musicMuseeExt);
+				audioFadeIn($musicIntervenante);
 				break;
 		}
 	}
