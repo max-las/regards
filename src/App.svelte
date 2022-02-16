@@ -3,12 +3,17 @@
 	import PleaseTurn from "./components/PleaseTurn.svelte";
 	import HomePage from "./components/HomePage.svelte";
 	import Credits from "./components/Credits.svelte";
-	import { isAdventure, isCredits } from "./lib/stores.js";
+	import Final from "./components/Final.svelte";
+	import { isAdventure, isCredits, currentDialogIndex } from "./lib/stores.js";
+	import dialogs from "./data/dialogs.json";
 
 	let mustTurn;
 	checkScreen();
 
 	function checkScreen(){
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 		if(window.innerHeight > window.innerWidth){
 			mustTurn = true;
 		}else{
@@ -27,6 +32,8 @@
 			<Adventure />
 		{:else if $isCredits}
 			<Credits />
+		{:else if $currentDialogIndex === dialogs.length -1}
+			<Final />
 		{:else}
 			<HomePage />
 		{/if}
@@ -35,8 +42,9 @@
 
 <style lang="scss">
 	main {
-		width: 100vw;
 		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+		width: 100vw;
 		position: relative;
 	}
 </style>

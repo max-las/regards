@@ -391,12 +391,11 @@
   {
     "character": "Intervenante",
     "text": "Intervenante : Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",
-    "picture": "Intervenante"
+    "picture": "framed"
   },
   {
     "character": "Intervenante",
     "text": "Intervenante : Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",
-    "picture": "Intervenante"
+    "picture": "framed"
   }
-
 ]

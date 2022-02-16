@@ -435,9 +435,9 @@ var app = (function () {
         $inject_state() { }
     }
 
-    var dialogs = [{character:"",text:"Un beau matin de printemps s’annonce à Bordeaux. Au musée des beaux-arts, trois frères et sœurs visitent l’aile sud.",picture:"museum_inside"},{character:"",text:"Voici Léo, André et Camille…",picture:"children"},{character:"",text:"Alors qu'ils déambulent dans le musée, un tableau retient leur attention...",picture:"children"},{character:"",text:" Face à eux, accroché en hauteur, un tableau d’une taille imposante se dresse...",picture:"framed"},{character:"",text:"Un sentiment très particulier les parcourt alors...",picture:"children"},{character:"",text:"À ce moment précis, une chose est sûre, cette peinture à su retenir leurs regards...",picture:"children"},{character:"Leo",text:"Leo : Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",picture:"children"},{character:"Camille",text:"Camille : Ils se regardent tous comme s'ils discutaient entre eux.",picture:"children"},{character:"Leo",text:"Leo : L’homme avec une grande barbe grise semble cacher quelque chose...",picture:"children"},{character:"Leo",text:"Leo : Moi, j’ai l'impression que…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Barbegrisebandeau"},{character:"Barbegrisebandeau",text:"« Je sais que c’est vous ! Je vous ai vu ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Hommeorange",text:"« Comment osez-vous ?! »",picture:"christ",zoom:"Hommeorange"},{character:"Jesus",text:"« Mes frères, celui qui a volé doit se dénoncer ! »",picture:"christ"},{character:"Jesus",text:"« Le bien de cette dame doit lui être rendu ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"Hommeorange"},{character:"Hommeorange",text:"« Très bien, j’avoue, je l’ai vu lui voler sa bourse ! C’est lui le fourbe ! »",picture:"christ",zoom:"Hommeorange"},{character:"Barbegrisebandeau",text:"« Comment osez-vous ? On peut deviner le voleur d’un regard ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Jesus",text:"« Mais comment savez-vous que c’est une bourse qui a été volée ? »",picture:"christ",zoom:"Jesus"},{character:"Hommeorange",text:"« Euuuh et bien… »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"",text:"",picture:"christ",click:"MaindelHommeOrange"},{character:"",text:"",picture:"christ",zoom:"MaindelHommeOrange",click:"MaindelHommeOrangeZoom"},{character:"Jesus",text:"« Ah ah ! Pris la main dans le sac ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Oooh merci ! Je suis heureuse que vous ayez retrouvé le voleur ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"André",text:"André : Ppfffffft n’importe quoi ton histoire !",picture:"children"},{character:"André",text:"André : Regarde plutôt l’homme au fond. Il paraît louche.",picture:"children"},{character:"André",text:"André : Pour moi l’histoire de ce tableau, c’est clairement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"HommeDuFond"},{character:"HommeDuFond",text:"« Cet homme avec une arme prépare un mauvais coup. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"« Je pense qu’il s'apprête à tuer ! »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"« La commère du village derrière en saura forcément plus. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"",picture:"christ",click:"Dameauxperles"},{character:"Dameauxperles",text:"« Oui, je sais tout. C’est sûr ! Il veut tuer la femme, regarde le, avec son air coupable. »",picture:"christ",zoom:"Dameauxperles"},{character:"Dameauxperles",text:"« Il faut prévenir les gardes. »",picture:"christ",zoom:"Dameauxperles"},{character:"",text:"",picture:"christ",click:"Garde"},{character:"Garde",text:"« Ne vous inquiétez pas madame, je ne laisserai personne mourir ! »",picture:"christ",zoom:"Garde"},{character:"Garde",text:"« Halte-là ! Vous ne ferez de mal à personne aujourd'hui. »",picture:"christ"},{character:"Femmevoilerose",text:"« Lâchez-moi garde ! Je suis innocent ! Cette femme est une voleuse. Elle ne m’a jamais remboursée ! »",picture:"christ",zoom:"Femmevoilerose"},{character:"Garde",text:"« Silence malotru ! Je vais te jeter au cachot ! Il ne pourra plus vous faire de mal madame. »",picture:"christ",zoom:"Garde"},{character:"FemmeDenudée",text:"« Me voilà soulagée ! Merci garde ! »",picture:"christ",zoom:"FemmeDenudéeTop"},{character:"André",text:"André : Et heureusement, elle est sauvée et n’a plus de dettes.",picture:"children"},{character:"Camille",text:"Camille : Mais non, gros bêta, ils sont en train de débattre pour construire un village.",picture:"children"},{character:"Camille",text:"Camille : Donc ce qu’il se passe réellement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Hommeauchapeau"},{character:"Hommeauchapeau",text:"« Ecoutez-moi ! Nous devons nous décider avant ce soir ! »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Oui, grand chef du village, si nous ne trouvons pas où dormir, cela pourrait être dangereux ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Quelqu’un à une idée ? »",picture:"christ",zoom:"Hommeauchapeau"},{character:"",text:"",picture:"christ",click:"Barbegriseprofil"},{character:"Barbegriseprofil",text:"« Si on construit ma grange, elle sera assez grande pour que nous puissions tous dormir dedans, ce sera rapide ! »",picture:"christ",zoom:"Barbegriseprofil"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« N’oubliez pas le prisonnier, il nous faut une prison. »",picture:"christ",zoom:"GardeCenter"},{character:"",text:"",picture:"christ",click:"HommeLouche"},{character:"HommeLouche",text:"« Excusez-moi, mais nous devons construire des chambres séparées. »",picture:"christ",zoom:"HommeLouche"},{character:"FemmeLouche",text:"« Et je ne supporte pas la paille. On mourra de froid aussi dans une prison. »",picture:"christ",zoom:"FemmeLouche"},{character:"FemmeDenudée",text:"« Il faut qu’une personne neutre tranche. »",picture:"christ",zoom:"FemmeDenudée"},{character:"HommeDuFond",text:"« Puis-je aider ? »",picture:"christ",zoom:"HommeDuFond"},{character:"Hommeauchapeau",text:"« Euh, pourquoi pas... Donnons la parole au plus reclu de notre groupe. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Alors, que le prisonnier décide. »",picture:"christ",zoom:"FemmeDenudée"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« Il en est hors de question ! »",picture:"christ",zoom:"GardeCenter"},{character:"Hommeauchapeau",text:"« Il nous faut un regard extérieur, il est donc le mieux placé. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"HommeDuFond",text:"« Hé bien, je pense qu'avec le temps dont nous disposons, dormir dans la paille d’une grange est la meilleure solution. »",picture:"christ",zoom:"HommeDuFond"},{character:"Camille",text:"Camille : Et ils purent dormir tous au chaud !",picture:"children"},{character:"Leo",text:"Leo : Moi, je préfère mon histoire, elle était plus simple !",picture:"children"},{character:"André",text:"André : Oui, elle était sympa mais moi elle était plus sérieuse.",picture:"children"},{character:"Camille",text:"Camille : Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",picture:"children"},{character:"Intervenante",text:"Intervenante : Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",picture:"Intervenante"},{character:"Leo",text:"Leo : Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",picture:"children"},{character:"Intervenante",text:"Intervenante : Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",picture:"Intervenante"},{character:"Intervenante",text:"Intervenante : Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",picture:"Intervenante"}];
+    var dialogs = [{character:"",text:"Un beau matin de printemps s’annonce à Bordeaux. Au musée des beaux-arts, trois frères et sœurs visitent l’aile sud.",picture:"museum_inside"},{character:"",text:"Voici Léo, André et Camille…",picture:"children"},{character:"",text:"Alors qu'ils déambulent dans le musée, un tableau retient leur attention...",picture:"children"},{character:"",text:" Face à eux, accroché en hauteur, un tableau d’une taille imposante se dresse...",picture:"framed"},{character:"",text:"Un sentiment très particulier les parcourt alors...",picture:"children"},{character:"",text:"À ce moment précis, une chose est sûre, cette peinture à su retenir leurs regards...",picture:"children"},{character:"Leo",text:"Leo : Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",picture:"children"},{character:"Camille",text:"Camille : Ils se regardent tous comme s'ils discutaient entre eux.",picture:"children"},{character:"Leo",text:"Leo : L’homme avec une grande barbe grise semble cacher quelque chose...",picture:"children"},{character:"Leo",text:"Leo : Moi, j’ai l'impression que…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Barbegrisebandeau"},{character:"Barbegrisebandeau",text:"« Je sais que c’est vous ! Je vous ai vu ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Hommeorange",text:"« Comment osez-vous ?! »",picture:"christ",zoom:"Hommeorange"},{character:"Jesus",text:"« Mes frères, celui qui a volé doit se dénoncer ! »",picture:"christ"},{character:"Jesus",text:"« Le bien de cette dame doit lui être rendu ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"Hommeorange"},{character:"Hommeorange",text:"« Très bien, j’avoue, je l’ai vu lui voler sa bourse ! C’est lui le fourbe ! »",picture:"christ",zoom:"Hommeorange"},{character:"Barbegrisebandeau",text:"« Comment osez-vous ? On peut deviner le voleur d’un regard ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Jesus",text:"« Mais comment savez-vous que c’est une bourse qui a été volée ? »",picture:"christ",zoom:"Jesus"},{character:"Hommeorange",text:"« Euuuh et bien… »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"",text:"",picture:"christ",click:"MaindelHommeOrange"},{character:"",text:"",picture:"christ",zoom:"MaindelHommeOrange",click:"MaindelHommeOrangeZoom"},{character:"Jesus",text:"« Ah ah ! Pris la main dans le sac ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Oooh merci ! Je suis heureuse que vous ayez retrouvé le voleur ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"André",text:"André : Ppfffffft n’importe quoi ton histoire !",picture:"children"},{character:"André",text:"André : Regarde plutôt l’homme au fond. Il paraît louche.",picture:"children"},{character:"André",text:"André : Pour moi l’histoire de ce tableau, c’est clairement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"HommeDuFond"},{character:"HommeDuFond",text:"« Cet homme avec une arme prépare un mauvais coup. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"« Je pense qu’il s'apprête à tuer ! »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"« La commère du village derrière en saura forcément plus. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"",picture:"christ",click:"Dameauxperles"},{character:"Dameauxperles",text:"« Oui, je sais tout. C’est sûr ! Il veut tuer la femme, regarde le, avec son air coupable. »",picture:"christ",zoom:"Dameauxperles"},{character:"Dameauxperles",text:"« Il faut prévenir les gardes. »",picture:"christ",zoom:"Dameauxperles"},{character:"",text:"",picture:"christ",click:"Garde"},{character:"Garde",text:"« Ne vous inquiétez pas madame, je ne laisserai personne mourir ! »",picture:"christ",zoom:"Garde"},{character:"Garde",text:"« Halte-là ! Vous ne ferez de mal à personne aujourd'hui. »",picture:"christ"},{character:"Femmevoilerose",text:"« Lâchez-moi garde ! Je suis innocent ! Cette femme est une voleuse. Elle ne m’a jamais remboursée ! »",picture:"christ",zoom:"Femmevoilerose"},{character:"Garde",text:"« Silence malotru ! Je vais te jeter au cachot ! Il ne pourra plus vous faire de mal madame. »",picture:"christ",zoom:"Garde"},{character:"FemmeDenudée",text:"« Me voilà soulagée ! Merci garde ! »",picture:"christ",zoom:"FemmeDenudéeTop"},{character:"André",text:"André : Et heureusement, elle est sauvée et n’a plus de dettes.",picture:"children"},{character:"Camille",text:"Camille : Mais non, gros bêta, ils sont en train de débattre pour construire un village.",picture:"children"},{character:"Camille",text:"Camille : Donc ce qu’il se passe réellement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Hommeauchapeau"},{character:"Hommeauchapeau",text:"« Ecoutez-moi ! Nous devons nous décider avant ce soir ! »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Oui, grand chef du village, si nous ne trouvons pas où dormir, cela pourrait être dangereux ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Quelqu’un à une idée ? »",picture:"christ",zoom:"Hommeauchapeau"},{character:"",text:"",picture:"christ",click:"Barbegriseprofil"},{character:"Barbegriseprofil",text:"« Si on construit ma grange, elle sera assez grande pour que nous puissions tous dormir dedans, ce sera rapide ! »",picture:"christ",zoom:"Barbegriseprofil"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« N’oubliez pas le prisonnier, il nous faut une prison. »",picture:"christ",zoom:"GardeCenter"},{character:"",text:"",picture:"christ",click:"HommeLouche"},{character:"HommeLouche",text:"« Excusez-moi, mais nous devons construire des chambres séparées. »",picture:"christ",zoom:"HommeLouche"},{character:"FemmeLouche",text:"« Et je ne supporte pas la paille. On mourra de froid aussi dans une prison. »",picture:"christ",zoom:"FemmeLouche"},{character:"FemmeDenudée",text:"« Il faut qu’une personne neutre tranche. »",picture:"christ",zoom:"FemmeDenudée"},{character:"HommeDuFond",text:"« Puis-je aider ? »",picture:"christ",zoom:"HommeDuFond"},{character:"Hommeauchapeau",text:"« Euh, pourquoi pas... Donnons la parole au plus reclu de notre groupe. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Alors, que le prisonnier décide. »",picture:"christ",zoom:"FemmeDenudée"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« Il en est hors de question ! »",picture:"christ",zoom:"GardeCenter"},{character:"Hommeauchapeau",text:"« Il nous faut un regard extérieur, il est donc le mieux placé. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"HommeDuFond",text:"« Hé bien, je pense qu'avec le temps dont nous disposons, dormir dans la paille d’une grange est la meilleure solution. »",picture:"christ",zoom:"HommeDuFond"},{character:"Camille",text:"Camille : Et ils purent dormir tous au chaud !",picture:"children"},{character:"Leo",text:"Leo : Moi, je préfère mon histoire, elle était plus simple !",picture:"children"},{character:"André",text:"André : Oui, elle était sympa mais moi elle était plus sérieuse.",picture:"children"},{character:"Camille",text:"Camille : Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",picture:"children"},{character:"Intervenante",text:"Intervenante : Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",picture:"Intervenante"},{character:"Leo",text:"Leo : Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",picture:"children"},{character:"Intervenante",text:"Intervenante : Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",picture:"framed"},{character:"Intervenante",text:"Intervenante : Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",picture:"framed"}];
 
-    var Leo={icon:"leo.png",size:"normal"};var Camille={icon:"camille.png",size:"normal"};var Barbegrisebandeau$1={icon:"Barbegrisebandeau.png",size:"small"};var Barbegriseprofil$1={icon:"barbegriseprofil.png",size:"small"};var Dameauxperles$1={icon:"Dameauxperles.png",size:"small"};var FemmeLouche$1={icon:"FemmeLouche.png",size:"small"};var Femmevoilerose$1={icon:"Femmevoilerose.png",size:"small"};var Garde$1={icon:"garde.png",size:"small"};var Hommeauchapeau$1={icon:"Hommeauchapeau.png",size:"small"};var HommeDuFond$1={icon:"HommeDuFond.png",size:"small"};var HommeLouche$1={icon:"HommeLouche.png",size:"small"};var Hommeorange$1={icon:"Hommeorange.png",size:"small"};var Hommeturbanfond={icon:"Hommeturbanfond.png",size:"small"};var Jesus$1={icon:"Jesus.png",size:"small"};var Intervenante$1={icon:"Intervenante.png",size:"small"};var characters = {Leo:Leo,"André":{icon:"andre.png",size:"normal"},Camille:Camille,Barbegrisebandeau:Barbegrisebandeau$1,Barbegriseprofil:Barbegriseprofil$1,Dameauxperles:Dameauxperles$1,"FemmeDenudée":{icon:"FemmeDenudée.png",size:"small"},FemmeLouche:FemmeLouche$1,Femmevoilerose:Femmevoilerose$1,Garde:Garde$1,Hommeauchapeau:Hommeauchapeau$1,HommeDuFond:HommeDuFond$1,HommeLouche:HommeLouche$1,Hommeorange:Hommeorange$1,Hommeturbanfond:Hommeturbanfond,Jesus:Jesus$1,Intervenante:Intervenante$1};
+    var Leo={icon:"Leo.png",size:"normal"};var Camille={icon:"Camille.png",size:"normal"};var Barbegrisebandeau$1={icon:"Barbegrisebandeau.png",size:"small"};var Barbegriseprofil$1={icon:"barbegriseprofil.png",size:"small"};var Dameauxperles$1={icon:"Dameauxperles.png",size:"small"};var FemmeLouche$1={icon:"FemmeLouche.png",size:"small"};var Femmevoilerose$1={icon:"Femmevoilerose.png",size:"small"};var Garde$1={icon:"garde.png",size:"small"};var Hommeauchapeau$1={icon:"Hommeauchapeau.png",size:"small"};var HommeDuFond$1={icon:"HommeDuFond.png",size:"small"};var HommeLouche$1={icon:"HommeLouche.png",size:"small"};var Hommeorange$1={icon:"Hommeorange.png",size:"small"};var Hommeturbanfond={icon:"Hommeturbanfond.png",size:"small"};var Jesus$1={icon:"Jesus.png",size:"small"};var Intervenante$1={icon:"Intervenante_fondue.png",size:"small"};var characters = {Leo:Leo,"André":{icon:"Andre.png",size:"normal"},Camille:Camille,Barbegrisebandeau:Barbegrisebandeau$1,Barbegriseprofil:Barbegriseprofil$1,Dameauxperles:Dameauxperles$1,"FemmeDenudée":{icon:"FemmeDenudée.png",size:"small"},FemmeLouche:FemmeLouche$1,Femmevoilerose:Femmevoilerose$1,Garde:Garde$1,Hommeauchapeau:Hommeauchapeau$1,HommeDuFond:HommeDuFond$1,HommeLouche:HommeLouche$1,Hommeorange:Hommeorange$1,Hommeturbanfond:Hommeturbanfond,Jesus:Jesus$1,Intervenante:Intervenante$1};
 
     const subscriber_queue = [];
     /**
@@ -492,9 +492,9 @@ var app = (function () {
     const isCredits = writable(false);
 
     /* src/components/Dialog.svelte generated by Svelte v3.46.4 */
-    const file$5 = "src/components/Dialog.svelte";
+    const file$6 = "src/components/Dialog.svelte";
 
-    // (25:6) {#if dialogs[$currentDialogIndex].character !== ""}
+    // (29:6) {#if dialogs[$currentDialogIndex].character !== ""}
     function create_if_block$2(ctx) {
     	let img;
     	let img_class_value;
@@ -503,20 +503,20 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", img_class_value = "" + (null_to_empty(characters[dialogs[/*$currentDialogIndex*/ ctx[0]].character].size) + " svelte-1hmu9cd"));
-    			if (!src_url_equal(img.src, img_src_value = "img/characters/" + characters[dialogs[/*$currentDialogIndex*/ ctx[0]].character].icon)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "class", img_class_value = "" + (null_to_empty(characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].size) + " svelte-1yr6zda"));
+    			if (!src_url_equal(img.src, img_src_value = "img/characters/" + characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].icon)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$5, 25, 8, 589);
+    			add_location(img, file$6, 29, 8, 714);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$currentDialogIndex*/ 1 && img_class_value !== (img_class_value = "" + (null_to_empty(characters[dialogs[/*$currentDialogIndex*/ ctx[0]].character].size) + " svelte-1hmu9cd"))) {
+    			if (dirty & /*$currentDialogIndex*/ 2 && img_class_value !== (img_class_value = "" + (null_to_empty(characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].size) + " svelte-1yr6zda"))) {
     				attr_dev(img, "class", img_class_value);
     			}
 
-    			if (dirty & /*$currentDialogIndex*/ 1 && !src_url_equal(img.src, img_src_value = "img/characters/" + characters[dialogs[/*$currentDialogIndex*/ ctx[0]].character].icon)) {
+    			if (dirty & /*$currentDialogIndex*/ 2 && !src_url_equal(img.src, img_src_value = "img/characters/" + characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].icon)) {
     				attr_dev(img, "src", img_src_value);
     			}
     		},
@@ -529,20 +529,20 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(25:6) {#if dialogs[$currentDialogIndex].character !== \\\"\\\"}",
+    		source: "(29:6) {#if dialogs[$currentDialogIndex].character !== \\\"\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    function create_fragment$5(ctx) {
+    function create_fragment$6(ctx) {
     	let div4;
     	let div3;
     	let div0;
     	let t0;
     	let p0;
-    	let t1_value = dialogs[/*$currentDialogIndex*/ ctx[0]].text + "";
+    	let t1_value = dialogs[/*$currentDialogIndex*/ ctx[1]].text + "";
     	let t1;
     	let t2;
     	let div2;
@@ -554,7 +554,7 @@ var app = (function () {
     	let img_src_value;
     	let mounted;
     	let dispose;
-    	let if_block = dialogs[/*$currentDialogIndex*/ ctx[0]].character !== "" && create_if_block$2(ctx);
+    	let if_block = dialogs[/*$currentDialogIndex*/ ctx[1]].character !== "" && create_if_block$2(ctx);
 
     	const block = {
     		c: function create() {
@@ -573,24 +573,26 @@ var app = (function () {
     			div1 = element("div");
     			t5 = space();
     			img = element("img");
-    			attr_dev(div0, "class", "character svelte-1hmu9cd");
-    			add_location(div0, file$5, 23, 4, 499);
-    			attr_dev(p0, "class", "font-montserrat text svelte-1hmu9cd");
-    			add_location(p0, file$5, 28, 4, 774);
-    			attr_dev(p1, "class", "font-cinzel nextButton svelte-1hmu9cd");
-    			add_location(p1, file$5, 30, 6, 890);
-    			attr_dev(div1, "class", "underline svelte-1hmu9cd");
-    			add_location(div1, file$5, 31, 6, 942);
+    			attr_dev(div0, "class", "character svelte-1yr6zda");
+    			add_location(div0, file$6, 27, 4, 624);
+    			attr_dev(p0, "class", "font-montserrat text svelte-1yr6zda");
+    			add_location(p0, file$6, 32, 4, 899);
+    			attr_dev(p1, "class", "font-cinzel nextButton svelte-1yr6zda");
+    			add_location(p1, file$6, 34, 6, 1075);
+    			attr_dev(div1, "class", "underline svelte-1yr6zda");
+    			add_location(div1, file$6, 35, 6, 1127);
     			set_style(div2, "width", "fit-content");
-    			add_location(div2, file$5, 29, 4, 850);
-    			attr_dev(div3, "class", "content svelte-1hmu9cd");
-    			add_location(div3, file$5, 22, 2, 473);
-    			attr_dev(img, "class", "decoration svelte-1hmu9cd");
+    			attr_dev(div2, "class", "nextButtonContainer svelte-1yr6zda");
+    			toggle_class(div2, "canContinue", /*canContinue*/ ctx[0]);
+    			add_location(div2, file$6, 33, 4, 975);
+    			attr_dev(div3, "class", "content svelte-1yr6zda");
+    			add_location(div3, file$6, 26, 2, 598);
+    			attr_dev(img, "class", "decoration svelte-1yr6zda");
     			if (!src_url_equal(img.src, img_src_value = "img/deco/cadre_decors.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$5, 34, 2, 994);
-    			attr_dev(div4, "class", "dialog svelte-1hmu9cd");
-    			add_location(div4, file$5, 21, 0, 434);
+    			add_location(img, file$6, 38, 2, 1179);
+    			attr_dev(div4, "class", "dialog svelte-1yr6zda");
+    			add_location(div4, file$6, 25, 0, 559);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -612,12 +614,12 @@ var app = (function () {
     			append_dev(div4, img);
 
     			if (!mounted) {
-    				dispose = listen_dev(div4, "click", /*next*/ ctx[1], false, false, false);
+    				dispose = listen_dev(div4, "click", /*next*/ ctx[2], false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dialogs[/*$currentDialogIndex*/ ctx[0]].character !== "") {
+    			if (dialogs[/*$currentDialogIndex*/ ctx[1]].character !== "") {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -630,7 +632,11 @@ var app = (function () {
     				if_block = null;
     			}
 
-    			if (dirty & /*$currentDialogIndex*/ 1 && t1_value !== (t1_value = dialogs[/*$currentDialogIndex*/ ctx[0]].text + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*$currentDialogIndex*/ 2 && t1_value !== (t1_value = dialogs[/*$currentDialogIndex*/ ctx[1]].text + "")) set_data_dev(t1, t1_value);
+
+    			if (dirty & /*canContinue*/ 1) {
+    				toggle_class(div2, "canContinue", /*canContinue*/ ctx[0]);
+    			}
     		},
     		i: noop,
     		o: noop,
@@ -644,7 +650,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$5.name,
+    		id: create_fragment$6.name,
     		type: "component",
     		source: "",
     		ctx
@@ -653,10 +659,13 @@ var app = (function () {
     	return block;
     }
 
-    function instance$5($$self, $$props, $$invalidate) {
+    function instance$6($$self, $$props, $$invalidate) {
+    	let $isAdventure;
     	let $currentDialogIndex;
+    	validate_store(isAdventure, 'isAdventure');
+    	component_subscribe($$self, isAdventure, $$value => $$invalidate(4, $isAdventure = $$value));
     	validate_store(currentDialogIndex, 'currentDialogIndex');
-    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(0, $currentDialogIndex = $$value));
+    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(1, $currentDialogIndex = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Dialog', slots, []);
     	let { first } = $$props;
@@ -665,15 +674,19 @@ var app = (function () {
 
     	function next() {
     		if (canContinue) {
-    			set_store_value(currentDialogIndex, $currentDialogIndex += 1, $currentDialogIndex);
-    			canContinue = false;
+    			if ($currentDialogIndex < dialogs.length - 1) {
+    				set_store_value(currentDialogIndex, $currentDialogIndex += 1, $currentDialogIndex);
+    				$$invalidate(0, canContinue = false);
 
-    			setTimeout(
-    				() => {
-    					canContinue = true;
-    				},
-    				1100
-    			);
+    				setTimeout(
+    					() => {
+    						$$invalidate(0, canContinue = true);
+    					},
+    					1100
+    				);
+    			} else {
+    				set_store_value(isAdventure, $isAdventure = false, $isAdventure);
+    			}
     		}
     	}
 
@@ -684,47 +697,49 @@ var app = (function () {
     	});
 
     	$$self.$$set = $$props => {
-    		if ('first' in $$props) $$invalidate(2, first = $$props.first);
+    		if ('first' in $$props) $$invalidate(3, first = $$props.first);
     	};
 
     	$$self.$capture_state = () => ({
     		dialogs,
     		characters,
     		currentDialogIndex,
+    		isAdventure,
     		first,
     		canContinue,
     		next,
+    		$isAdventure,
     		$currentDialogIndex
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('first' in $$props) $$invalidate(2, first = $$props.first);
-    		if ('canContinue' in $$props) canContinue = $$props.canContinue;
+    		if ('first' in $$props) $$invalidate(3, first = $$props.first);
+    		if ('canContinue' in $$props) $$invalidate(0, canContinue = $$props.canContinue);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [$currentDialogIndex, next, first];
+    	return [canContinue, $currentDialogIndex, next, first];
     }
 
     class Dialog extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { first: 2 });
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { first: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Dialog",
     			options,
-    			id: create_fragment$5.name
+    			id: create_fragment$6.name
     		});
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*first*/ ctx[2] === undefined && !('first' in props)) {
+    		if (/*first*/ ctx[3] === undefined && !('first' in props)) {
     			console.warn("<Dialog> was created without expected prop 'first'");
     		}
     	}
@@ -738,7 +753,7 @@ var app = (function () {
     	}
     }
 
-    var museum_inside="museum_inside.jpg";var children="children.jpg";var framed="framed.png";var christ="christ.png";var Intervenante="Intervenante.png";var pictures = {museum_inside:museum_inside,children:children,framed:framed,christ:christ,Intervenante:Intervenante};
+    var museum_inside="museum_inside.jpg";var children="Enfants_2.png";var framed="framed.png";var christ="christ.png";var Intervenante="Intervenante.png";var pictures = {museum_inside:museum_inside,children:children,framed:framed,christ:christ,Intervenante:Intervenante};
 
     var Barbegrisebandeau={x:23.59,y:55,w:12.32,h:31.25,transform:"scale(3) translate(21vw, 10vw)"};var Hommeorange={x:10.59,y:45,w:18.32,h:35.25,transform:"scale(3) translate(30vw, 6vw)"};var Jesus={transform:"scale(3) translate(6vw, 10vw)"};var MaindelHommeOrange={x:24.25,y:27,w:12.32,h:23.25,transform:"scale(3) translate(20vw, -5vw)"};var MaindelHommeOrangeZoom={x:39.25,y:23,w:25.32,h:34.25};var HommeDuFond={x:63.25,y:77,w:12.32,h:23.25,transform:"scale(5) translate(-19vw, 35vh)"};var HommeDuFondCenter={transform:"scale(5) translate(-19vw, 35vh)"};var Dameauxperles={x:58,y:65,w:11.32,h:23.25,transform:"scale(4) translate(-14vw, 23vh)"};var Garde={x:82.25,y:49,w:10.32,h:24.25,transform:"scale(3) translate(-31vw, 6vw)"};var Femmevoilerose={transform:"scale(4) translate(-22vw, 20vh)"};var Hommeauchapeau={x:61.25,y:54,w:11.32,h:27.25,transform:"scale(3) translate(-17vw, 7vw)"};var Barbegriseprofil={x:0.25,y:54,w:12.32,h:29.25,transform:"scale(3) translate(32vw, 8vw)"};var GardeCenter={x:82.25,y:62,w:11.32,h:27.25,transform:"scale(3) translate(-30vw, 12vw)"};var HommeLouche={x:48.25,y:59,w:9.32,h:24.25,transform:"scale(3) translate(-3vw, 8vw)"};var FemmeLouche={transform:"scale(3) translate(-8vw, 8vw)"};var coordinates = {Barbegrisebandeau:Barbegrisebandeau,Hommeorange:Hommeorange,Jesus:Jesus,MaindelHommeOrange:MaindelHommeOrange,MaindelHommeOrangeZoom:MaindelHommeOrangeZoom,"FemmeDenudée":{x:72.25,y:27,w:24.32,h:55.25,transform:"scale(3) translate(-27vw, 7vw)"},HommeDuFond:HommeDuFond,HommeDuFondCenter:HommeDuFondCenter,Dameauxperles:Dameauxperles,Garde:Garde,Femmevoilerose:Femmevoilerose,"FemmeDenudéeTop":{transform:"scale(3) translate(-27vw, 0vh)"},Hommeauchapeau:Hommeauchapeau,Barbegriseprofil:Barbegriseprofil,GardeCenter:GardeCenter,HommeLouche:HommeLouche,FemmeLouche:FemmeLouche};
 
@@ -756,8 +771,21 @@ var app = (function () {
       }
     };
 
+    const iOS = () => {
+      return [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+      ].includes(navigator.platform)
+      // iPad on iOS 13 detection
+      || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    };
+
     /* src/components/Adventure.svelte generated by Svelte v3.46.4 */
-    const file$4 = "src/components/Adventure.svelte";
+    const file$5 = "src/components/Adventure.svelte";
 
     // (91:26) 
     function create_if_block_1$1(ctx) {
@@ -773,7 +801,7 @@ var app = (function () {
     			set_style(div, "height", /*clickCoords*/ ctx[5].h + "%");
     			set_style(div, "bottom", /*clickCoords*/ ctx[5].y + "%");
     			set_style(div, "left", /*clickCoords*/ ctx[5].x + "%");
-    			add_location(div, file$4, 91, 1, 2852);
+    			add_location(div, file$5, 91, 1, 2852);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -868,7 +896,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$4(ctx) {
+    function create_fragment$5(ctx) {
     	let div0;
     	let img0;
     	let img0_src_value;
@@ -908,18 +936,18 @@ var app = (function () {
     			attr_dev(img0, "alt", "");
     			attr_dev(img0, "class", "svelte-puxjun");
     			toggle_class(img0, "center", /*backImgPos*/ ctx[7] === "center");
-    			add_location(img0, file$4, 83, 1, 2419);
+    			add_location(img0, file$5, 83, 1, 2419);
     			attr_dev(div0, "class", "pictureBg svelte-puxjun");
-    			add_location(div0, file$4, 82, 0, 2394);
+    			add_location(div0, file$5, 82, 0, 2394);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/pictures/" + /*pictureSafe*/ ctx[0])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
     			attr_dev(img1, "class", "svelte-puxjun");
     			toggle_class(img1, "center", /*frontImgPos*/ ctx[8] === "center");
-    			add_location(img1, file$4, 86, 1, 2646);
+    			add_location(img1, file$5, 86, 1, 2646);
     			attr_dev(div1, "class", "pictureBg svelte-puxjun");
     			set_style(div1, "--transform", /*transform*/ ctx[1]);
     			toggle_class(div1, "opacityTransition", /*opacityTransitionOn*/ ctx[6]);
-    			add_location(div1, file$4, 85, 0, 2513);
+    			add_location(div1, file$5, 85, 0, 2513);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1026,7 +1054,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$4.name,
+    		id: create_fragment$5.name,
     		type: "component",
     		source: "",
     		ctx
@@ -1035,7 +1063,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$4($$self, $$props, $$invalidate) {
+    function instance$5($$self, $$props, $$invalidate) {
     	let $currentDialogIndex;
     	validate_store(currentDialogIndex, 'currentDialogIndex');
     	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(2, $currentDialogIndex = $$value));
@@ -1201,22 +1229,22 @@ var app = (function () {
     class Adventure extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Adventure",
     			options,
-    			id: create_fragment$4.name
+    			id: create_fragment$5.name
     		});
     	}
     }
 
     /* src/components/PleaseTurn.svelte generated by Svelte v3.46.4 */
 
-    const file$3 = "src/components/PleaseTurn.svelte";
+    const file$4 = "src/components/PleaseTurn.svelte";
 
-    function create_fragment$3(ctx) {
+    function create_fragment$4(ctx) {
     	let div;
     	let img;
     	let img_src_value;
@@ -1233,11 +1261,11 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "/img/deco/refresh-ccw.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-1nqwcr1");
-    			add_location(img, file$3, 1, 2, 25);
+    			add_location(img, file$4, 1, 2, 25);
     			attr_dev(p, "class", "font-cinzel svelte-1nqwcr1");
-    			add_location(p, file$3, 2, 2, 72);
+    			add_location(p, file$4, 2, 2, 72);
     			attr_dev(div, "class", "mustTurn svelte-1nqwcr1");
-    			add_location(div, file$3, 0, 0, 0);
+    			add_location(div, file$4, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1258,7 +1286,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$3.name,
+    		id: create_fragment$4.name,
     		type: "component",
     		source: "",
     		ctx
@@ -1267,7 +1295,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$3($$self, $$props) {
+    function instance$4($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('PleaseTurn', slots, []);
     	const writable_props = [];
@@ -1282,21 +1310,21 @@ var app = (function () {
     class PleaseTurn extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "PleaseTurn",
     			options,
-    			id: create_fragment$3.name
+    			id: create_fragment$4.name
     		});
     	}
     }
 
     /* src/components/HomePage.svelte generated by Svelte v3.46.4 */
-    const file$2 = "src/components/HomePage.svelte";
+    const file$3 = "src/components/HomePage.svelte";
 
-    function create_fragment$2(ctx) {
+    function create_fragment$3(ctx) {
     	let div7;
     	let div0;
     	let t0;
@@ -1337,28 +1365,28 @@ var app = (function () {
     			p1.textContent = "VIVRE L'EXPÉRIENCE";
     			t7 = space();
     			div4 = element("div");
-    			attr_dev(div0, "class", "dark svelte-4q5x06");
-    			add_location(div0, file$2, 5, 2, 99);
-    			attr_dev(p0, "class", "font-cinzel svelte-4q5x06");
-    			add_location(p0, file$2, 8, 6, 175);
-    			attr_dev(div1, "class", "underline svelte-4q5x06");
-    			add_location(div1, file$2, 9, 6, 254);
-    			attr_dev(div2, "class", "button svelte-4q5x06");
-    			add_location(div2, file$2, 7, 4, 148);
-    			attr_dev(div3, "class", "top svelte-4q5x06");
-    			add_location(div3, file$2, 6, 2, 126);
-    			attr_dev(h1, "class", "font-cinzel svelte-4q5x06");
-    			add_location(h1, file$2, 13, 4, 331);
-    			attr_dev(p1, "class", "font-cinzel svelte-4q5x06");
-    			add_location(p1, file$2, 15, 6, 399);
-    			attr_dev(div4, "class", "underline svelte-4q5x06");
-    			add_location(div4, file$2, 19, 6, 550);
-    			attr_dev(div5, "class", "button svelte-4q5x06");
-    			add_location(div5, file$2, 14, 4, 372);
-    			attr_dev(div6, "class", "bottom svelte-4q5x06");
-    			add_location(div6, file$2, 12, 2, 306);
-    			attr_dev(div7, "class", "home svelte-4q5x06");
-    			add_location(div7, file$2, 4, 0, 78);
+    			attr_dev(div0, "class", "dark svelte-16ttej1");
+    			add_location(div0, file$3, 13, 2, 258);
+    			attr_dev(p0, "class", "font-cinzel svelte-16ttej1");
+    			add_location(p0, file$3, 16, 6, 334);
+    			attr_dev(div1, "class", "underline svelte-16ttej1");
+    			add_location(div1, file$3, 17, 6, 413);
+    			attr_dev(div2, "class", "button svelte-16ttej1");
+    			add_location(div2, file$3, 15, 4, 307);
+    			attr_dev(div3, "class", "top svelte-16ttej1");
+    			add_location(div3, file$3, 14, 2, 285);
+    			attr_dev(h1, "class", "font-cinzel svelte-16ttej1");
+    			add_location(h1, file$3, 21, 4, 490);
+    			attr_dev(p1, "class", "font-cinzel svelte-16ttej1");
+    			add_location(p1, file$3, 23, 6, 558);
+    			attr_dev(div4, "class", "underline svelte-16ttej1");
+    			add_location(div4, file$3, 24, 6, 633);
+    			attr_dev(div5, "class", "button svelte-16ttej1");
+    			add_location(div5, file$3, 22, 4, 531);
+    			attr_dev(div6, "class", "bottom svelte-16ttej1");
+    			add_location(div6, file$3, 20, 2, 465);
+    			attr_dev(div7, "class", "home svelte-16ttej1");
+    			add_location(div7, file$3, 12, 0, 237);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1384,7 +1412,7 @@ var app = (function () {
     			if (!mounted) {
     				dispose = [
     					listen_dev(p0, "click", /*click_handler*/ ctx[2], false, false, false),
-    					listen_dev(p1, "click", /*click_handler_1*/ ctx[3], false, false, false)
+    					listen_dev(p1, "click", /*handleStart*/ ctx[1], false, false, false)
     				];
 
     				mounted = true;
@@ -1402,7 +1430,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$2.name,
+    		id: create_fragment$3.name,
     		type: "component",
     		source: "",
     		ctx
@@ -1411,15 +1439,24 @@ var app = (function () {
     	return block;
     }
 
-    function instance$2($$self, $$props, $$invalidate) {
-    	let $isCredits;
+    function instance$3($$self, $$props, $$invalidate) {
     	let $isAdventure;
+    	let $isCredits;
+    	validate_store(isAdventure, 'isAdventure');
+    	component_subscribe($$self, isAdventure, $$value => $$invalidate(3, $isAdventure = $$value));
     	validate_store(isCredits, 'isCredits');
     	component_subscribe($$self, isCredits, $$value => $$invalidate(0, $isCredits = $$value));
-    	validate_store(isAdventure, 'isAdventure');
-    	component_subscribe($$self, isAdventure, $$value => $$invalidate(1, $isAdventure = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('HomePage', slots, []);
+
+    	function handleStart() {
+    		if (!iOS()) {
+    			document.body.requestFullscreen();
+    		}
+
+    		set_store_value(isAdventure, $isAdventure = true, $isAdventure);
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -1430,39 +1467,36 @@ var app = (function () {
     		set_store_value(isCredits, $isCredits = true, $isCredits);
     	};
 
-    	const click_handler_1 = () => {
-    		document.body.requestFullscreen();
-    		set_store_value(isAdventure, $isAdventure = true, $isAdventure);
-    	};
-
     	$$self.$capture_state = () => ({
     		isAdventure,
     		isCredits,
-    		$isCredits,
-    		$isAdventure
+    		iOS,
+    		handleStart,
+    		$isAdventure,
+    		$isCredits
     	});
 
-    	return [$isCredits, $isAdventure, click_handler, click_handler_1];
+    	return [$isCredits, handleStart, click_handler];
     }
 
     class HomePage extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "HomePage",
     			options,
-    			id: create_fragment$2.name
+    			id: create_fragment$3.name
     		});
     	}
     }
 
     /* src/components/Credits.svelte generated by Svelte v3.46.4 */
-    const file$1 = "src/components/Credits.svelte";
+    const file$2 = "src/components/Credits.svelte";
 
-    function create_fragment$1(ctx) {
+    function create_fragment$2(ctx) {
     	let div16;
     	let div2;
     	let h1;
@@ -1640,93 +1674,93 @@ var app = (function () {
     			p19 = element("p");
     			p19.textContent = "Enzo DURET";
     			attr_dev(h1, "class", "svelte-t79uuu");
-    			add_location(h1, file$1, 6, 4, 126);
+    			add_location(h1, file$2, 6, 4, 126);
     			attr_dev(p0, "class", "svelte-t79uuu");
-    			add_location(p0, file$1, 8, 6, 174);
+    			add_location(p0, file$2, 8, 6, 174);
     			attr_dev(div0, "class", "underline svelte-t79uuu");
-    			add_location(div0, file$1, 9, 6, 233);
+    			add_location(div0, file$2, 9, 6, 233);
     			attr_dev(div1, "class", "button svelte-t79uuu");
-    			add_location(div1, file$1, 7, 4, 147);
+    			add_location(div1, file$2, 7, 4, 147);
     			attr_dev(div2, "class", "top font-cinzel svelte-t79uuu");
-    			add_location(div2, file$1, 5, 2, 92);
+    			add_location(div2, file$2, 5, 2, 92);
     			attr_dev(h20, "class", "svelte-t79uuu");
-    			add_location(h20, file$1, 16, 8, 364);
+    			add_location(h20, file$2, 16, 8, 364);
     			attr_dev(p1, "class", "svelte-t79uuu");
-    			add_location(p1, file$1, 17, 8, 412);
+    			add_location(p1, file$2, 17, 8, 412);
     			attr_dev(p2, "class", "svelte-t79uuu");
-    			add_location(p2, file$1, 18, 8, 470);
+    			add_location(p2, file$2, 18, 8, 470);
     			attr_dev(div3, "class", "block svelte-t79uuu");
-    			add_location(div3, file$1, 15, 6, 336);
+    			add_location(div3, file$2, 15, 6, 336);
     			attr_dev(h21, "class", "svelte-t79uuu");
-    			add_location(h21, file$1, 22, 8, 536);
+    			add_location(h21, file$2, 22, 8, 536);
     			attr_dev(p3, "class", "svelte-t79uuu");
-    			add_location(p3, file$1, 23, 8, 585);
+    			add_location(p3, file$2, 23, 8, 585);
     			attr_dev(p4, "class", "svelte-t79uuu");
-    			add_location(p4, file$1, 24, 8, 615);
+    			add_location(p4, file$2, 24, 8, 615);
     			attr_dev(div4, "class", "block svelte-t79uuu");
-    			add_location(div4, file$1, 21, 6, 508);
+    			add_location(div4, file$2, 21, 6, 508);
     			attr_dev(h22, "class", "svelte-t79uuu");
-    			add_location(h22, file$1, 28, 8, 675);
+    			add_location(h22, file$2, 28, 8, 675);
     			attr_dev(p5, "class", "svelte-t79uuu");
-    			add_location(p5, file$1, 29, 8, 710);
+    			add_location(p5, file$2, 29, 8, 710);
     			attr_dev(p6, "class", "svelte-t79uuu");
-    			add_location(p6, file$1, 30, 8, 745);
+    			add_location(p6, file$2, 30, 8, 745);
     			attr_dev(div5, "class", "block svelte-t79uuu");
-    			add_location(div5, file$1, 27, 6, 647);
+    			add_location(div5, file$2, 27, 6, 647);
     			attr_dev(h23, "class", "svelte-t79uuu");
-    			add_location(h23, file$1, 34, 8, 805);
+    			add_location(h23, file$2, 34, 8, 805);
     			attr_dev(p7, "class", "svelte-t79uuu");
-    			add_location(p7, file$1, 35, 8, 836);
+    			add_location(p7, file$2, 35, 8, 836);
     			attr_dev(p8, "class", "svelte-t79uuu");
-    			add_location(p8, file$1, 36, 8, 896);
+    			add_location(p8, file$2, 36, 8, 896);
     			attr_dev(div6, "class", "block svelte-t79uuu");
-    			add_location(div6, file$1, 33, 6, 777);
+    			add_location(div6, file$2, 33, 6, 777);
     			attr_dev(div7, "class", "left svelte-t79uuu");
-    			add_location(div7, file$1, 14, 4, 311);
+    			add_location(div7, file$2, 14, 4, 311);
     			attr_dev(div8, "class", "separator svelte-t79uuu");
-    			add_location(div8, file$1, 40, 4, 1004);
+    			add_location(div8, file$2, 40, 4, 1004);
     			attr_dev(h24, "class", "svelte-t79uuu");
-    			add_location(h24, file$1, 44, 8, 1099);
+    			add_location(h24, file$2, 44, 8, 1099);
     			attr_dev(p9, "class", "svelte-t79uuu");
-    			add_location(p9, file$1, 45, 8, 1125);
+    			add_location(p9, file$2, 45, 8, 1125);
     			attr_dev(p10, "class", "svelte-t79uuu");
-    			add_location(p10, file$1, 46, 8, 1155);
+    			add_location(p10, file$2, 46, 8, 1155);
     			attr_dev(p11, "class", "svelte-t79uuu");
-    			add_location(p11, file$1, 47, 8, 1210);
+    			add_location(p11, file$2, 47, 8, 1210);
     			attr_dev(p12, "class", "svelte-t79uuu");
-    			add_location(p12, file$1, 48, 8, 1260);
+    			add_location(p12, file$2, 48, 8, 1260);
     			attr_dev(div9, "class", "block music svelte-t79uuu");
-    			add_location(div9, file$1, 43, 6, 1065);
+    			add_location(div9, file$2, 43, 6, 1065);
     			attr_dev(h25, "class", "svelte-t79uuu");
-    			add_location(h25, file$1, 52, 8, 1343);
+    			add_location(h25, file$2, 52, 8, 1343);
     			attr_dev(p13, "class", "svelte-t79uuu");
-    			add_location(p13, file$1, 56, 12, 1439);
+    			add_location(p13, file$2, 56, 12, 1439);
     			attr_dev(p14, "class", "svelte-t79uuu");
-    			add_location(p14, file$1, 57, 12, 1474);
+    			add_location(p14, file$2, 57, 12, 1474);
     			attr_dev(p15, "class", "svelte-t79uuu");
-    			add_location(p15, file$1, 58, 12, 1510);
+    			add_location(p15, file$2, 58, 12, 1510);
     			attr_dev(p16, "class", "svelte-t79uuu");
-    			add_location(p16, file$1, 59, 12, 1543);
+    			add_location(p16, file$2, 59, 12, 1543);
     			attr_dev(div10, "class", "column");
-    			add_location(div10, file$1, 55, 10, 1406);
+    			add_location(div10, file$2, 55, 10, 1406);
     			attr_dev(p17, "class", "svelte-t79uuu");
-    			add_location(p17, file$1, 63, 12, 1630);
+    			add_location(p17, file$2, 63, 12, 1630);
     			attr_dev(p18, "class", "svelte-t79uuu");
-    			add_location(p18, file$1, 64, 12, 1659);
+    			add_location(p18, file$2, 64, 12, 1659);
     			attr_dev(p19, "class", "svelte-t79uuu");
-    			add_location(p19, file$1, 65, 12, 1692);
+    			add_location(p19, file$2, 65, 12, 1692);
     			attr_dev(div11, "class", "column");
-    			add_location(div11, file$1, 62, 10, 1597);
+    			add_location(div11, file$2, 62, 10, 1597);
     			attr_dev(div12, "class", "columns svelte-t79uuu");
-    			add_location(div12, file$1, 54, 8, 1374);
+    			add_location(div12, file$2, 54, 8, 1374);
     			attr_dev(div13, "class", "block svelte-t79uuu");
-    			add_location(div13, file$1, 51, 6, 1315);
+    			add_location(div13, file$2, 51, 6, 1315);
     			attr_dev(div14, "class", "right svelte-t79uuu");
-    			add_location(div14, file$1, 42, 4, 1039);
+    			add_location(div14, file$2, 42, 4, 1039);
     			attr_dev(div15, "class", "bottom svelte-t79uuu");
-    			add_location(div15, file$1, 13, 2, 286);
+    			add_location(div15, file$2, 13, 2, 286);
     			attr_dev(div16, "class", "credits svelte-t79uuu");
-    			add_location(div16, file$1, 4, 0, 68);
+    			add_location(div16, file$2, 4, 0, 68);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1822,7 +1856,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$1.name,
+    		id: create_fragment$2.name,
     		type: "component",
     		source: "",
     		ctx
@@ -1831,7 +1865,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$1($$self, $$props, $$invalidate) {
+    function instance$2($$self, $$props, $$invalidate) {
     	let $isCredits;
     	validate_store(isCredits, 'isCredits');
     	component_subscribe($$self, isCredits, $$value => $$invalidate(0, $isCredits = $$value));
@@ -1854,11 +1888,101 @@ var app = (function () {
     class Credits extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Credits",
+    			options,
+    			id: create_fragment$2.name
+    		});
+    	}
+    }
+
+    /* src/components/Final.svelte generated by Svelte v3.46.4 */
+    const file$1 = "src/components/Final.svelte";
+
+    function create_fragment$1(ctx) {
+    	let div;
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			p = element("p");
+    			attr_dev(p, "class", "font-cinzel svelte-wikrvt");
+    			add_location(p, file$1, 13, 2, 356);
+    			attr_dev(div, "class", "final svelte-wikrvt");
+    			add_location(div, file$1, 12, 0, 334);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, p);
+    			p.innerHTML = /*finalText*/ ctx[0];
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*finalText*/ 1) p.innerHTML = /*finalText*/ ctx[0];		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$1.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Final', slots, []);
+    	let text = "“ La richesse d’une œuvre d’art est un ensemble d’interprétations variées, à travers différents . . . „";
+    	let arrText = text.split("");
+    	let finalText = "";
+
+    	for (const char of arrText) {
+    		finalText += `<span style="opacity: 0;">${char}</span>`;
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Final> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ wait, text, arrText, finalText });
+
+    	$$self.$inject_state = $$props => {
+    		if ('text' in $$props) text = $$props.text;
+    		if ('arrText' in $$props) arrText = $$props.arrText;
+    		if ('finalText' in $$props) $$invalidate(0, finalText = $$props.finalText);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [finalText];
+    }
+
+    class Final extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Final",
     			options,
     			id: create_fragment$1.name
     		});
@@ -1870,7 +1994,7 @@ var app = (function () {
     const { window: window_1 } = globals;
     const file = "src/App.svelte";
 
-    // (30:2) {:else}
+    // (37:2) {:else}
     function create_else_block(ctx) {
     	let homepage;
     	let current;
@@ -1902,14 +2026,53 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(30:2) {:else}",
+    		source: "(37:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (28:23) 
+    // (35:54) 
+    function create_if_block_3(ctx) {
+    	let final;
+    	let current;
+    	final = new Final({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(final.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(final, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(final.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(final.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(final, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3.name,
+    		type: "if",
+    		source: "(35:54) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (33:23) 
     function create_if_block_2(ctx) {
     	let credits;
     	let current;
@@ -1941,14 +2104,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(28:23) ",
+    		source: "(33:23) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (26:2) {#if $isAdventure}
+    // (31:2) {#if $isAdventure}
     function create_if_block_1(ctx) {
     	let adventure;
     	let current;
@@ -1980,14 +2143,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(26:2) {#if $isAdventure}",
+    		source: "(31:2) {#if $isAdventure}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (23:1) {#if mustTurn}
+    // (28:1) {#if mustTurn}
     function create_if_block(ctx) {
     	let pleaseturn;
     	let current;
@@ -2019,7 +2182,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(23:1) {#if mustTurn}",
+    		source: "(28:1) {#if mustTurn}",
     		ctx
     	});
 
@@ -2033,14 +2196,23 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block, create_if_block_1, create_if_block_2, create_else_block];
+
+    	const if_block_creators = [
+    		create_if_block,
+    		create_if_block_1,
+    		create_if_block_2,
+    		create_if_block_3,
+    		create_else_block
+    	];
+
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
     		if (/*mustTurn*/ ctx[0]) return 0;
     		if (/*$isAdventure*/ ctx[1]) return 1;
     		if (/*$isCredits*/ ctx[2]) return 2;
-    		return 3;
+    		if (/*$currentDialogIndex*/ ctx[3] === dialogs.length - 1) return 3;
+    		return 4;
     	}
 
     	current_block_type_index = select_block_type(ctx);
@@ -2050,8 +2222,8 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			if_block.c();
-    			attr_dev(main, "class", "svelte-1azx8u2");
-    			add_location(main, file, 21, 0, 502);
+    			attr_dev(main, "class", "svelte-17503q8");
+    			add_location(main, file, 26, 0, 718);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2062,7 +2234,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(window_1, "resize", /*checkScreen*/ ctx[3], false, false, false);
+    				dispose = listen_dev(window_1, "resize", /*checkScreen*/ ctx[4], false, false, false);
     				mounted = true;
     			}
     		},
@@ -2120,16 +2292,22 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let $isAdventure;
     	let $isCredits;
+    	let $currentDialogIndex;
     	validate_store(isAdventure, 'isAdventure');
     	component_subscribe($$self, isAdventure, $$value => $$invalidate(1, $isAdventure = $$value));
     	validate_store(isCredits, 'isCredits');
     	component_subscribe($$self, isCredits, $$value => $$invalidate(2, $isCredits = $$value));
+    	validate_store(currentDialogIndex, 'currentDialogIndex');
+    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(3, $currentDialogIndex = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
     	let mustTurn;
     	checkScreen();
 
     	function checkScreen() {
+    		let vh = window.innerHeight * 0.01;
+    		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
     		if (window.innerHeight > window.innerWidth) {
     			$$invalidate(0, mustTurn = true);
     		} else {
@@ -2148,12 +2326,16 @@ var app = (function () {
     		PleaseTurn,
     		HomePage,
     		Credits,
+    		Final,
     		isAdventure,
     		isCredits,
+    		currentDialogIndex,
+    		dialogs,
     		mustTurn,
     		checkScreen,
     		$isAdventure,
-    		$isCredits
+    		$isCredits,
+    		$currentDialogIndex
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2164,7 +2346,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [mustTurn, $isAdventure, $isCredits, checkScreen];
+    	return [mustTurn, $isAdventure, $isCredits, $currentDialogIndex, checkScreen];
     }
 
     class App extends SvelteComponentDev {

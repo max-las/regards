@@ -1,7 +1,7 @@
 <script>
   import dialogs from '../data/dialogs.json';
   import characters from '../data/characters.json';
-  import { currentDialogIndex } from "../lib/stores.js";
+  import { currentDialogIndex, isAdventure } from "../lib/stores.js";
 
   export let first;
   $currentDialogIndex = first;
@@ -10,11 +10,15 @@
 
   function next() {
     if(canContinue){
-      $currentDialogIndex += 1;
-      canContinue = false;
-      setTimeout(() => {
-        canContinue = true;
-      }, 1100);
+      if($currentDialogIndex < dialogs.length -1){
+        $currentDialogIndex += 1;
+        canContinue = false;
+        setTimeout(() => {
+          canContinue = true;
+        }, 1100);
+      }else{
+        $isAdventure = false;
+      }
     }
   }
 </script>
@@ -27,7 +31,7 @@
       {/if}
     </div>
     <p class="font-montserrat text">{dialogs[$currentDialogIndex].text}</p>
-    <div style="width: fit-content;">
+    <div style="width: fit-content;" class="nextButtonContainer" class:canContinue={canContinue}>
       <p class="font-cinzel nextButton">SUIVANT</p>
       <div class="underline"></div>
     </div>
@@ -37,6 +41,14 @@
 
 <style lang="scss">
   @import "../scss/variables.scss";
+
+  .nextButtonContainer {
+    opacity: 0;
+    &.canContinue {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+  }
 
   .dialog {
     background-color: rgba(1,1,1,0.5);
