@@ -9,7 +9,7 @@
 	checkScreen();
 
 	function checkScreen(){
-		if(screen.height > screen.width){
+		if(window.innerHeight > window.innerWidth){
 			mustTurn = true;
 		}else{
 			mustTurn = false;
