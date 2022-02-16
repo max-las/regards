@@ -1,10 +1,8 @@
 <script>
-  import { wait, audioFadeIn, audioFadeOut } from "../lib/helpers";
-  import { currentDialogIndex, musicIntervenante, musicMuseeAmbiance, musicCitation } from "../lib/stores";
+  import { wait } from "../lib/helpers";
+  import { currentDialogIndex, currentMusics } from "../lib/stores";
 
-  audioFadeOut($musicIntervenante);
-  audioFadeOut($musicMuseeAmbiance);
-  audioFadeIn($musicCitation);
+  $currentMusics = ["musicCitation"];
 
   let text = "“ La richesse d’une œuvre d’art est aussi un ensemble d’interprétations variées, à travers différents . . . „";
   let arrText = text.split("");
@@ -30,7 +28,6 @@
       spans[i].style.opacity = 1;
     }
     await wait(2000);
-    audioFadeOut($musicCitation);
     $currentDialogIndex = 0;
   }
 </script>

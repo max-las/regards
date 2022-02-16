@@ -31,12 +31,6 @@ export const iOS = () => {
   || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 }
 
-export const pauseAllMusic = () => {
-  for (const audio of document.querySelectorAll("audio")) {
-    audio.pause();
-  }
-}
-
 export const audioFadeIn = (audio) => {
   if(audio){
     audio.volume = 0;

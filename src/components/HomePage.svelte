@@ -1,16 +1,10 @@
 <script>
-  import { isAdventure, isCredits, musicMenu, menuClick, musicMuseeExt, musicMuseeExtAmbiance } from "../lib/stores";
-  import { audioFadeIn, audioFadeOut } from "../lib/helpers";
+  import { isAdventure, isCredits, soundEffects, currentMusics } from "../lib/stores";
 
-  $: {
-    audioFadeIn($musicMenu);
-  }
+  $currentMusics = ["musicMenu"];
 
   function handleStart(){
-    $menuClick?.play();
-    audioFadeOut($musicMenu);
-    audioFadeIn($musicMuseeExt);
-    audioFadeIn($musicMuseeExtAmbiance);
+    $soundEffects.menuClick?.play();
     $isAdventure = true;
   }
 </script>

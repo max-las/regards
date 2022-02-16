@@ -3,8 +3,8 @@
 	import pictures from '../data/pictures.json';
 	import dialogs from '../data/dialogs.json';
 	import coordinates from '../data/coordinates.json'
-	import { currentDialogIndex, musicMuseeExtAmbiance, musicMuseeExt, musicMuseeAmbiance, musicLeo, musicAndre, musicCamille, musicIntervenante } from "../lib/stores.js";
-	import { wait, dialogIndexToBgpos, pauseAllMusic, audioFadeIn, audioFadeOut } from "../lib/helpers.js";
+	import { currentDialogIndex, currentMusics } from "../lib/stores.js";
+	import { wait, dialogIndexToBgpos } from "../lib/helpers.js";
 
 	let mainPictureBg;
 	let nextPictureSafe = pictures[dialogs[$currentDialogIndex+1].picture];
@@ -21,45 +21,24 @@
 			pictureTransition();
 		}
 
-		switch($currentDialogIndex){
-			case 3:
-				audioFadeOut($musicMuseeExtAmbiance);
-				audioFadeIn($musicMuseeAmbiance);
-				break;
-			case 10:
-				audioFadeOut($musicMuseeExt);
-				audioFadeOut($musicMuseeAmbiance);
-				audioFadeIn($musicLeo);
-				break;
-			case 25:
-				audioFadeIn($musicMuseeExt);
-				audioFadeIn($musicMuseeAmbiance);
-				audioFadeOut($musicLeo);
-				break;
-			case 28:
-				audioFadeOut($musicMuseeExt);
-				audioFadeOut($musicMuseeAmbiance);
-				audioFadeIn($musicAndre);
-				break;
-			case 41:
-				audioFadeIn($musicMuseeExt);
-				audioFadeIn($musicMuseeAmbiance);
-				audioFadeOut($musicAndre);
-				break;
-			case 44:
-				audioFadeOut($musicMuseeExt);
-				audioFadeOut($musicMuseeAmbiance);
-				audioFadeIn($musicCamille);
-				break;
-			case 63:
-				audioFadeIn($musicMuseeExt);
-				audioFadeIn($musicMuseeAmbiance);
-				audioFadeOut($musicCamille);
-				break;
-			case 67:
-				audioFadeOut($musicMuseeExt);
-				audioFadeIn($musicIntervenante);
-				break;
+		if($currentDialogIndex >= 0 && $currentDialogIndex < 3){
+			$currentMusics = ["musicMuseeExt", "musicMuseeExtAmbiance"];
+		} else if($currentDialogIndex >= 3 && $currentDialogIndex < 10) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 10 && $currentDialogIndex < 25) {
+			$currentMusics = ["musicLeo"];
+		} else if($currentDialogIndex >= 25 && $currentDialogIndex < 28) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 28 && $currentDialogIndex < 41) {
+			$currentMusics = ["musicAndre"];
+		} else if($currentDialogIndex >= 41 && $currentDialogIndex < 44) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 44 && $currentDialogIndex < 63) {
+			$currentMusics = ["musicCamille"];
+		} else if($currentDialogIndex >= 63 && $currentDialogIndex < 67) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 67) {
+			$currentMusics = ["musicIntervenante", "musicMuseeAmbiance"];
 		}
 	}
 
