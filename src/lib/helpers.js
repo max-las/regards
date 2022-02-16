@@ -34,7 +34,6 @@ export const iOS = () => {
 export const audioFadeIn = (audio) => {
   if(audio){
     audio.volume = 0;
-    audio.loop = true;
     audio.play();
     let interval = setInterval(function(){
       let newVolume = audio.volume + 0.1;
@@ -64,7 +63,6 @@ export const audioFadeOut = (audio) => {
         newVolume = 0;
         clearInterval(interval);
         audio.pause();
-        audio.loop = false;
       }
       audio.volume = newVolume;
     }, 300);

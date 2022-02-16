@@ -30,10 +30,9 @@
 
 	let audiosReady = false;
 
-	let i;
 	$: {
 		const entries = Object.entries(audios);
-
+		let i;
 		for (i = 0; i < entries.length; i++) {
 			if(!entries[i][1]){
 				break;
@@ -81,31 +80,31 @@
 	<source src="/audio/1_-_Menu_-_click_(touche_clavier).mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicMenu}>
+<audio loop bind:this={audios.musicMenu}>
 	<source src="/audio/1_-_Menu_-_musique.mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicMuseeExtAmbiance}>
+<audio loop bind:this={audios.musicMuseeExtAmbiance}>
 	<source src="/audio/2_-_Musee_exterieur_-_ambiance_de_fond.mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicMuseeExt}>
+<audio loop bind:this={audios.musicMuseeExt}>
 	<source src="/audio/2_-_Musee_exterieur_-_musique.mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicMuseeAmbiance}>
+<audio loop bind:this={audios.musicMuseeAmbiance}>
 	<source src="/audio/3_-_Musee_-_ambiance_de_fond.mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicAndre}>
+<audio loop bind:this={audios.musicAndre}>
 	<source src="/audio/3_-_Musee_-_andre.mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicCamille}>
+<audio loop bind:this={audios.musicCamille}>
 	<source src="/audio/3_-_Musee_-_camille.mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicLeo}>
+<audio loop bind:this={audios.musicLeo}>
 	<source src="/audio/3_-_Musee_-_leo.mp3" type="audio/mpeg">
 </audio>
 
@@ -113,7 +112,7 @@
 	<source src="/audio/4_-_Fin_-_citation_-_musique.mp3" type="audio/mpeg">
 </audio>
 
-<audio bind:this={audios.musicIntervenante}>
+<audio loop bind:this={audios.musicIntervenante}>
 	<source src="/audio/4_-_Fin_-_sequence_intervenante_-_musique.mp3" type="audio/mpeg">
 </audio>
 

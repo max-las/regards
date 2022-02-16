@@ -428,7 +428,7 @@ var app = (function () {
         $inject_state() { }
     }
 
-    var dialogs = [{character:"",text:"Un beau matin de printemps s’annonce à Bordeaux. Au musée des beaux-arts, trois frères et sœurs visitent l’aile sud.",picture:"museum_inside"},{character:"",text:"Voici Léo, André et Camille…",picture:"children"},{character:"",text:"Alors qu'ils déambulent dans le musée, un tableau retient leur attention...",picture:"children"},{character:"",text:" Face à eux, accroché en hauteur, un tableau d’une taille imposante se dresse...",picture:"framed"},{character:"",text:"Un sentiment très particulier les parcourt alors...",picture:"children"},{character:"",text:"À ce moment précis, une chose est sûre, cette peinture à su retenir leurs regards...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Ils se regardent tous comme s'ils discutaient entre eux.",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> L’homme avec une grande barbe grise semble cacher quelque chose...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, j’ai l'impression que…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Barbegrisebandeau"},{character:"Barbegrisebandeau",text:"« Je sais que c’est vous ! Je vous ai vu ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Hommeorange",text:"« Comment osez-vous ?! »",picture:"christ",zoom:"Hommeorange"},{character:"Jesus",text:"« Mes frères, celui qui a volé doit se dénoncer ! »",picture:"christ"},{character:"Jesus",text:"« Le bien de cette dame doit lui être rendu ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"Hommeorange"},{character:"Hommeorange",text:"« Très bien, j’avoue, je l’ai vu lui voler sa bourse ! C’est lui le fourbe ! »",picture:"christ",zoom:"Hommeorange"},{character:"Barbegrisebandeau",text:"« Comment osez-vous ? On peut deviner le voleur d’un regard ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Jesus",text:"« Mais comment savez-vous que c’est une bourse qui a été volée ? »",picture:"christ",zoom:"Jesus"},{character:"Hommeorange",text:"« Euuuh et bien… »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"",text:"",picture:"christ",click:"MaindelHommeOrange"},{character:"",text:"",picture:"christ",zoom:"MaindelHommeOrange",click:"MaindelHommeOrangeZoom"},{character:"Jesus",text:"« Ah ah ! Pris la main dans le sac ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Oooh merci ! Je suis heureuse que vous ayez retrouvé le voleur ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Ppfffffft n’importe quoi ton histoire !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Regarde plutôt l’homme au fond. Il paraît louche.",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Pour moi l’histoire de ce tableau, c’est clairement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"HommeDuFond"},{character:"HommeDuFond",text:"« Cet homme avec une arme prépare un mauvais coup. »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« Je pense qu’il s'apprête à tuer ! »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« La commère du village derrière en saura forcément plus. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"",picture:"christ",click:"Dameauxperles"},{character:"Dameauxperles",text:"« Oui, je sais tout. C’est sûr ! Il veut tuer la femme, regarde le, avec son air coupable. »",picture:"christ",zoom:"Dameauxperles"},{character:"Dameauxperles",text:"« Il faut prévenir les gardes. »",picture:"christ",zoom:"Dameauxperles"},{character:"",text:"",picture:"christ",click:"Garde"},{character:"Garde",text:"« Ne vous inquiétez pas madame, je ne laisserai personne mourir ! »",picture:"christ",zoom:"Garde"},{character:"Garde",text:"« Halte-là ! Vous ne ferez de mal à personne aujourd'hui. »",picture:"christ"},{character:"Femmevoilerose",text:"« Lâchez-moi garde ! Je suis innocent ! Cette femme est une voleuse. Elle ne m’a jamais remboursée ! »",picture:"christ",zoom:"Femmevoilerose"},{character:"Garde",text:"« Silence malotru ! Je vais te jeter au cachot ! Il ne pourra plus vous faire de mal madame. »",picture:"christ",zoom:"Garde"},{character:"FemmeDenudée",text:"« Me voilà soulagée ! Merci garde ! »",picture:"christ",zoom:"FemmeDenudéeTop"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Et heureusement, elle est sauvée et n’a plus de dettes.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Mais non, gros bêta, ils sont en train de débattre pour construire un village.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Donc ce qu’il se passe réellement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Hommeauchapeau"},{character:"Hommeauchapeau",text:"« Ecoutez-moi ! Nous devons nous décider avant ce soir ! »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Oui, grand chef du village, si nous ne trouvons pas où dormir, cela pourrait être dangereux ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Quelqu’un à une idée ? »",picture:"christ",zoom:"Hommeauchapeau"},{character:"",text:"",picture:"christ",click:"Barbegriseprofil"},{character:"Barbegriseprofil",text:"« Si on construit ma grange, elle sera assez grande pour que nous puissions tous dormir dedans, ce sera rapide ! »",picture:"christ",zoom:"Barbegriseprofil"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« N’oubliez pas le prisonnier, il nous faut une prison. »",picture:"christ",zoom:"GardeCenter"},{character:"",text:"",picture:"christ",click:"HommeLouche"},{character:"HommeLouche",text:"« Excusez-moi, mais nous devons construire des chambres séparées. »",picture:"christ",zoom:"HommeLouche"},{character:"FemmeLouche",text:"« Et je ne supporte pas la paille. On mourra de froid aussi dans une prison. »",picture:"christ",zoom:"FemmeLouche"},{character:"FemmeDenudée",text:"« Il faut qu’une personne neutre tranche. »",picture:"christ",zoom:"FemmeDenudée"},{character:"HommeDuFond",text:"« Puis-je aider ? »",picture:"christ",zoom:"HommeDuFond"},{character:"Hommeauchapeau",text:"« Euh, pourquoi pas... Donnons la parole au plus reclu de notre groupe. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Alors, que le prisonnier décide. »",picture:"christ",zoom:"FemmeDenudée"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« Il en est hors de question ! »",picture:"christ",zoom:"GardeCenter"},{character:"Hommeauchapeau",text:"« Il nous faut un regard extérieur, il est donc le mieux placé. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"HommeDuFond",text:"« Hé bien, je pense qu'avec le temps dont nous disposons, dormir dans la paille d’une grange est la meilleure solution. »",picture:"christ",zoom:"HommeDuFond"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Et ils purent dormir tous au chaud !",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, je préfère mon histoire, elle était plus simple !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Oui, elle était sympa mais moi elle était plus sérieuse.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",picture:"Intervenante"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",picture:"framed"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",picture:"framed"}];
+    var dialogs = [{character:"",text:"Un beau matin de printemps s’annonce à Bordeaux. Au musée des beaux-arts, trois frères et sœurs visitent l’aile sud.",picture:"museum_outside"},{character:"",text:"Voici Léo, André et Camille…",picture:"children"},{character:"",text:"Alors qu'ils déambulent dans le musée, un tableau retient leur attention...",picture:"children"},{character:"",text:" Face à eux, accroché en hauteur, un tableau d’une taille imposante se dresse...",picture:"framed"},{character:"",text:"Un sentiment très particulier les parcourt alors...",picture:"children"},{character:"",text:"À ce moment précis, une chose est sûre, cette peinture à su retenir leurs regards...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Ils se regardent tous comme s'ils discutaient entre eux.",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> L’homme avec une grande barbe grise semble cacher quelque chose...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, j’ai l'impression que…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Barbegrisebandeau"},{character:"Barbegrisebandeau",text:"« Je sais que c’est vous ! Je vous ai vu ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Hommeorange",text:"« Comment osez-vous ?! »",picture:"christ",zoom:"Hommeorange"},{character:"Jesus",text:"« Mes frères, celui qui a volé doit se dénoncer ! »",picture:"christ"},{character:"Jesus",text:"« Le bien de cette dame doit lui être rendu ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"Hommeorange"},{character:"Hommeorange",text:"« Très bien, j’avoue, je l’ai vu lui voler sa bourse ! C’est lui le fourbe ! »",picture:"christ",zoom:"Hommeorange"},{character:"Barbegrisebandeau",text:"« Comment osez-vous ? On peut deviner le voleur d’un regard ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Jesus",text:"« Mais comment savez-vous que c’est une bourse qui a été volée ? »",picture:"christ",zoom:"Jesus"},{character:"Hommeorange",text:"« Euuuh et bien… »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"",text:"",picture:"christ",click:"MaindelHommeOrange"},{character:"",text:"",picture:"christ",zoom:"MaindelHommeOrange",click:"MaindelHommeOrangeZoom"},{character:"Jesus",text:"« Ah ah ! Pris la main dans le sac ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Oooh merci ! Je suis heureuse que vous ayez retrouvé le voleur ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Ppfffffft n’importe quoi ton histoire !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Regarde plutôt l’homme au fond. Il paraît louche.",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Pour moi l’histoire de ce tableau, c’est clairement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"HommeDuFond"},{character:"HommeDuFond",text:"« Cet homme avec une arme prépare un mauvais coup. »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« Je pense qu’il s'apprête à tuer ! »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« La commère du village derrière en saura forcément plus. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"",picture:"christ",click:"Dameauxperles"},{character:"Dameauxperles",text:"« Oui, je sais tout. C’est sûr ! Il veut tuer la femme, regarde le, avec son air coupable. »",picture:"christ",zoom:"Dameauxperles"},{character:"Dameauxperles",text:"« Il faut prévenir les gardes. »",picture:"christ",zoom:"Dameauxperles"},{character:"",text:"",picture:"christ",click:"Garde"},{character:"Garde",text:"« Ne vous inquiétez pas madame, je ne laisserai personne mourir ! »",picture:"christ",zoom:"Garde"},{character:"Garde",text:"« Halte-là ! Vous ne ferez de mal à personne aujourd'hui. »",picture:"christ"},{character:"Femmevoilerose",text:"« Lâchez-moi garde ! Je suis innocent ! Cette femme est une voleuse. Elle ne m’a jamais remboursée ! »",picture:"christ",zoom:"Femmevoilerose"},{character:"Garde",text:"« Silence malotru ! Je vais te jeter au cachot ! Il ne pourra plus vous faire de mal madame. »",picture:"christ",zoom:"Garde"},{character:"FemmeDenudée",text:"« Me voilà soulagée ! Merci garde ! »",picture:"christ",zoom:"FemmeDenudéeTop"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Et heureusement, elle est sauvée et n’a plus de dettes.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Mais non, gros bêta, ils sont en train de débattre pour construire un village.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Donc ce qu’il se passe réellement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Hommeauchapeau"},{character:"Hommeauchapeau",text:"« Ecoutez-moi ! Nous devons nous décider avant ce soir ! »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Oui, grand chef du village, si nous ne trouvons pas où dormir, cela pourrait être dangereux ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Quelqu’un à une idée ? »",picture:"christ",zoom:"Hommeauchapeau"},{character:"",text:"",picture:"christ",click:"Barbegriseprofil"},{character:"Barbegriseprofil",text:"« Si on construit ma grange, elle sera assez grande pour que nous puissions tous dormir dedans, ce sera rapide ! »",picture:"christ",zoom:"Barbegriseprofil"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« N’oubliez pas le prisonnier, il nous faut une prison. »",picture:"christ",zoom:"GardeCenter"},{character:"",text:"",picture:"christ",click:"HommeLouche"},{character:"HommeLouche",text:"« Excusez-moi, mais nous devons construire des chambres séparées. »",picture:"christ",zoom:"HommeLouche"},{character:"FemmeLouche",text:"« Et je ne supporte pas la paille. On mourra de froid aussi dans une prison. »",picture:"christ",zoom:"FemmeLouche"},{character:"FemmeDenudée",text:"« Il faut qu’une personne neutre tranche. »",picture:"christ",zoom:"FemmeDenudée"},{character:"HommeDuFond",text:"« Puis-je aider ? »",picture:"christ",zoom:"HommeDuFond"},{character:"Hommeauchapeau",text:"« Euh, pourquoi pas... Donnons la parole au plus reclu de notre groupe. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Alors, que le prisonnier décide. »",picture:"christ",zoom:"FemmeDenudée"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« Il en est hors de question ! »",picture:"christ",zoom:"GardeCenter"},{character:"Hommeauchapeau",text:"« Il nous faut un regard extérieur, il est donc le mieux placé. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"HommeDuFond",text:"« Hé bien, je pense qu'avec le temps dont nous disposons, dormir dans la paille d’une grange est la meilleure solution. »",picture:"christ",zoom:"HommeDuFond"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Et ils purent dormir tous au chaud !",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, je préfère mon histoire, elle était plus simple !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Oui, elle était sympa mais moi elle était plus sérieuse.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",picture:"Intervenante"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",picture:"framed"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",picture:"framed"}];
 
     var Leo={icon:"Leo.png",size:"normal"};var Camille={icon:"Camille.png",size:"normal"};var Barbegrisebandeau$1={icon:"Barbegrisebandeau.png",size:"small"};var Barbegriseprofil$1={icon:"barbegriseprofil.png",size:"small"};var Dameauxperles$1={icon:"Dameauxperles.png",size:"small"};var FemmeLouche$1={icon:"FemmeLouche.png",size:"small"};var Femmevoilerose$1={icon:"Femmevoilerose.png",size:"small"};var Garde$1={icon:"garde.png",size:"small"};var Hommeauchapeau$1={icon:"Hommeauchapeau.png",size:"small"};var HommeDuFond$1={icon:"HommeDuFond.png",size:"small"};var HommeLouche$1={icon:"HommeLouche.png",size:"small"};var Hommeorange$1={icon:"Hommeorange.png",size:"small"};var Hommeturbanfond={icon:"Hommeturbanfond.png",size:"small"};var Jesus$1={icon:"Jesus.png",size:"small"};var Intervenante$1={icon:"Intervenante_fondue.png",size:"normal"};var characters = {Leo:Leo,"André":{icon:"Andre.png",size:"normal"},Camille:Camille,Barbegrisebandeau:Barbegrisebandeau$1,Barbegriseprofil:Barbegriseprofil$1,Dameauxperles:Dameauxperles$1,"FemmeDenudée":{icon:"FemmeDenudée.png",size:"small"},FemmeLouche:FemmeLouche$1,Femmevoilerose:Femmevoilerose$1,Garde:Garde$1,Hommeauchapeau:Hommeauchapeau$1,HommeDuFond:HommeDuFond$1,HommeLouche:HommeLouche$1,Hommeorange:Hommeorange$1,Hommeturbanfond:Hommeturbanfond,Jesus:Jesus$1,Intervenante:Intervenante$1};
 
@@ -749,7 +749,7 @@ var app = (function () {
     	}
     }
 
-    var museum_inside="museum_inside.jpg";var children="Enfants_2.png";var framed="framed.png";var christ="christ.png";var Intervenante="Intervenante.png";var pictures = {museum_inside:museum_inside,children:children,framed:framed,christ:christ,Intervenante:Intervenante};
+    var museum_outside="museum_outside.jpg";var children="Enfants_2.png";var framed="framed.png";var christ="christ.png";var Intervenante="Intervenante.png";var pictures = {museum_outside:museum_outside,children:children,framed:framed,christ:christ,Intervenante:Intervenante};
 
     var Barbegrisebandeau={x:23.59,y:55,w:12.32,h:31.25,transform:"scale(3) translate(21vw, 10vw)"};var Hommeorange={x:10.59,y:45,w:18.32,h:35.25,transform:"scale(3) translate(30vw, 6vw)"};var Jesus={transform:"scale(3) translate(6vw, 10vw)"};var MaindelHommeOrange={x:24.25,y:27,w:12.32,h:23.25,transform:"scale(3) translate(20vw, -5vw)"};var MaindelHommeOrangeZoom={x:39.25,y:23,w:25.32,h:34.25};var HommeDuFond={x:63.25,y:77,w:12.32,h:23.25,transform:"scale(5) translate(-19vw, 35vh)"};var HommeDuFondCenter={transform:"scale(5) translate(-19vw, 35vh)"};var Dameauxperles={x:58,y:65,w:11.32,h:23.25,transform:"scale(4) translate(-14vw, 23vh)"};var Garde={x:82.25,y:49,w:10.32,h:24.25,transform:"scale(3) translate(-31vw, 6vw)"};var Femmevoilerose={transform:"scale(4) translate(-22vw, 20vh)"};var Hommeauchapeau={x:61.25,y:54,w:11.32,h:27.25,transform:"scale(3) translate(-17vw, 7vw)"};var Barbegriseprofil={x:0.25,y:54,w:12.32,h:29.25,transform:"scale(3) translate(32vw, 8vw)"};var GardeCenter={x:82.25,y:62,w:11.32,h:27.25,transform:"scale(3) translate(-30vw, 12vw)"};var HommeLouche={x:48.25,y:59,w:9.32,h:24.25,transform:"scale(3) translate(-3vw, 8vw)"};var FemmeLouche={transform:"scale(3) translate(-8vw, 8vw)"};var coordinates = {Barbegrisebandeau:Barbegrisebandeau,Hommeorange:Hommeorange,Jesus:Jesus,MaindelHommeOrange:MaindelHommeOrange,MaindelHommeOrangeZoom:MaindelHommeOrangeZoom,"FemmeDenudée":{x:72.25,y:27,w:24.32,h:55.25,transform:"scale(3) translate(-27vw, 7vw)"},HommeDuFond:HommeDuFond,HommeDuFondCenter:HommeDuFondCenter,Dameauxperles:Dameauxperles,Garde:Garde,Femmevoilerose:Femmevoilerose,"FemmeDenudéeTop":{transform:"scale(3) translate(-27vw, 0vh)"},Hommeauchapeau:Hommeauchapeau,Barbegriseprofil:Barbegriseprofil,GardeCenter:GardeCenter,HommeLouche:HommeLouche,FemmeLouche:FemmeLouche};
 
@@ -783,7 +783,6 @@ var app = (function () {
     const audioFadeIn = (audio) => {
       if(audio){
         audio.volume = 0;
-        audio.loop = true;
         audio.play();
         let interval = setInterval(function(){
           let newVolume = audio.volume + 0.1;
@@ -813,7 +812,6 @@ var app = (function () {
             newVolume = 0;
             clearInterval(interval);
             audio.pause();
-            audio.loop = false;
           }
           audio.volume = newVolume;
         }, 300);
@@ -2239,7 +2237,7 @@ var app = (function () {
     const { Object: Object_1, window: window_1 } = globals;
     const file = "src/App.svelte";
 
-    // (134:2) {:else}
+    // (133:2) {:else}
     function create_else_block_1(ctx) {
     	let confirmmusic;
     	let current;
@@ -2272,14 +2270,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(134:2) {:else}",
+    		source: "(133:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (124:2) {#if $confirmedMusic}
+    // (123:2) {#if $confirmedMusic}
     function create_if_block_1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -2350,14 +2348,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(124:2) {#if $confirmedMusic}",
+    		source: "(123:2) {#if $confirmedMusic}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (121:1) {#if mustTurn}
+    // (120:1) {#if mustTurn}
     function create_if_block(ctx) {
     	let pleaseturn;
     	let current;
@@ -2390,14 +2388,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(121:1) {#if mustTurn}",
+    		source: "(120:1) {#if mustTurn}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (131:3) {:else}
+    // (130:3) {:else}
     function create_else_block(ctx) {
     	let homepage;
     	let current;
@@ -2429,14 +2427,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(131:3) {:else}",
+    		source: "(130:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (129:55) 
+    // (128:55) 
     function create_if_block_4(ctx) {
     	let final;
     	let current;
@@ -2468,14 +2466,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(129:55) ",
+    		source: "(128:55) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (127:24) 
+    // (126:24) 
     function create_if_block_3(ctx) {
     	let credits;
     	let current;
@@ -2507,14 +2505,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(127:24) ",
+    		source: "(126:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (125:3) {#if $isAdventure}
+    // (124:3) {#if $isAdventure}
     function create_if_block_2(ctx) {
     	let adventure;
     	let current;
@@ -2546,7 +2544,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(125:3) {#if $isAdventure}",
+    		source: "(124:3) {#if $isAdventure}",
     		ctx
     	});
 
@@ -2648,46 +2646,54 @@ var app = (function () {
     			if_block.c();
     			if (!src_url_equal(source0.src, source0_src_value = "/audio/1_-_Menu_-_click_(touche_clavier).mp3")) attr_dev(source0, "src", source0_src_value);
     			attr_dev(source0, "type", "audio/mpeg");
-    			add_location(source0, file, 80, 1, 1678);
-    			add_location(audio0, file, 79, 0, 1633);
+    			add_location(source0, file, 79, 1, 1678);
+    			add_location(audio0, file, 78, 0, 1633);
     			if (!src_url_equal(source1.src, source1_src_value = "/audio/1_-_Menu_-_musique.mp3")) attr_dev(source1, "src", source1_src_value);
     			attr_dev(source1, "type", "audio/mpeg");
-    			add_location(source1, file, 84, 1, 1804);
-    			add_location(audio1, file, 83, 0, 1766);
+    			add_location(source1, file, 83, 1, 1809);
+    			audio1.loop = true;
+    			add_location(audio1, file, 82, 0, 1766);
     			if (!src_url_equal(source2.src, source2_src_value = "/audio/2_-_Musee_exterieur_-_ambiance_de_fond.mp3")) attr_dev(source2, "src", source2_src_value);
     			attr_dev(source2, "type", "audio/mpeg");
-    			add_location(source2, file, 88, 1, 1927);
-    			add_location(audio2, file, 87, 0, 1877);
+    			add_location(source2, file, 87, 1, 1937);
+    			audio2.loop = true;
+    			add_location(audio2, file, 86, 0, 1882);
     			if (!src_url_equal(source3.src, source3_src_value = "/audio/2_-_Musee_exterieur_-_musique.mp3")) attr_dev(source3, "src", source3_src_value);
     			attr_dev(source3, "type", "audio/mpeg");
-    			add_location(source3, file, 92, 1, 2062);
-    			add_location(audio3, file, 91, 0, 2020);
+    			add_location(source3, file, 91, 1, 2077);
+    			audio3.loop = true;
+    			add_location(audio3, file, 90, 0, 2030);
     			if (!src_url_equal(source4.src, source4_src_value = "/audio/3_-_Musee_-_ambiance_de_fond.mp3")) attr_dev(source4, "src", source4_src_value);
     			attr_dev(source4, "type", "audio/mpeg");
-    			add_location(source4, file, 96, 1, 2193);
-    			add_location(audio4, file, 95, 0, 2146);
+    			add_location(source4, file, 95, 1, 2213);
+    			audio4.loop = true;
+    			add_location(audio4, file, 94, 0, 2161);
     			if (!src_url_equal(source5.src, source5_src_value = "/audio/3_-_Musee_-_andre.mp3")) attr_dev(source5, "src", source5_src_value);
     			attr_dev(source5, "type", "audio/mpeg");
-    			add_location(source5, file, 100, 1, 2315);
-    			add_location(audio5, file, 99, 0, 2276);
+    			add_location(source5, file, 99, 1, 2340);
+    			audio5.loop = true;
+    			add_location(audio5, file, 98, 0, 2296);
     			if (!src_url_equal(source6.src, source6_src_value = "/audio/3_-_Musee_-_camille.mp3")) attr_dev(source6, "src", source6_src_value);
     			attr_dev(source6, "type", "audio/mpeg");
-    			add_location(source6, file, 104, 1, 2428);
-    			add_location(audio6, file, 103, 0, 2387);
+    			add_location(source6, file, 103, 1, 2458);
+    			audio6.loop = true;
+    			add_location(audio6, file, 102, 0, 2412);
     			if (!src_url_equal(source7.src, source7_src_value = "/audio/3_-_Musee_-_leo.mp3")) attr_dev(source7, "src", source7_src_value);
     			attr_dev(source7, "type", "audio/mpeg");
-    			add_location(source7, file, 108, 1, 2539);
-    			add_location(audio7, file, 107, 0, 2502);
+    			add_location(source7, file, 107, 1, 2574);
+    			audio7.loop = true;
+    			add_location(audio7, file, 106, 0, 2532);
     			if (!src_url_equal(source8.src, source8_src_value = "/audio/4_-_Fin_-_citation_-_musique.mp3")) attr_dev(source8, "src", source8_src_value);
     			attr_dev(source8, "type", "audio/mpeg");
-    			add_location(source8, file, 112, 1, 2651);
-    			add_location(audio8, file, 111, 0, 2609);
+    			add_location(source8, file, 111, 1, 2686);
+    			add_location(audio8, file, 110, 0, 2644);
     			if (!src_url_equal(source9.src, source9_src_value = "/audio/4_-_Fin_-_sequence_intervenante_-_musique.mp3")) attr_dev(source9, "src", source9_src_value);
     			attr_dev(source9, "type", "audio/mpeg");
-    			add_location(source9, file, 116, 1, 2780);
-    			add_location(audio9, file, 115, 0, 2734);
+    			add_location(source9, file, 115, 1, 2820);
+    			audio9.loop = true;
+    			add_location(audio9, file, 114, 0, 2769);
     			attr_dev(main, "class", "svelte-17503q8");
-    			add_location(main, file, 119, 0, 2876);
+    			add_location(main, file, 118, 0, 2916);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2695,43 +2701,43 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, audio0, anchor);
     			append_dev(audio0, source0);
-    			/*audio0_binding*/ ctx[11](audio0);
+    			/*audio0_binding*/ ctx[10](audio0);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, audio1, anchor);
     			append_dev(audio1, source1);
-    			/*audio1_binding*/ ctx[12](audio1);
+    			/*audio1_binding*/ ctx[11](audio1);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, audio2, anchor);
     			append_dev(audio2, source2);
-    			/*audio2_binding*/ ctx[13](audio2);
+    			/*audio2_binding*/ ctx[12](audio2);
     			insert_dev(target, t2, anchor);
     			insert_dev(target, audio3, anchor);
     			append_dev(audio3, source3);
-    			/*audio3_binding*/ ctx[14](audio3);
+    			/*audio3_binding*/ ctx[13](audio3);
     			insert_dev(target, t3, anchor);
     			insert_dev(target, audio4, anchor);
     			append_dev(audio4, source4);
-    			/*audio4_binding*/ ctx[15](audio4);
+    			/*audio4_binding*/ ctx[14](audio4);
     			insert_dev(target, t4, anchor);
     			insert_dev(target, audio5, anchor);
     			append_dev(audio5, source5);
-    			/*audio5_binding*/ ctx[16](audio5);
+    			/*audio5_binding*/ ctx[15](audio5);
     			insert_dev(target, t5, anchor);
     			insert_dev(target, audio6, anchor);
     			append_dev(audio6, source6);
-    			/*audio6_binding*/ ctx[17](audio6);
+    			/*audio6_binding*/ ctx[16](audio6);
     			insert_dev(target, t6, anchor);
     			insert_dev(target, audio7, anchor);
     			append_dev(audio7, source7);
-    			/*audio7_binding*/ ctx[18](audio7);
+    			/*audio7_binding*/ ctx[17](audio7);
     			insert_dev(target, t7, anchor);
     			insert_dev(target, audio8, anchor);
     			append_dev(audio8, source8);
-    			/*audio8_binding*/ ctx[19](audio8);
+    			/*audio8_binding*/ ctx[18](audio8);
     			insert_dev(target, t8, anchor);
     			insert_dev(target, audio9, anchor);
     			append_dev(audio9, source9);
-    			/*audio9_binding*/ ctx[20](audio9);
+    			/*audio9_binding*/ ctx[19](audio9);
     			insert_dev(target, t9, anchor);
     			insert_dev(target, main, anchor);
     			if_blocks[current_block_type_index].m(main, null);
@@ -2780,34 +2786,34 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(audio0);
-    			/*audio0_binding*/ ctx[11](null);
+    			/*audio0_binding*/ ctx[10](null);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(audio1);
-    			/*audio1_binding*/ ctx[12](null);
+    			/*audio1_binding*/ ctx[11](null);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(audio2);
-    			/*audio2_binding*/ ctx[13](null);
+    			/*audio2_binding*/ ctx[12](null);
     			if (detaching) detach_dev(t2);
     			if (detaching) detach_dev(audio3);
-    			/*audio3_binding*/ ctx[14](null);
+    			/*audio3_binding*/ ctx[13](null);
     			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(audio4);
-    			/*audio4_binding*/ ctx[15](null);
+    			/*audio4_binding*/ ctx[14](null);
     			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(audio5);
-    			/*audio5_binding*/ ctx[16](null);
+    			/*audio5_binding*/ ctx[15](null);
     			if (detaching) detach_dev(t5);
     			if (detaching) detach_dev(audio6);
-    			/*audio6_binding*/ ctx[17](null);
+    			/*audio6_binding*/ ctx[16](null);
     			if (detaching) detach_dev(t6);
     			if (detaching) detach_dev(audio7);
-    			/*audio7_binding*/ ctx[18](null);
+    			/*audio7_binding*/ ctx[17](null);
     			if (detaching) detach_dev(t7);
     			if (detaching) detach_dev(audio8);
-    			/*audio8_binding*/ ctx[19](null);
+    			/*audio8_binding*/ ctx[18](null);
     			if (detaching) detach_dev(t8);
     			if (detaching) detach_dev(audio9);
-    			/*audio9_binding*/ ctx[20](null);
+    			/*audio9_binding*/ ctx[19](null);
     			if (detaching) detach_dev(t9);
     			if (detaching) detach_dev(main);
     			if_blocks[current_block_type_index].d();
@@ -2835,7 +2841,7 @@ var app = (function () {
     	let $isCredits;
     	let $currentDialogIndex;
     	validate_store(currentMusics, 'currentMusics');
-    	component_subscribe($$self, currentMusics, $$value => $$invalidate(10, $currentMusics = $$value));
+    	component_subscribe($$self, currentMusics, $$value => $$invalidate(9, $currentMusics = $$value));
     	validate_store(soundEffects, 'soundEffects');
     	component_subscribe($$self, soundEffects, $$value => $$invalidate(2, $soundEffects = $$value));
     	validate_store(confirmedMusic, 'confirmedMusic');
@@ -2862,7 +2868,6 @@ var app = (function () {
     	};
 
     	let audiosReady = false;
-    	let i;
     	let mustTurn;
     	checkScreen();
 
@@ -2971,7 +2976,6 @@ var app = (function () {
     		dialogs,
     		audios,
     		audiosReady,
-    		i,
     		mustTurn,
     		checkScreen,
     		$currentMusics,
@@ -2985,7 +2989,6 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('audios' in $$props) $$invalidate(0, audios = $$props.audios);
     		if ('audiosReady' in $$props) $$invalidate(8, audiosReady = $$props.audiosReady);
-    		if ('i' in $$props) $$invalidate(9, i = $$props.i);
     		if ('mustTurn' in $$props) $$invalidate(1, mustTurn = $$props.mustTurn);
     	};
 
@@ -2994,11 +2997,12 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*audios, i*/ 513) {
+    		if ($$self.$$.dirty & /*audios*/ 1) {
     			{
     				const entries = Object.entries(audios);
+    				let i;
 
-    				for ($$invalidate(9, i = 0); i < entries.length; $$invalidate(9, i++, i)) {
+    				for (i = 0; i < entries.length; i++) {
     					if (!entries[i][1]) {
     						break;
     					}
@@ -3010,7 +3014,7 @@ var app = (function () {
     			}
     		}
 
-    		if ($$self.$$.dirty & /*audiosReady, audios, $currentMusics*/ 1281) {
+    		if ($$self.$$.dirty & /*audiosReady, audios, $currentMusics*/ 769) {
     			{
     				if (audiosReady) {
     					for (const [audioName, audio] of Object.entries(audios)) {
@@ -3039,7 +3043,6 @@ var app = (function () {
     		$currentDialogIndex,
     		checkScreen,
     		audiosReady,
-    		i,
     		$currentMusics,
     		audio0_binding,
     		audio1_binding,

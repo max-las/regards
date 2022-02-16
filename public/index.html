@@ -65,11 +65,24 @@
 				"christ.png",
 				"framed.png",
 				"Intervenante.png",
-				"museum_inside.jpg"
+				"museum_outside.jpg"
 			],
 			deco: [
 				"cadre_decors.png",
-				"refresh-ccw.svg"
+				"refresh-ccw.svg",
+				"casque.png",
+			],
+			audio: [
+			 	"1_-_Menu_-_click_(touche_clavier).mp3",
+				"1_-_Menu_-_musique.mp3",
+				"2_-_Musee_exterieur_-_ambiance_de_fond.mp3",
+				"2_-_Musee_exterieur_-_musique.mp3",
+				"3_-_Musee_-_ambiance_de_fond.mp3",
+				"3_-_Musee_-_andre.mp3",
+				"3_-_Musee_-_camille.mp3",
+				"3_-_Musee_-_leo.mp3",
+				"4_-_Fin_-_citation_-_musique.mp3",
+				"4_-_Fin_-_sequence_intervenante_-_musique.mp3",
 			]
 		};
 		let assetsCount = assets.characters.length + assets.pictures.length + assets.deco.length;
@@ -84,6 +97,9 @@
 			}
 			for (const imgFile of assets.deco) {
 				preloadWithProgress(`/img/deco/${imgFile}`);
+			}
+			for (const audioFile of assets.audio) {
+				preloadWithProgress(`/audio/${audioFile}`);
 			}
 		}
 		function preloadWithProgress(url){
