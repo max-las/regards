@@ -68,13 +68,9 @@
 			deco: [
 				"cadre_decors.png",
 				"refresh-ccw.svg"
-			],
-			other: [
-				"/build/bundle.css",
-				"/build/bundle.js"
 			]
 		};
-		let assetsCount = assets.characters.length + assets.pictures.length + assets.other.length + assets.deco.length;
+		let assetsCount = assets.characters.length + assets.pictures.length + assets.deco.length;
 		let assetsLoaded = 0;
 		let percent = 0;
 		function runPreloadProgress(){
