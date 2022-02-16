@@ -95,6 +95,9 @@
 			let xhr = new XMLHttpRequest();
 			let previousLoad = 0;
 			xhr.onprogress = (e) => {
+				if(e.total <= 0){
+					console.log(url);
+				}
 				const newLoad = e.loaded / e.total;
 				assetsLoaded += newLoad - previousLoad;
 				previousLoad = newLoad;

@@ -13,7 +13,10 @@
   <div class="bottom">
     <h1 class="font-cinzel">REGARDS</h1>
     <div class="button">
-      <p class="font-cinzel" on:click={() => {$isAdventure = true;}}>VIVRE L'EXPÉRIENCE</p>
+      <p class="font-cinzel" on:click={() => {
+        document.body.requestFullscreen();
+        $isAdventure = true;
+      }}>VIVRE L'EXPÉRIENCE</p>
       <div class="underline"></div>
     </div>
   </div>
