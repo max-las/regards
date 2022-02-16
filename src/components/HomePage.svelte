@@ -1,5 +1,13 @@
 <script>
   import { isAdventure, isCredits } from "../lib/stores";
+  import { iOS } from "../lib/helpers";
+
+  function handleStart(){
+    if(!iOS()){
+      document.body.requestFullscreen();
+    }
+    $isAdventure = true;
+  }
 </script>
 
 <div class="home">
@@ -13,10 +21,7 @@
   <div class="bottom">
     <h1 class="font-cinzel">REGARDS</h1>
     <div class="button">
-      <p class="font-cinzel" on:click={() => {
-        document.body.requestFullscreen();
-        $isAdventure = true;
-      }}>VIVRE L'EXPÉRIENCE</p>
+      <p class="font-cinzel" on:click={handleStart}>VIVRE L'EXPÉRIENCE</p>
       <div class="underline"></div>
     </div>
   </div>
