@@ -1,17 +1,37 @@
 <script>
   import { wait } from "../lib/helpers";
+  import { currentDialogIndex } from "../lib/stores";
 
-  let text = "“ La richesse d’une œuvre d’art est un ensemble d’interprétations variées, à travers différents . . . „";
+  let text = "“ La richesse d’une œuvre d’art est aussi un ensemble d’interprétations variées, à travers différents . . . „";
   let arrText = text.split("");
-  let finalText = "";
+  let pText = null;
 
-  for (const char of arrText) {
-    finalText += `<span style="opacity: 0;">${char}</span>`;
+  $: {
+    if(pText){
+      for (const char of arrText) {
+        let span = document.createElement("span");
+        span.style.opacity = 0;
+        span.style.transition = "opacity 1s";
+        span.innerHTML = char;
+        pText.appendChild(span);
+      }
+      writeText();
+    }
+  }
+
+  async function writeText(){
+    let spans = pText.querySelectorAll("span");
+    for(let i = 0; i < arrText.length; i++){
+      await wait(100);
+      spans[i].style.opacity = 1;
+    }
+    await wait(2000);
+    $currentDialogIndex = 0;
   }
 </script>
 
 <div class="final">
-  <p class="font-cinzel">{@html finalText}</p>
+  <p class="font-cinzel" bind:this={pText}></p>
 </div>
 
 <style lang="scss">

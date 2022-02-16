@@ -430,7 +430,7 @@ var app = (function () {
 
     var dialogs = [{character:"",text:"Un beau matin de printemps s’annonce à Bordeaux. Au musée des beaux-arts, trois frères et sœurs visitent l’aile sud.",picture:"museum_inside"},{character:"",text:"Voici Léo, André et Camille…",picture:"children"},{character:"",text:"Alors qu'ils déambulent dans le musée, un tableau retient leur attention...",picture:"children"},{character:"",text:" Face à eux, accroché en hauteur, un tableau d’une taille imposante se dresse...",picture:"framed"},{character:"",text:"Un sentiment très particulier les parcourt alors...",picture:"children"},{character:"",text:"À ce moment précis, une chose est sûre, cette peinture à su retenir leurs regards...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Ils se regardent tous comme s'ils discutaient entre eux.",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> L’homme avec une grande barbe grise semble cacher quelque chose...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, j’ai l'impression que…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Barbegrisebandeau"},{character:"Barbegrisebandeau",text:"« Je sais que c’est vous ! Je vous ai vu ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Hommeorange",text:"« Comment osez-vous ?! »",picture:"christ",zoom:"Hommeorange"},{character:"Jesus",text:"« Mes frères, celui qui a volé doit se dénoncer ! »",picture:"christ"},{character:"Jesus",text:"« Le bien de cette dame doit lui être rendu ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"Hommeorange"},{character:"Hommeorange",text:"« Très bien, j’avoue, je l’ai vu lui voler sa bourse ! C’est lui le fourbe ! »",picture:"christ",zoom:"Hommeorange"},{character:"Barbegrisebandeau",text:"« Comment osez-vous ? On peut deviner le voleur d’un regard ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Jesus",text:"« Mais comment savez-vous que c’est une bourse qui a été volée ? »",picture:"christ",zoom:"Jesus"},{character:"Hommeorange",text:"« Euuuh et bien… »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"",text:"",picture:"christ",click:"MaindelHommeOrange"},{character:"",text:"",picture:"christ",zoom:"MaindelHommeOrange",click:"MaindelHommeOrangeZoom"},{character:"Jesus",text:"« Ah ah ! Pris la main dans le sac ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Oooh merci ! Je suis heureuse que vous ayez retrouvé le voleur ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Ppfffffft n’importe quoi ton histoire !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Regarde plutôt l’homme au fond. Il paraît louche.",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Pour moi l’histoire de ce tableau, c’est clairement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"HommeDuFond"},{character:"HommeDuFond",text:"« Cet homme avec une arme prépare un mauvais coup. »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« Je pense qu’il s'apprête à tuer ! »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« La commère du village derrière en saura forcément plus. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"",picture:"christ",click:"Dameauxperles"},{character:"Dameauxperles",text:"« Oui, je sais tout. C’est sûr ! Il veut tuer la femme, regarde le, avec son air coupable. »",picture:"christ",zoom:"Dameauxperles"},{character:"Dameauxperles",text:"« Il faut prévenir les gardes. »",picture:"christ",zoom:"Dameauxperles"},{character:"",text:"",picture:"christ",click:"Garde"},{character:"Garde",text:"« Ne vous inquiétez pas madame, je ne laisserai personne mourir ! »",picture:"christ",zoom:"Garde"},{character:"Garde",text:"« Halte-là ! Vous ne ferez de mal à personne aujourd'hui. »",picture:"christ"},{character:"Femmevoilerose",text:"« Lâchez-moi garde ! Je suis innocent ! Cette femme est une voleuse. Elle ne m’a jamais remboursée ! »",picture:"christ",zoom:"Femmevoilerose"},{character:"Garde",text:"« Silence malotru ! Je vais te jeter au cachot ! Il ne pourra plus vous faire de mal madame. »",picture:"christ",zoom:"Garde"},{character:"FemmeDenudée",text:"« Me voilà soulagée ! Merci garde ! »",picture:"christ",zoom:"FemmeDenudéeTop"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Et heureusement, elle est sauvée et n’a plus de dettes.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Mais non, gros bêta, ils sont en train de débattre pour construire un village.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Donc ce qu’il se passe réellement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Hommeauchapeau"},{character:"Hommeauchapeau",text:"« Ecoutez-moi ! Nous devons nous décider avant ce soir ! »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Oui, grand chef du village, si nous ne trouvons pas où dormir, cela pourrait être dangereux ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Quelqu’un à une idée ? »",picture:"christ",zoom:"Hommeauchapeau"},{character:"",text:"",picture:"christ",click:"Barbegriseprofil"},{character:"Barbegriseprofil",text:"« Si on construit ma grange, elle sera assez grande pour que nous puissions tous dormir dedans, ce sera rapide ! »",picture:"christ",zoom:"Barbegriseprofil"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« N’oubliez pas le prisonnier, il nous faut une prison. »",picture:"christ",zoom:"GardeCenter"},{character:"",text:"",picture:"christ",click:"HommeLouche"},{character:"HommeLouche",text:"« Excusez-moi, mais nous devons construire des chambres séparées. »",picture:"christ",zoom:"HommeLouche"},{character:"FemmeLouche",text:"« Et je ne supporte pas la paille. On mourra de froid aussi dans une prison. »",picture:"christ",zoom:"FemmeLouche"},{character:"FemmeDenudée",text:"« Il faut qu’une personne neutre tranche. »",picture:"christ",zoom:"FemmeDenudée"},{character:"HommeDuFond",text:"« Puis-je aider ? »",picture:"christ",zoom:"HommeDuFond"},{character:"Hommeauchapeau",text:"« Euh, pourquoi pas... Donnons la parole au plus reclu de notre groupe. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Alors, que le prisonnier décide. »",picture:"christ",zoom:"FemmeDenudée"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« Il en est hors de question ! »",picture:"christ",zoom:"GardeCenter"},{character:"Hommeauchapeau",text:"« Il nous faut un regard extérieur, il est donc le mieux placé. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"HommeDuFond",text:"« Hé bien, je pense qu'avec le temps dont nous disposons, dormir dans la paille d’une grange est la meilleure solution. »",picture:"christ",zoom:"HommeDuFond"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Et ils purent dormir tous au chaud !",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, je préfère mon histoire, elle était plus simple !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Oui, elle était sympa mais moi elle était plus sérieuse.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Je préfère celle de Leo, mais avouez que la mienne est la plus intéressante.",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",picture:"Intervenante"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et en raconte une partie.",picture:"framed"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Intervenante :</span> Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",picture:"framed"}];
 
-    var Leo={icon:"Leo.png",size:"normal"};var Camille={icon:"Camille.png",size:"normal"};var Barbegrisebandeau$1={icon:"Barbegrisebandeau.png",size:"small"};var Barbegriseprofil$1={icon:"barbegriseprofil.png",size:"small"};var Dameauxperles$1={icon:"Dameauxperles.png",size:"small"};var FemmeLouche$1={icon:"FemmeLouche.png",size:"small"};var Femmevoilerose$1={icon:"Femmevoilerose.png",size:"small"};var Garde$1={icon:"garde.png",size:"small"};var Hommeauchapeau$1={icon:"Hommeauchapeau.png",size:"small"};var HommeDuFond$1={icon:"HommeDuFond.png",size:"small"};var HommeLouche$1={icon:"HommeLouche.png",size:"small"};var Hommeorange$1={icon:"Hommeorange.png",size:"small"};var Hommeturbanfond={icon:"Hommeturbanfond.png",size:"small"};var Jesus$1={icon:"Jesus.png",size:"small"};var Intervenante$1={icon:"Intervenante_fondue.png",size:"small"};var characters = {Leo:Leo,"André":{icon:"Andre.png",size:"normal"},Camille:Camille,Barbegrisebandeau:Barbegrisebandeau$1,Barbegriseprofil:Barbegriseprofil$1,Dameauxperles:Dameauxperles$1,"FemmeDenudée":{icon:"FemmeDenudée.png",size:"small"},FemmeLouche:FemmeLouche$1,Femmevoilerose:Femmevoilerose$1,Garde:Garde$1,Hommeauchapeau:Hommeauchapeau$1,HommeDuFond:HommeDuFond$1,HommeLouche:HommeLouche$1,Hommeorange:Hommeorange$1,Hommeturbanfond:Hommeturbanfond,Jesus:Jesus$1,Intervenante:Intervenante$1};
+    var Leo={icon:"Leo.png",size:"normal"};var Camille={icon:"Camille.png",size:"normal"};var Barbegrisebandeau$1={icon:"Barbegrisebandeau.png",size:"small"};var Barbegriseprofil$1={icon:"barbegriseprofil.png",size:"small"};var Dameauxperles$1={icon:"Dameauxperles.png",size:"small"};var FemmeLouche$1={icon:"FemmeLouche.png",size:"small"};var Femmevoilerose$1={icon:"Femmevoilerose.png",size:"small"};var Garde$1={icon:"garde.png",size:"small"};var Hommeauchapeau$1={icon:"Hommeauchapeau.png",size:"small"};var HommeDuFond$1={icon:"HommeDuFond.png",size:"small"};var HommeLouche$1={icon:"HommeLouche.png",size:"small"};var Hommeorange$1={icon:"Hommeorange.png",size:"small"};var Hommeturbanfond={icon:"Hommeturbanfond.png",size:"small"};var Jesus$1={icon:"Jesus.png",size:"small"};var Intervenante$1={icon:"Intervenante_fondue.png",size:"normal"};var characters = {Leo:Leo,"André":{icon:"Andre.png",size:"normal"},Camille:Camille,Barbegrisebandeau:Barbegrisebandeau$1,Barbegriseprofil:Barbegriseprofil$1,Dameauxperles:Dameauxperles$1,"FemmeDenudée":{icon:"FemmeDenudée.png",size:"small"},FemmeLouche:FemmeLouche$1,Femmevoilerose:Femmevoilerose$1,Garde:Garde$1,Hommeauchapeau:Hommeauchapeau$1,HommeDuFond:HommeDuFond$1,HommeLouche:HommeLouche$1,Hommeorange:Hommeorange$1,Hommeturbanfond:Hommeturbanfond,Jesus:Jesus$1,Intervenante:Intervenante$1};
 
     const subscriber_queue = [];
     /**
@@ -1901,9 +1901,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			attr_dev(p, "class", "font-cinzel svelte-wikrvt");
-    			add_location(p, file$1, 13, 2, 356);
+    			add_location(p, file$1, 33, 2, 847);
     			attr_dev(div, "class", "final svelte-wikrvt");
-    			add_location(div, file$1, 12, 0, 334);
+    			add_location(div, file$1, 32, 0, 825);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1911,14 +1911,14 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, p);
-    			p.innerHTML = /*finalText*/ ctx[0];
+    			/*p_binding*/ ctx[1](p);
     		},
-    		p: function update(ctx, [dirty]) {
-    			if (dirty & /*finalText*/ 1) p.innerHTML = /*finalText*/ ctx[0];		},
+    		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
+    			/*p_binding*/ ctx[1](null);
     		}
     	};
 
@@ -1934,14 +1934,25 @@ var app = (function () {
     }
 
     function instance$1($$self, $$props, $$invalidate) {
+    	let $currentDialogIndex;
+    	validate_store(currentDialogIndex, 'currentDialogIndex');
+    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(2, $currentDialogIndex = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Final', slots, []);
-    	let text = "“ La richesse d’une œuvre d’art est un ensemble d’interprétations variées, à travers différents . . . „";
+    	let text = "“ La richesse d’une œuvre d’art est aussi un ensemble d’interprétations variées, à travers différents . . . „";
     	let arrText = text.split("");
-    	let finalText = "";
+    	let pText = null;
 
-    	for (const char of arrText) {
-    		finalText += `<span style="opacity: 0;">${char}</span>`;
+    	async function writeText() {
+    		let spans = pText.querySelectorAll("span");
+
+    		for (let i = 0; i < arrText.length; i++) {
+    			await wait(100);
+    			spans[i].style.opacity = 1;
+    		}
+
+    		await wait(2000);
+    		set_store_value(currentDialogIndex, $currentDialogIndex = 0, $currentDialogIndex);
     	}
 
     	const writable_props = [];
@@ -1950,19 +1961,52 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Final> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ wait, text, arrText, finalText });
+    	function p_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			pText = $$value;
+    			$$invalidate(0, pText);
+    		});
+    	}
+
+    	$$self.$capture_state = () => ({
+    		wait,
+    		currentDialogIndex,
+    		text,
+    		arrText,
+    		pText,
+    		writeText,
+    		$currentDialogIndex
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('text' in $$props) text = $$props.text;
-    		if ('arrText' in $$props) arrText = $$props.arrText;
-    		if ('finalText' in $$props) $$invalidate(0, finalText = $$props.finalText);
+    		if ('arrText' in $$props) $$invalidate(4, arrText = $$props.arrText);
+    		if ('pText' in $$props) $$invalidate(0, pText = $$props.pText);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [finalText];
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*pText*/ 1) {
+    			{
+    				if (pText) {
+    					for (const char of arrText) {
+    						let span = document.createElement("span");
+    						span.style.opacity = 0;
+    						span.style.transition = "opacity 1s";
+    						span.innerHTML = char;
+    						pText.appendChild(span);
+    					}
+
+    					writeText();
+    				}
+    			}
+    		}
+    	};
+
+    	return [pText, p_binding];
     }
 
     class Final extends SvelteComponentDev {
