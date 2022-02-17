@@ -2642,13 +2642,13 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "/img/deco/casque.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-u9g782");
-    			add_location(img, file$1, 12, 2, 274);
+    			add_location(img, file$1, 12, 2, 271);
     			attr_dev(p, "class", "font-montserrat svelte-u9g782");
-    			add_location(p, file$1, 13, 2, 313);
+    			add_location(p, file$1, 13, 2, 310);
     			attr_dev(div0, "class", "button font-montserrat svelte-u9g782");
-    			add_location(div0, file$1, 14, 2, 404);
+    			add_location(div0, file$1, 14, 2, 401);
     			attr_dev(div1, "class", "confirmMusic svelte-u9g782");
-    			add_location(div1, file$1, 11, 0, 245);
+    			add_location(div1, file$1, 11, 0, 242);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2695,7 +2695,9 @@ var app = (function () {
     	validate_slots('ConfirmMusic', slots, []);
 
     	function handleClick() {
-    		if (typeof document.body.requestFullscreen == "function") ; // document.body.requestFullscreen();
+    		if (typeof document.body.requestFullscreen == "function") {
+    			document.body.requestFullscreen();
+    		}
 
     		set_store_value(confirmedMusic, $confirmedMusic = true, $confirmedMusic);
     	}
