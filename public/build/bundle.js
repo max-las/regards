@@ -874,10 +874,10 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "/img/pictures/" + /*prevPictureSafe*/ ctx[6])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			attr_dev(img, "class", "svelte-1ra9nla");
+    			attr_dev(img, "class", "svelte-1tp3qgq");
     			toggle_class(img, "center", /*prevImgPos*/ ctx[9] === "center");
     			add_location(img, file$6, 131, 2, 4327);
-    			attr_dev(div, "class", "pictureBg svelte-1ra9nla");
+    			attr_dev(div, "class", "pictureBg svelte-1tp3qgq");
     			add_location(div, file$6, 130, 1, 4301);
     		},
     		m: function mount(target, anchor) {
@@ -919,7 +919,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "backArrow svelte-1ra9nla");
+    			attr_dev(img, "class", "backArrow svelte-1tp3qgq");
     			if (!src_url_equal(img.src, img_src_value = "/img/deco/backArrow.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			add_location(img, file$6, 141, 1, 4875);
@@ -960,7 +960,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", "clickDiv svelte-1ra9nla");
+    			attr_dev(div, "class", "clickDiv svelte-1tp3qgq");
     			set_style(div, "width", /*clickCoords*/ ctx[10].w + "%");
     			set_style(div, "height", /*clickCoords*/ ctx[10].h + "%");
     			set_style(div, "bottom", /*clickCoords*/ ctx[10].y + "%");
@@ -1106,18 +1106,18 @@ var app = (function () {
     			if_block2_anchor = empty();
     			if (!src_url_equal(img0.src, img0_src_value = "/img/pictures/" + /*nextPictureSafe*/ ctx[5])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			attr_dev(img0, "class", "svelte-1ra9nla");
+    			attr_dev(img0, "class", "svelte-1tp3qgq");
     			toggle_class(img0, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
     			toggle_class(img0, "center", /*nextImgPos*/ ctx[7] === "center");
     			add_location(img0, file$6, 135, 1, 4477);
-    			attr_dev(div0, "class", "pictureBg svelte-1ra9nla");
+    			attr_dev(div0, "class", "pictureBg svelte-1tp3qgq");
     			add_location(div0, file$6, 134, 0, 4428);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/pictures/" + /*pictureSafe*/ ctx[0])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			attr_dev(img1, "class", "svelte-1ra9nla");
+    			attr_dev(img1, "class", "svelte-1tp3qgq");
     			toggle_class(img1, "center", /*currentImgPos*/ ctx[8] === "center");
     			add_location(img1, file$6, 138, 1, 4751);
-    			attr_dev(div1, "class", "pictureBg svelte-1ra9nla");
+    			attr_dev(div1, "class", "pictureBg svelte-1tp3qgq");
     			set_style(div1, "--transform", /*transform*/ ctx[1]);
     			toggle_class(div1, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
     			add_location(div1, file$6, 137, 0, 4619);
@@ -1279,16 +1279,19 @@ var app = (function () {
     function instance$6($$self, $$props, $$invalidate) {
     	let $currentDialogIndex;
     	let $prevDialogIndex;
+    	let $backwardDialog;
     	let $forwardDialog;
     	let $currentMusics;
     	validate_store(currentDialogIndex, 'currentDialogIndex');
     	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(2, $currentDialogIndex = $$value));
     	validate_store(prevDialogIndex, 'prevDialogIndex');
     	component_subscribe($$self, prevDialogIndex, $$value => $$invalidate(17, $prevDialogIndex = $$value));
+    	validate_store(backwardDialog, 'backwardDialog');
+    	component_subscribe($$self, backwardDialog, $$value => $$invalidate(18, $backwardDialog = $$value));
     	validate_store(forwardDialog, 'forwardDialog');
-    	component_subscribe($$self, forwardDialog, $$value => $$invalidate(18, $forwardDialog = $$value));
+    	component_subscribe($$self, forwardDialog, $$value => $$invalidate(19, $forwardDialog = $$value));
     	validate_store(currentMusics, 'currentMusics');
-    	component_subscribe($$self, currentMusics, $$value => $$invalidate(19, $currentMusics = $$value));
+    	component_subscribe($$self, currentMusics, $$value => $$invalidate(20, $currentMusics = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Adventure', slots, []);
     	let frontPicture, nextPicture;
@@ -1309,9 +1312,8 @@ var app = (function () {
     	}
 
     	function handleBackArrow() {
-    		// $backwardDialog();
-    		calcCoords();
-    	}
+    		$backwardDialog();
+    	} // calcCoords();
 
     	function calcCoords() {
     		let posX = 28.81;
@@ -1415,6 +1417,7 @@ var app = (function () {
     		pictureTransition,
     		$currentDialogIndex,
     		$prevDialogIndex,
+    		$backwardDialog,
     		$forwardDialog,
     		$currentMusics
     	});

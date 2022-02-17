@@ -76,8 +76,8 @@
 	}
 
 	function handleBackArrow() {
-		// $backwardDialog();
-		calcCoords();
+		$backwardDialog();
+		// calcCoords();
 	}
 
 	function calcCoords(){
@@ -179,8 +179,8 @@
 
 	.backArrow {
 		position: absolute;
-		top: 10px;
-		left: 10px;
+		top: 30px;
+		left: 30px;
 	}
 
 	@keyframes blink {
