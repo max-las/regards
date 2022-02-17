@@ -45,7 +45,7 @@
 
 	$: {
 		if(audiosReady){
-			for (let [audioName, audio] of Object.entries(audios)) {
+			for (const [audioName, audio] of Object.entries(audios)) {
 				if($currentMusics.includes(audioName)){
 					if(audio.paused){
 						audioFadeIn(audio);

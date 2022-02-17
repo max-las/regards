@@ -32,52 +32,67 @@ export const iOS = () => {
 }
 
 export const audioFadeIn = (audio) => {
-  if(audio){
-    audio.volume = 0;
-    audio.play();
-    let interval = setInterval(function(){
-      let newVolume = audio.volume + 0.1;
-      console.log(`fadeIn interval | newVolume: ${newVolume}`);
-      if(newVolume >= 1){
-        newVolume = 1;
-        clearInterval(interval);
-        console.log(`fadeIn interval | clear`);
-      }
-      audio.volume = newVolume;
-    }, 300);
-    if(typeof audio.fadeInterval !== "undefined"){
-      clearInterval(audio.fadeInterval);
-      audio.fadeInterval = interval;
-    }else{
-      Object.defineProperty(audio, "fadeInterval", {
-        value: interval,
-        writable: true
-      });
+  if(typeof audio.audioCtx === "undefined"){
+    setupAudioContext(audio);
+  }
+  audio.audioGain.gain.value = "0";
+  audio.play();
+  let interval = setInterval(function(){
+    let newVolume = audio.audioGain.gain.value + 0.1;
+    if(newVolume >= 1){
+      newVolume = 1;
+      clearInterval(interval);
     }
+    audio.audioGain.gain.value = newVolume;
+  }, 300);
+  if(typeof audio.fadeInterval !== "undefined"){
+    clearInterval(audio.fadeInterval);
+    audio.fadeInterval = interval;
+  }else{
+    Object.defineProperty(audio, "fadeInterval", {
+      value: interval,
+      writable: true
+    });
   }
 }
 
 export const audioFadeOut = (audio) => {
-  if(audio){
-    let interval = setInterval(function(){
-      let newVolume = audio.volume - 0.1;
-      console.log(`fadeOut interval | newVolume: ${newVolume}`);
-      if(newVolume <= 0){
-        newVolume = 0;
-        clearInterval(interval);
-        console.log(`fadeOut interval | clear`);
-        audio.pause();
-      }
-      audio.volume = newVolume;
-    }, 300);
-    if(typeof audio.fadeInterval !== "undefined"){
-      clearInterval(audio.fadeInterval);
-      audio.fadeInterval = interval;
-    }else{
-      Object.defineProperty(audio, "fadeInterval", {
-        value: interval,
-        writable: true
-      });
-    }
+  if(typeof audio.audioCtx === "undefined"){
+    setupAudioContext(audio);
   }
+  let interval = setInterval(function(){
+    let newVolume = audio.audioGain.gain.value - 0.1;
+    if(newVolume <= 0){
+      newVolume = 0;
+      audio.pause();
+      clearInterval(interval);
+    }
+    audio.audioGain.gain.value = newVolume;
+  }, 300);
+  if(typeof audio.fadeInterval !== "undefined"){
+    clearInterval(audio.fadeInterval);
+    audio.fadeInterval = interval;
+  }else{
+    Object.defineProperty(audio, "fadeInterval", {
+      value: interval,
+      writable: true
+    });
+  }
+}
+
+function setupAudioContext(audio){
+  Object.defineProperty(audio, "audioCtx", {
+    value: new AudioContext(),
+    writable: true
+  });
+  Object.defineProperty(audio, "audioSource", {
+    value: audio.audioCtx.createMediaElementSource(audio),
+    writable: true
+  });
+  Object.defineProperty(audio, "audioGain", {
+    value: audio.audioCtx.createGain(),
+    writable: true
+  });
+  audio.audioSource.connect(audio.audioGain);
+  audio.audioGain.connect(audio.audioCtx.destination);
 }

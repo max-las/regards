@@ -3,7 +3,7 @@
 
   function handleClick() {
     if(typeof document.body.requestFullscreen == "function"){
-      document.body.requestFullscreen();
+      // document.body.requestFullscreen();
     }
     $confirmedMusic = true;
   }
