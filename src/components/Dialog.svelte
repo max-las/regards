@@ -1,7 +1,7 @@
 <script>
   import dialogs from '../data/dialogs.json';
   import characters from '../data/characters.json';
-  import { currentDialogIndex, isAdventure } from "../lib/stores.js";
+  import { currentDialogIndex, isAdventure, forwardDialog } from "../lib/stores.js";
 
   export let first;
   $currentDialogIndex = first;
@@ -11,7 +11,7 @@
   function next() {
     if(canContinue){
       if($currentDialogIndex < dialogs.length -1){
-        $currentDialogIndex += 1;
+        $forwardDialog();
         canContinue = false;
         setTimeout(() => {
           canContinue = true;
