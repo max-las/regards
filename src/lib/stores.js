@@ -1,6 +1,6 @@
 import { writable, get } from 'svelte/store';
 
-export const currentDialogIndex = writable(0);
+export const currentDialogIndex = writable(67);
 export const prevDialogIndex = writable(null);
 export const forwardDialog = writable(() => {
   let index = get(currentDialogIndex);
@@ -21,5 +21,6 @@ export const confirmedMusic = writable(false);
 
 export const currentMusics = writable([]);
 export const soundEffects = writable({
-  menuClick: null
+  menuClick: null,
+  eric: null,
 });

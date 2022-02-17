@@ -1,12 +1,16 @@
 <script>
   import { wait } from "../lib/helpers";
-  import { currentDialogIndex, currentMusics } from "../lib/stores";
+  import { currentDialogIndex, currentMusics, soundEffects } from "../lib/stores";
 
   $currentMusics = ["musicCitation"];
 
   let text = "“ La richesse d’une œuvre d’art est aussi un ensemble d’interprétations variées, à travers différents . . . „";
   let arrText = text.split("");
   let pText = null;
+
+  $: {
+    $soundEffects.eric?.play();
+  }
 
   $: {
     if(pText){
@@ -24,7 +28,7 @@
   async function writeText(){
     let spans = pText.querySelectorAll("span");
     for(let i = 0; i < arrText.length; i++){
-      await wait(100);
+      await wait(50);
       spans[i].style.opacity = 1;
     }
     await wait(2000);

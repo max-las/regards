@@ -82,6 +82,10 @@
 
 <svelte:window on:resize={checkScreen}/>
 
+<audio bind:this={$soundEffects.eric}>
+	<source src="/audio/Eric.mp3" type="audio/mpeg">
+</audio>
+
 <audio bind:this={$soundEffects.menuClick}>
 	<source src="/audio/1_-_Menu_-_click_(touche_clavier).mp3" type="audio/mpeg">
 </audio>
