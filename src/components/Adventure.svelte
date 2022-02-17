@@ -84,10 +84,8 @@
 		let posX = 28.81;
 		let posY = 35.78;
 		let img = frontPicture.querySelector("img");
-		let hDiff = ((img.offsetHeight - window.innerHeight) / window.innerHeight) * 100;
-		let mPosY = posY - hDiff/2;
 		let translateX = window.innerWidth * ((50 - posX) / 100);
-		let translateY = window.innerHeight * ((50 - mPosY) / 100);
+		let translateY = img.offsetHeight * ((50 - posY) / 100);
 	}
 
 	async function pictureTransition(){

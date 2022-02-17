@@ -37,9 +37,11 @@ export const audioFadeIn = (audio) => {
     audio.play();
     let interval = setInterval(function(){
       let newVolume = audio.volume + 0.1;
+      console.log(`fadeIn interval | newVolume: ${newVolume}`);
       if(newVolume >= 1){
         newVolume = 1;
         clearInterval(interval);
+        console.log(`fadeIn interval | clear`);
       }
       audio.volume = newVolume;
     }, 300);
@@ -59,9 +61,11 @@ export const audioFadeOut = (audio) => {
   if(audio){
     let interval = setInterval(function(){
       let newVolume = audio.volume - 0.1;
+      console.log(`fadeOut interval | newVolume: ${newVolume}`);
       if(newVolume <= 0){
         newVolume = 0;
         clearInterval(interval);
+        console.log(`fadeOut interval | clear`);
         audio.pause();
       }
       audio.volume = newVolume;

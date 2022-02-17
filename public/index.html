@@ -73,8 +73,8 @@
 				"casque.png",
 				"creditsLeft.svg",
 				"creditsRight.svg",
-				"mmi.svg",
-				"backArrow.svg"
+				"backArrow.svg",
+				"mmi.svg"
 			],
 			audio: [
 			 	"1_-_Menu_-_click_(touche_clavier).mp3",
@@ -110,13 +110,15 @@
 			let xhr = new XMLHttpRequest();
 			let previousLoad = 0;
 			xhr.onprogress = (e) => {
-				if(e.total <= 0){
-					console.log(url);
+				if(e.total > 0){
+					const newLoad = e.loaded / e.total;
+					assetsLoaded += newLoad - previousLoad;
+					previousLoad = newLoad;
+					updatePercent();
+				}else{
+					console.log("url");
+					assetsLoaded += 1 - previousLoad;
 				}
-				const newLoad = e.loaded / e.total;
-				assetsLoaded += newLoad - previousLoad;
-				previousLoad = newLoad;
-				updatePercent();
 			};
 			xhr.onload = () => {
 				if(xhr.status >= 400){

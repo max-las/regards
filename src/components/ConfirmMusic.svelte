@@ -1,6 +1,5 @@
 <script>
   import { confirmedMusic } from "../lib/stores.js";
-  import { iOS } from "../lib/helpers";
 
   function handleClick() {
     if(typeof document.body.requestFullscreen == "function"){
