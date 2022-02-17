@@ -3,7 +3,7 @@
   import { iOS } from "../lib/helpers";
 
   function handleClick() {
-    if(!iOS()){
+    if(typeof document.body.requestFullscreen == "function"){
       document.body.requestFullscreen();
     }
     $confirmedMusic = true;
