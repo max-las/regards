@@ -129,7 +129,7 @@
 	<img src="/img/pictures/{pictureSafe}" class:center={currentImgPos === "center"} alt>
 </div>
 {#if $currentDialogIndex > 0}
-	<img class="backArrow" src="/img/deco/Back_arrow.png" on:click={handleBackArrow} alt>
+	<img class="backArrow" src="/img/deco/backArrow.svg" on:click={handleBackArrow} alt>
 {/if}
 {#if dialogs[$currentDialogIndex].text !== ""}
 	<Dialog first={$currentDialogIndex} />
