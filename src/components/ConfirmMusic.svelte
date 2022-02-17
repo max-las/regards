@@ -2,9 +2,6 @@
   import { confirmedMusic } from "../lib/stores.js";
 
   function handleClick() {
-    if(typeof document.body.requestFullscreen == "function"){
-      document.body.requestFullscreen();
-    }
     $confirmedMusic = true;
   }
 </script>

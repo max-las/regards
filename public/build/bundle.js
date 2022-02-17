@@ -874,10 +874,10 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "/img/pictures/" + /*prevPictureSafe*/ ctx[6])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			attr_dev(img, "class", "svelte-1tp3qgq");
+    			attr_dev(img, "class", "svelte-19bmcey");
     			toggle_class(img, "center", /*prevImgPos*/ ctx[9] === "center");
     			add_location(img, file$6, 131, 2, 4327);
-    			attr_dev(div, "class", "pictureBg svelte-1tp3qgq");
+    			attr_dev(div, "class", "pictureBg svelte-19bmcey");
     			add_location(div, file$6, 130, 1, 4301);
     		},
     		m: function mount(target, anchor) {
@@ -911,6 +911,7 @@ var app = (function () {
 
     // (141:0) {#if $currentDialogIndex > 0}
     function create_if_block_2$1(ctx) {
+    	let div;
     	let img;
     	let img_src_value;
     	let mounted;
@@ -918,23 +919,27 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div = element("div");
     			img = element("img");
-    			attr_dev(img, "class", "backArrow svelte-1tp3qgq");
     			if (!src_url_equal(img.src, img_src_value = "/img/deco/backArrow.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$6, 141, 1, 4875);
+    			attr_dev(img, "class", "svelte-19bmcey");
+    			add_location(img, file$6, 142, 2, 4928);
+    			attr_dev(div, "class", "backArrow svelte-19bmcey");
+    			add_location(div, file$6, 141, 1, 4875);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, img, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
 
     			if (!mounted) {
-    				dispose = listen_dev(img, "click", /*handleBackArrow*/ ctx[14], false, false, false);
+    				dispose = listen_dev(div, "click", /*handleBackArrow*/ ctx[14], false, false, false);
     				mounted = true;
     			}
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(img);
+    			if (detaching) detach_dev(div);
     			mounted = false;
     			dispose();
     		}
@@ -951,7 +956,7 @@ var app = (function () {
     	return block;
     }
 
-    // (146:26) 
+    // (148:26) 
     function create_if_block_1$2(ctx) {
     	let div;
     	let mounted;
@@ -960,12 +965,12 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", "clickDiv svelte-1tp3qgq");
+    			attr_dev(div, "class", "clickDiv svelte-19bmcey");
     			set_style(div, "width", /*clickCoords*/ ctx[10].w + "%");
     			set_style(div, "height", /*clickCoords*/ ctx[10].h + "%");
     			set_style(div, "bottom", /*clickCoords*/ ctx[10].y + "%");
     			set_style(div, "left", /*clickCoords*/ ctx[10].x + "%");
-    			add_location(div, file$6, 146, 1, 5081);
+    			add_location(div, file$6, 148, 1, 5097);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1005,14 +1010,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(146:26) ",
+    		source: "(148:26) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (144:0) {#if dialogs[$currentDialogIndex].text !== ""}
+    // (146:0) {#if dialogs[$currentDialogIndex].text !== ""}
     function create_if_block$2(ctx) {
     	let dialog;
     	let current;
@@ -1053,7 +1058,7 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(144:0) {#if dialogs[$currentDialogIndex].text !== \\\"\\\"}",
+    		source: "(146:0) {#if dialogs[$currentDialogIndex].text !== \\\"\\\"}",
     		ctx
     	});
 
@@ -1106,18 +1111,18 @@ var app = (function () {
     			if_block2_anchor = empty();
     			if (!src_url_equal(img0.src, img0_src_value = "/img/pictures/" + /*nextPictureSafe*/ ctx[5])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			attr_dev(img0, "class", "svelte-1tp3qgq");
+    			attr_dev(img0, "class", "svelte-19bmcey");
     			toggle_class(img0, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
     			toggle_class(img0, "center", /*nextImgPos*/ ctx[7] === "center");
     			add_location(img0, file$6, 135, 1, 4477);
-    			attr_dev(div0, "class", "pictureBg svelte-1tp3qgq");
+    			attr_dev(div0, "class", "pictureBg svelte-19bmcey");
     			add_location(div0, file$6, 134, 0, 4428);
     			if (!src_url_equal(img1.src, img1_src_value = "/img/pictures/" + /*pictureSafe*/ ctx[0])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			attr_dev(img1, "class", "svelte-1tp3qgq");
+    			attr_dev(img1, "class", "svelte-19bmcey");
     			toggle_class(img1, "center", /*currentImgPos*/ ctx[8] === "center");
     			add_location(img1, file$6, 138, 1, 4751);
-    			attr_dev(div1, "class", "pictureBg svelte-1tp3qgq");
+    			attr_dev(div1, "class", "pictureBg svelte-19bmcey");
     			set_style(div1, "--transform", /*transform*/ ctx[1]);
     			toggle_class(div1, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
     			add_location(div1, file$6, 137, 0, 4619);
@@ -2645,13 +2650,13 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "/img/deco/casque.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-u9g782");
-    			add_location(img, file$1, 12, 2, 271);
+    			add_location(img, file$1, 9, 2, 162);
     			attr_dev(p, "class", "font-montserrat svelte-u9g782");
-    			add_location(p, file$1, 13, 2, 310);
+    			add_location(p, file$1, 10, 2, 201);
     			attr_dev(div0, "class", "button font-montserrat svelte-u9g782");
-    			add_location(div0, file$1, 14, 2, 401);
+    			add_location(div0, file$1, 11, 2, 292);
     			attr_dev(div1, "class", "confirmMusic svelte-u9g782");
-    			add_location(div1, file$1, 11, 0, 242);
+    			add_location(div1, file$1, 8, 0, 133);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2698,10 +2703,6 @@ var app = (function () {
     	validate_slots('ConfirmMusic', slots, []);
 
     	function handleClick() {
-    		if (typeof document.body.requestFullscreen == "function") {
-    			document.body.requestFullscreen();
-    		}
-
     		set_store_value(confirmedMusic, $confirmedMusic = true, $confirmedMusic);
     	}
 
@@ -2739,7 +2740,7 @@ var app = (function () {
     const { Object: Object_1, window: window_1 } = globals;
     const file = "src/App.svelte";
 
-    // (133:2) {:else}
+    // (139:2) {:else}
     function create_else_block_1(ctx) {
     	let confirmmusic;
     	let current;
@@ -2772,14 +2773,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(133:2) {:else}",
+    		source: "(139:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (123:2) {#if $confirmedMusic}
+    // (129:2) {#if $confirmedMusic}
     function create_if_block_1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -2850,14 +2851,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(123:2) {#if $confirmedMusic}",
+    		source: "(129:2) {#if $confirmedMusic}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (120:1) {#if mustTurn}
+    // (126:1) {#if mustTurn}
     function create_if_block(ctx) {
     	let pleaseturn;
     	let current;
@@ -2890,14 +2891,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(120:1) {#if mustTurn}",
+    		source: "(126:1) {#if mustTurn}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (130:3) {:else}
+    // (136:3) {:else}
     function create_else_block(ctx) {
     	let homepage;
     	let current;
@@ -2929,14 +2930,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(130:3) {:else}",
+    		source: "(136:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (128:55) 
+    // (134:55) 
     function create_if_block_4(ctx) {
     	let final;
     	let current;
@@ -2968,14 +2969,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(128:55) ",
+    		source: "(134:55) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (126:24) 
+    // (132:24) 
     function create_if_block_3(ctx) {
     	let credits;
     	let current;
@@ -3007,14 +3008,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(126:24) ",
+    		source: "(132:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (124:3) {#if $isAdventure}
+    // (130:3) {#if $isAdventure}
     function create_if_block_2(ctx) {
     	let adventure;
     	let current;
@@ -3046,7 +3047,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(124:3) {#if $isAdventure}",
+    		source: "(130:3) {#if $isAdventure}",
     		ctx
     	});
 
@@ -3148,54 +3149,54 @@ var app = (function () {
     			if_block.c();
     			if (!src_url_equal(source0.src, source0_src_value = "/audio/1_-_Menu_-_click_(touche_clavier).mp3")) attr_dev(source0, "src", source0_src_value);
     			attr_dev(source0, "type", "audio/mpeg");
-    			add_location(source0, file, 79, 1, 1678);
-    			add_location(audio0, file, 78, 0, 1633);
+    			add_location(source0, file, 85, 1, 1814);
+    			add_location(audio0, file, 84, 0, 1769);
     			if (!src_url_equal(source1.src, source1_src_value = "/audio/1_-_Menu_-_musique.mp3")) attr_dev(source1, "src", source1_src_value);
     			attr_dev(source1, "type", "audio/mpeg");
-    			add_location(source1, file, 83, 1, 1809);
+    			add_location(source1, file, 89, 1, 1945);
     			audio1.loop = true;
-    			add_location(audio1, file, 82, 0, 1766);
+    			add_location(audio1, file, 88, 0, 1902);
     			if (!src_url_equal(source2.src, source2_src_value = "/audio/2_-_Musee_exterieur_-_ambiance_de_fond.mp3")) attr_dev(source2, "src", source2_src_value);
     			attr_dev(source2, "type", "audio/mpeg");
-    			add_location(source2, file, 87, 1, 1937);
+    			add_location(source2, file, 93, 1, 2073);
     			audio2.loop = true;
-    			add_location(audio2, file, 86, 0, 1882);
+    			add_location(audio2, file, 92, 0, 2018);
     			if (!src_url_equal(source3.src, source3_src_value = "/audio/2_-_Musee_exterieur_-_musique.mp3")) attr_dev(source3, "src", source3_src_value);
     			attr_dev(source3, "type", "audio/mpeg");
-    			add_location(source3, file, 91, 1, 2077);
+    			add_location(source3, file, 97, 1, 2213);
     			audio3.loop = true;
-    			add_location(audio3, file, 90, 0, 2030);
+    			add_location(audio3, file, 96, 0, 2166);
     			if (!src_url_equal(source4.src, source4_src_value = "/audio/3_-_Musee_-_ambiance_de_fond.mp3")) attr_dev(source4, "src", source4_src_value);
     			attr_dev(source4, "type", "audio/mpeg");
-    			add_location(source4, file, 95, 1, 2213);
+    			add_location(source4, file, 101, 1, 2349);
     			audio4.loop = true;
-    			add_location(audio4, file, 94, 0, 2161);
+    			add_location(audio4, file, 100, 0, 2297);
     			if (!src_url_equal(source5.src, source5_src_value = "/audio/3_-_Musee_-_andre.mp3")) attr_dev(source5, "src", source5_src_value);
     			attr_dev(source5, "type", "audio/mpeg");
-    			add_location(source5, file, 99, 1, 2340);
+    			add_location(source5, file, 105, 1, 2476);
     			audio5.loop = true;
-    			add_location(audio5, file, 98, 0, 2296);
+    			add_location(audio5, file, 104, 0, 2432);
     			if (!src_url_equal(source6.src, source6_src_value = "/audio/3_-_Musee_-_camille.mp3")) attr_dev(source6, "src", source6_src_value);
     			attr_dev(source6, "type", "audio/mpeg");
-    			add_location(source6, file, 103, 1, 2458);
+    			add_location(source6, file, 109, 1, 2594);
     			audio6.loop = true;
-    			add_location(audio6, file, 102, 0, 2412);
+    			add_location(audio6, file, 108, 0, 2548);
     			if (!src_url_equal(source7.src, source7_src_value = "/audio/3_-_Musee_-_leo.mp3")) attr_dev(source7, "src", source7_src_value);
     			attr_dev(source7, "type", "audio/mpeg");
-    			add_location(source7, file, 107, 1, 2574);
+    			add_location(source7, file, 113, 1, 2710);
     			audio7.loop = true;
-    			add_location(audio7, file, 106, 0, 2532);
+    			add_location(audio7, file, 112, 0, 2668);
     			if (!src_url_equal(source8.src, source8_src_value = "/audio/4_-_Fin_-_citation_-_musique.mp3")) attr_dev(source8, "src", source8_src_value);
     			attr_dev(source8, "type", "audio/mpeg");
-    			add_location(source8, file, 111, 1, 2686);
-    			add_location(audio8, file, 110, 0, 2644);
+    			add_location(source8, file, 117, 1, 2822);
+    			add_location(audio8, file, 116, 0, 2780);
     			if (!src_url_equal(source9.src, source9_src_value = "/audio/4_-_Fin_-_sequence_intervenante_-_musique.mp3")) attr_dev(source9, "src", source9_src_value);
     			attr_dev(source9, "type", "audio/mpeg");
-    			add_location(source9, file, 115, 1, 2820);
+    			add_location(source9, file, 121, 1, 2956);
     			audio9.loop = true;
-    			add_location(audio9, file, 114, 0, 2769);
+    			add_location(audio9, file, 120, 0, 2905);
     			attr_dev(main, "class", "svelte-17503q8");
-    			add_location(main, file, 118, 0, 2916);
+    			add_location(main, file, 124, 0, 3052);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3246,7 +3247,11 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(window_1, "resize", /*checkScreen*/ ctx[7], false, false, false);
+    				dispose = [
+    					listen_dev(window_1, "resize", /*checkScreen*/ ctx[7], false, false, false),
+    					listen_dev(main, "click", fullscreen, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
@@ -3320,7 +3325,7 @@ var app = (function () {
     			if (detaching) detach_dev(main);
     			if_blocks[current_block_type_index].d();
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -3333,6 +3338,12 @@ var app = (function () {
     	});
 
     	return block;
+    }
+
+    function fullscreen() {
+    	if (typeof document.body.requestFullscreen == "function") {
+    		document.body.requestFullscreen();
+    	}
     }
 
     function instance($$self, $$props, $$invalidate) {
@@ -3480,6 +3491,7 @@ var app = (function () {
     		audiosReady,
     		mustTurn,
     		checkScreen,
+    		fullscreen,
     		$currentMusics,
     		$soundEffects,
     		$confirmedMusic,

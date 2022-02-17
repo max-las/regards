@@ -139,7 +139,9 @@
 	<img src="/img/pictures/{pictureSafe}" class:center={currentImgPos === "center"} alt>
 </div>
 {#if $currentDialogIndex > 0}
-	<img class="backArrow" src="/img/deco/backArrow.svg" on:click={handleBackArrow} alt>
+	<div class="backArrow" on:click={handleBackArrow}>
+		<img src="/img/deco/backArrow.svg" alt>
+	</div>
 {/if}
 {#if dialogs[$currentDialogIndex].text !== ""}
 	<Dialog first={$currentDialogIndex} />
@@ -181,6 +183,14 @@
 		position: absolute;
 		top: 30px;
 		left: 30px;
+		width: fit-content;
+		height: fit-content;
+
+		img {
+			height: 30px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 
 	@keyframes blink {

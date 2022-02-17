@@ -72,6 +72,12 @@
 			mustTurn = false;
 		}
 	}
+
+	function fullscreen() {
+		if(typeof document.body.requestFullscreen == "function"){
+      document.body.requestFullscreen();
+    }
+	}
 </script>
 
 <svelte:window on:resize={checkScreen}/>
@@ -116,7 +122,7 @@
 	<source src="/audio/4_-_Fin_-_sequence_intervenante_-_musique.mp3" type="audio/mpeg">
 </audio>
 
-<main>
+<main on:click={fullscreen}>
 	{#if mustTurn}
 		<PleaseTurn />
 	{:else}
