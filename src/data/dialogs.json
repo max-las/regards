@@ -370,17 +370,17 @@
   },
   {
     "character": "André",
-    "text": "André : Oui, elle était sympa mais, la mienne était plus sérieuse.",
+    "text": "<span style=\"font-weight: 800\">André :</span> Oui, elle était sympa mais, la mienne était plus sérieuse.",
     "picture": "children"
   },
   {
     "character": "Camille",
-    "text": "Camille : Je préfère celle de Léo, mais avouez que la mienne est la plus intéressante.",
+    "text": "<span style=\"font-weight: 800\">Camille :</span> Je préfère celle de Léo, mais avouez que la mienne est la plus intéressante.",
     "picture": "children"
   },
   {
     "character": "Intervenante",
-    "text": "Guide : Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",
+    "text": "<span style=\"font-weight: 800\">Guide :</span> Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",
     "picture": "Intervenante"
   },
   {
@@ -390,12 +390,12 @@
   },
   {
     "character": "Intervenante",
-    "text": "Guide : Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et il en narre une partie.",
+    "text": "<span style=\"font-weight: 800\">Guide :</span> Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et il en narre une partie.",
     "picture": "Intervenante"
   },
   {
     "character": "Intervenante",
-    "text": "Guide : Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",
+    "text": "<span style=\"font-weight: 800\">Guide :</span> Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",
     "picture": "Intervenante"
   }
 ]
