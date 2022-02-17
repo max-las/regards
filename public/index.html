@@ -2,12 +2,13 @@
 <html lang="fr">
 <head>
 	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, viewport-fit=cover">
 
-	<title>Svelte app</title>
+	<title>Regards</title>
 
 	<link rel='icon' type='image/png' href='/favicon.png'>
 	<link rel='stylesheet' href='/build/bundle.css'>
+	<link rel="icon" type="image/png" href="img/deco/favicon.png">
 
 	<script defer src='/build/bundle.js'></script>
 
@@ -41,10 +42,10 @@
 	<script>
 		const assets = {
 			characters: [
-				"andre.png",
+				"Andre.png",
 				"Barbegrisebandeau.png",
 				"barbegriseprofil.png",
-				"camille.png",
+				"Camille.png",
 				"Dameauxperles.png",
 				"FemmeDenudée.png",
 				"FemmeLouche.png",
@@ -56,25 +57,39 @@
 				"Hommeorange.png",
 				"Hommeturbanfond.png",
 				"Jesus.png",
-				"leo.png"
+				"Leo.png",
+				"Intervenante_fondue.png"
 			],
 			pictures: [
-				"children.jpg",
+				"Enfants_2.png",
 				"christ.png",
 				"framed.png",
 				"Intervenante.png",
-				"museum_inside.jpg"
+				"museum_outside.jpg"
 			],
 			deco: [
 				"cadre_decors.png",
-				"refresh-ccw.svg"
+				"refresh-ccw.svg",
+				"casque.png",
+				"creditsLeft.svg",
+				"creditsRight.svg",
+				"mmi.svg",
+				"backArrow.svg"
 			],
-			other: [
-				"/build/bundle.css",
-				"/build/bundle.js"
+			audio: [
+			 	"1_-_Menu_-_click_(touche_clavier).mp3",
+				"1_-_Menu_-_musique.mp3",
+				"2_-_Musee_exterieur_-_ambiance_de_fond.mp3",
+				"2_-_Musee_exterieur_-_musique.mp3",
+				"3_-_Musee_-_ambiance_de_fond.mp3",
+				"3_-_Musee_-_andre.mp3",
+				"3_-_Musee_-_camille.mp3",
+				"3_-_Musee_-_leo.mp3",
+				"4_-_Fin_-_citation_-_musique.mp3",
+				"4_-_Fin_-_sequence_intervenante_-_musique.mp3",
 			]
 		};
-		let assetsCount = assets.characters.length + assets.pictures.length + assets.other.length + assets.deco.length;
+		let assetsCount = assets.characters.length + assets.pictures.length + assets.deco.length;
 		let assetsLoaded = 0;
 		let percent = 0;
 		function runPreloadProgress(){
@@ -87,8 +102,8 @@
 			for (const imgFile of assets.deco) {
 				preloadWithProgress(`/img/deco/${imgFile}`);
 			}
-			for (const otherFile of assets.other) {
-				preloadWithProgress(otherFile);
+			for (const audioFile of assets.audio) {
+				preloadWithProgress(`/audio/${audioFile}`);
 			}
 		}
 		function preloadWithProgress(url){

@@ -3,22 +3,43 @@
 	import pictures from '../data/pictures.json';
 	import dialogs from '../data/dialogs.json';
 	import coordinates from '../data/coordinates.json'
-	import { currentDialogIndex } from "../lib/stores.js";
+	import { currentDialogIndex, prevDialogIndex, currentMusics, forwardDialog, backwardDialog } from "../lib/stores.js";
 	import { wait, dialogIndexToBgpos } from "../lib/helpers.js";
 
-	let mainPictureBg;
+	let frontPicture, nextPicture;
 	let nextPictureSafe = pictures[dialogs[$currentDialogIndex+1].picture];
 	let pictureSafe = pictures[dialogs[$currentDialogIndex].picture];
+	let prevPictureSafe = null;
+	let nextImgPos = dialogIndexToBgpos($currentDialogIndex+1);
+	let currentImgPos = dialogIndexToBgpos($currentDialogIndex);
+	let prevImgPos = null;
+
 	let clickCoords = null;
 	let opacityTransitionOn = false;
 	let transform = "scale(1) translate(0vw, 0vw)";
-	let backImgPos = dialogIndexToBgpos($currentDialogIndex+1);
-	let frontImgPos = dialogIndexToBgpos($currentDialogIndex);
 	let displayClickDiv = false;
 
 	$: {
-		if($currentDialogIndex){
-			pictureTransition();
+		pictureTransition();
+
+		if($currentDialogIndex >= 0 && $currentDialogIndex < 3){
+			$currentMusics = ["musicMuseeExt", "musicMuseeExtAmbiance"];
+		} else if($currentDialogIndex >= 3 && $currentDialogIndex < 10) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 10 && $currentDialogIndex < 25) {
+			$currentMusics = ["musicLeo"];
+		} else if($currentDialogIndex >= 25 && $currentDialogIndex < 28) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 28 && $currentDialogIndex < 41) {
+			$currentMusics = ["musicAndre"];
+		} else if($currentDialogIndex >= 41 && $currentDialogIndex < 44) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 44 && $currentDialogIndex < 63) {
+			$currentMusics = ["musicCamille"];
+		} else if($currentDialogIndex >= 63 && $currentDialogIndex < 67) {
+			$currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"];
+		} else if($currentDialogIndex >= 67) {
+			$currentMusics = ["musicIntervenante", "musicMuseeAmbiance"];
 		}
 	}
 
@@ -51,41 +72,65 @@
 
 	function handleClickDiv() {
 		displayClickDiv = false;
-		$currentDialogIndex += 1;
+		$forwardDialog();
+	}
+
+	function handleBackArrow() {
+		$backwardDialog();
 	}
 
 	async function pictureTransition(){
 		try {
 			if(pictures[dialogs[$currentDialogIndex].picture] !== pictureSafe){
 				opacityTransitionOn = true;
-				mainPictureBg.style.opacity = 0;
+				frontPicture.style.opacity = 0;
+				if($currentDialogIndex < $prevDialogIndex){
+					nextPicture.style.opacity = 0;
+				}
 				await wait(1000);
 				opacityTransitionOn = false;
 				pictureSafe = pictures[dialogs[$currentDialogIndex].picture];
-				frontImgPos = dialogIndexToBgpos($currentDialogIndex);
+				currentImgPos = dialogIndexToBgpos($currentDialogIndex);
 				await wait(100); // fix flash on transition
-				mainPictureBg.style.opacity = null;
+				frontPicture.style.opacity = null;
+				nextPicture.style.opacity = null;
 			}else{
-				frontImgPos = dialogIndexToBgpos($currentDialogIndex);
+				currentImgPos = dialogIndexToBgpos($currentDialogIndex);
 			}
 
 			let nextDialog = dialogs[$currentDialogIndex+1];
 			if(nextDialog){
 				if(nextDialog.picture){
 					nextPictureSafe = pictures[nextDialog.picture];
-					backImgPos = dialogIndexToBgpos($currentDialogIndex+1);
+					nextImgPos = dialogIndexToBgpos($currentDialogIndex+1);
+				}
+			}
+
+			let prevDialog = dialogs[$currentDialogIndex-1];
+			if(prevDialog){
+				if(prevDialog.picture){
+					prevPictureSafe = pictures[prevDialog.picture];
+					prevImgPos = dialogIndexToBgpos($currentDialogIndex-1);
 				}
 			}
 		} catch (err) {}
 	}
 </script>
 
-<div class="pictureBg">
-	<img src="/img/pictures/{nextPictureSafe}" class:center={backImgPos === "center"} alt>
+{#if prevPictureSafe}
+	<div class="pictureBg">
+		<img src="/img/pictures/{prevPictureSafe}" class:center={prevImgPos === "center"} alt>
+	</div>
+{/if}
+<div bind:this={nextPicture} class="pictureBg">
+	<img src="/img/pictures/{nextPictureSafe}" class:opacityTransition="{opacityTransitionOn}" class:center={nextImgPos === "center"} alt>
 </div>
-<div class="pictureBg" class:opacityTransition="{opacityTransitionOn}" bind:this={mainPictureBg} style="--transform: {transform};">
-	<img src="/img/pictures/{pictureSafe}" class:center={frontImgPos === "center"} alt>
+<div bind:this={frontPicture} class="pictureBg" class:opacityTransition="{opacityTransitionOn}" style="--transform: {transform};">
+	<img src="/img/pictures/{pictureSafe}" class:center={currentImgPos === "center"} alt>
 </div>
+{#if $currentDialogIndex > 0}
+	<img class="backArrow" src="/img/deco/backArrow.svg" on:click={handleBackArrow} alt>
+{/if}
 {#if dialogs[$currentDialogIndex].text !== ""}
 	<Dialog first={$currentDialogIndex} />
 {:else if displayClickDiv}
@@ -119,6 +164,13 @@
 		border-radius: 50px;
 		background-color: rgb(196,196,196);
 		animation: blink 1s ease-in-out 0s infinite alternate;
+		filter: blur(10px);
+	}
+
+	.backArrow {
+		position: absolute;
+		top: 10px;
+		left: 10px;
 	}
 
 	@keyframes blink {
