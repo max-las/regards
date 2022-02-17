@@ -76,8 +76,8 @@
 	}
 
 	function handleBackArrow() {
-		$backwardDialog();
-		//calcCoords();
+		// $backwardDialog();
+		calcCoords();
 	}
 
 	function calcCoords(){
@@ -86,6 +86,7 @@
 		let img = frontPicture.querySelector("img");
 		let translateX = window.innerWidth * ((50 - posX) / 100);
 		let translateY = img.offsetHeight * ((50 - posY) / 100);
+		console.log(`translate(${translateX}px, ${translateY}px)`);
 	}
 
 	async function pictureTransition(){

@@ -45,15 +45,13 @@
 
 	$: {
 		if(audiosReady){
-			for (const [audioName, audio] of Object.entries(audios)) {
+			for (let [audioName, audio] of Object.entries(audios)) {
 				if($currentMusics.includes(audioName)){
 					if(audio.paused){
-						console.log(`${audioName} paused, fading in...`);
 						audioFadeIn(audio);
 					}
 				}else{
 					if(!audio.paused){
-						console.log(`${audioName} not paused, fading out...`);
 						audioFadeOut(audio);
 					}
 				}
