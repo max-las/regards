@@ -1,6 +1,6 @@
 import { writable, get } from 'svelte/store';
 
-export const currentDialogIndex = writable(10);
+export const currentDialogIndex = writable(0);
 export const prevDialogIndex = writable(null);
 export const forwardDialog = writable(() => {
   let index = get(currentDialogIndex);
