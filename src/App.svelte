@@ -74,7 +74,7 @@
 	}
 
 	function fullscreen() {
-		if(typeof document.body.requestFullscreen == "function"){
+		if(typeof document.body.requestFullscreen == "function" && window.innerHeight <= 420 && window.innerWidth <= 920){
       document.body.requestFullscreen();
     }
 	}
@@ -126,7 +126,7 @@
 	<source src="/audio/4_-_Fin_-_sequence_intervenante_-_musique.mp3" type="audio/mpeg">
 </audio>
 
-<main on:click={fullscreen}>
+<main on:click={fullscreen} class:mustTurn={mustTurn}>
 	{#if mustTurn}
 		<PleaseTurn />
 	{:else}
@@ -151,6 +151,11 @@
 		height: 100vh;
 		height: calc(var(--vh, 1vh) * 100);
 		width: 100vw;
+		overflow: hidden;
 		position: relative;
+		&:not(.mustTurn) {
+			max-height: 420px;
+			max-width: 920px;
+		}
 	}
 </style>

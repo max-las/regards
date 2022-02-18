@@ -52,7 +52,7 @@
 
   .dialog {
     background-color: rgba(1,1,1,0.5);
-    width: 100vw;
+    width: 100%;
     height: 95px;
     position: absolute;
     bottom: 0;
