@@ -43,10 +43,28 @@
 		}
 	}
 
+	function vToPx(val, refElem){
+		let mw = refElem.offsetWidth;
+		let mh = refElem.offsetHeight;
+		let valFloat = parseFloat(val);
+		if(val.slice(-2) == "vw"){
+			return `${mw * (valFloat / 100)}px`;
+		}else if(val.slice(-2) == "vh"){
+			return `${mh * (valFloat / 100)}px`;
+		}else{
+			return val;
+		}
+	}
+
 	$: {
 		let prevTransform = transform;
 		if(typeof dialogs[$currentDialogIndex].zoom !== "undefined"){
-			transform = coordinates[dialogs[$currentDialogIndex].zoom].transform;
+			let transformBrut = coordinates[dialogs[$currentDialogIndex].zoom].transform;
+			let scale = transformBrut.split(" translate")[0];
+			let translateX = transformBrut.split("translate(")[1].split(",")[0];
+			let translateY = transformBrut.split(", ")[1].split(")")[0];
+			let main = document.querySelector("main");	
+			transform = `${scale} translate(${vToPx(translateX, main)}, ${vToPx(translateY, main)})`;
 		}else{
 			transform = "scale(1) translate(0vw, 0vw)";
 		}
