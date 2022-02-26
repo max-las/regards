@@ -1,2 +1,3686 @@
-var app=function(){"use strict";function e(){}function t(e){return e()}function n(){return Object.create(null)}function r(e){e.forEach(t)}function s(e){return"function"==typeof e}function a(e,t){return e!=e?t==t:e!==t||e&&"object"==typeof e||"function"==typeof e}let i,c;function o(e,t){return i||(i=document.createElement("a")),i.href=t,e===i.href}function l(t,...n){if(null==t)return e;const r=t.subscribe(...n);return r.unsubscribe?()=>r.unsubscribe():r}function u(e){let t;return l(e,(e=>t=e))(),t}function m(e,t,n){e.$$.on_destroy.push(l(t,n))}function p(e){return null==e?"":e}function d(e,t,n){return e.set(n),t}function f(e,t){e.appendChild(t)}function h(e,t,n){e.insertBefore(t,n||null)}function v(e){e.parentNode.removeChild(e)}function g(e){return document.createElement(e)}function x(e){return document.createTextNode(e)}function b(){return x(" ")}function y(){return x("")}function w(e,t,n,r){return e.addEventListener(t,n,r),()=>e.removeEventListener(t,n,r)}function $(e,t,n){null==n?e.removeAttribute(t):e.getAttribute(t)!==n&&e.setAttribute(t,n)}function z(e,t,n,r){null===n?e.style.removeProperty(t):e.style.setProperty(t,n,r?"important":"")}function _(e,t,n){e.classList[n?"add":"remove"](t)}function H(e){c=e}const L=[],M=[],C=[],A=[],D=Promise.resolve();let k=!1;function E(e){C.push(e)}const I=new Set;let F=0;function T(){const e=c;do{for(;F<L.length;){const e=L[F];F++,H(e),q(e.$$)}for(H(null),L.length=0,F=0;M.length;)M.pop()();for(let e=0;e<C.length;e+=1){const t=C[e];I.has(t)||(I.add(t),t())}C.length=0}while(L.length);for(;A.length;)A.pop()();k=!1,I.clear(),H(e)}function q(e){if(null!==e.fragment){e.update(),r(e.before_update);const t=e.dirty;e.dirty=[-1],e.fragment&&e.fragment.p(e.ctx,t),e.after_update.forEach(E)}}const j=new Set;let G;function B(){G={r:0,c:[],p:G}}function O(){G.r||r(G.c),G=G.p}function S(e,t){e&&e.i&&(j.delete(e),e.i(t))}function P(e,t,n,r){if(e&&e.o){if(j.has(e))return;j.add(e),G.c.push((()=>{j.delete(e),r&&(n&&e.d(1),r())})),e.o(t)}}const R="undefined"!=typeof window?window:"undefined"!=typeof globalThis?globalThis:global;function J(e){e&&e.c()}function N(e,n,a,i){const{fragment:c,on_mount:o,on_destroy:l,after_update:u}=e.$$;c&&c.m(n,a),i||E((()=>{const n=o.map(t).filter(s);l?l.push(...n):r(n),e.$$.on_mount=[]})),u.forEach(E)}function U(e,t){const n=e.$$;null!==n.fragment&&(r(n.on_destroy),n.fragment&&n.fragment.d(t),n.on_destroy=n.fragment=null,n.ctx=[])}function V(e,t){-1===e.$$.dirty[0]&&(L.push(e),k||(k=!0,D.then(T)),e.$$.dirty.fill(0)),e.$$.dirty[t/31|0]|=1<<t%31}function W(t,s,a,i,o,l,u,m=[-1]){const p=c;H(t);const d=t.$$={fragment:null,ctx:null,props:l,update:e,not_equal:o,bound:n(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(s.context||(p?p.$$.context:[])),callbacks:n(),dirty:m,skip_bound:!1,root:s.target||p.$$.root};u&&u(d.root);let f=!1;if(d.ctx=a?a(t,s.props||{},((e,n,...r)=>{const s=r.length?r[0]:n;return d.ctx&&o(d.ctx[e],d.ctx[e]=s)&&(!d.skip_bound&&d.bound[e]&&d.bound[e](s),f&&V(t,e)),n})):[],d.update(),f=!0,r(d.before_update),d.fragment=!!i&&i(d.ctx),s.target){if(s.hydrate){const e=function(e){return Array.from(e.childNodes)}(s.target);d.fragment&&d.fragment.l(e),e.forEach(v)}else d.fragment&&d.fragment.c();s.intro&&S(t.$$.fragment),N(t,s.target,s.anchor,s.customElement),T()}H(p)}class Z{$destroy(){U(this,1),this.$destroy=e}$on(e,t){const n=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return n.push(t),()=>{const e=n.indexOf(t);-1!==e&&n.splice(e,1)}}$set(e){var t;this.$$set&&(t=e,0!==Object.keys(t).length)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}var Q=[{character:"",text:" Un beau matin de printemps s’annonce à Bordeaux. Au musée des Beaux-Arts, trois frères et sœurs visitent l’aile sud du bâtiment.",picture:"museum_outside"},{character:"",text:"Voici Léo, André et Camille…",picture:"children"},{character:"",text:"Alors qu'ils déambulent dans le musée, un tableau retient leur attention...",picture:"children"},{character:"",text:"Face à eux, accroché en hauteur, un tableau d’une taille imposante se dresse...",picture:"framed"},{character:"",text:"Un sentiment très particulier les anime alors...",picture:"children"},{character:"",text:"À ce moment précis, une chose est certaine, cette oeuvre à su attirer leur attention...",picture:"children"},{character:"Leo",text:'<span style="font-weight: 800">Léo :</span> Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.',picture:"children"},{character:"Camille",text:'<span style="font-weight: 800">Camille :</span> Ils se regardent tous comme s\'ils discutaient entre eux.',picture:"children"},{character:"Leo",text:'<span style="font-weight: 800">Léo :</span> L’homme avec une grande barbe grise semble cacher quelque chose...',picture:"children"},{character:"Leo",text:'<span style="font-weight: 800">Léo :</span> Moi, j’ai l\'impression que…',picture:"framed"},{character:"",text:"",picture:"christ",click:"Barbegrisebandeau"},{character:"Barbegrisebandeau",text:"« Je sais que c’est vous ! Je vous ai vu ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Hommeorange",text:"« Comment osez-vous ?! »",picture:"christ",zoom:"Hommeorange"},{character:"Jesus",text:"« Mes frères, celui qui a volé doit se dénoncer ! »",picture:"christ"},{character:"Jesus",text:"« Le bien de cette dame doit lui être rendu ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"Hommeorange"},{character:"Hommeorange",text:"« Très bien, j’avoue, J’ai vu cet homme voler la bourse ! C’est lui le fourbe ! »",picture:"christ",zoom:"Hommeorange"},{character:"Barbegrisebandeau",text:"« Comment osez-vous ? Il est possible d’identifier le voleur d’un simple regard ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Jesus",text:"« Mais comment saviez-vous que c’est une bourse qui a été volée ? »",picture:"christ",zoom:"Jesus"},{character:"Hommeorange",text:"« Euuuh et bien… »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"",text:"",picture:"christ",click:"MaindelHommeOrange"},{character:"",text:"",picture:"christ",zoom:"MaindelHommeOrange",click:"MaindelHommeOrangeZoom"},{character:"Jesus",text:"« Ah ah ! Pris la main dans le sac ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Oooh merci ! Je suis heureuse que vous ayez retrouvé le voleur ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"André",text:'<span style="font-weight: 800">André :</span> Ppfffffft n’importe quoi ton histoire !',picture:"children"},{character:"André",text:'<span style="font-weight: 800">André :</span> Regarde plutôt l’homme au fond. Il paraît louche.',picture:"children"},{character:"André",text:'<span style="font-weight: 800">André :</span> Pour moi l’histoire de ce tableau, c’est clairement…',picture:"framed"},{character:"",text:"",picture:"christ",click:"HommeDuFond"},{character:"HommeDuFond",text:"« Cet homme possède une arme ! Il  prépare un mauvais coup. »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« Je pense qu’il s'apprête à tuer ! »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« La commère du village, derrière, en saura forcément plus. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"",picture:"christ",click:"Dameauxperles"},{character:"Dameauxperles",text:"« Oui, je sais tout. C’est sûr ! Il veut tuer la femme. C’est sûr ! D’ailleurs, regardez-le, il a l’air coupable ! »",picture:"christ",zoom:"Dameauxperles"},{character:"Dameauxperles",text:"« Il faut prévenir les gardes ! »",picture:"christ",zoom:"Dameauxperles"},{character:"",text:"",picture:"christ",click:"Garde"},{character:"Garde",text:"« Ne vous inquiétez pas madame, je ne laisserai personne mourir ! »",picture:"christ",zoom:"Garde"},{character:"Garde",text:"« Halte-là ! Vous ne ferez de mal à personne aujourd'hui ! »",picture:"christ"},{character:"Femmevoilerose",text:"« Lâchez-moi garde ! Je suis innocent ! Cette femme est une voleuse. Elle ne m’a jamais remboursée ! »",picture:"christ",zoom:"Femmevoilerose"},{character:"Garde",text:"« Silence malotru ! Je vais te jeter au cachot ! Il ne pourra plus vous faire de mal madame. »",picture:"christ",zoom:"Garde"},{character:"FemmeDenudée",text:"« Me voilà soulagée ! Merci garde ! »",picture:"christ",zoom:"FemmeDenudéeTop"},{character:"André",text:'<span style="font-weight: 800">André :</span> Et heureusement, elle est sauvée et n’a plus de dettes.',picture:"children"},{character:"Camille",text:'<span style="font-weight: 800">Camille :</span> Mais non, gros bêta, ils sont en train de débattre pour construire un village.',picture:"children"},{character:"Camille",text:'<span style="font-weight: 800">Camille :</span> Donc ce qu’il se passe réellement…',picture:"framed"},{character:"",text:"",picture:"christ",click:"Hommeauchapeau"},{character:"Hommeauchapeau",text:"« Ecoutez-moi ! Nous devons prendre une décision avant la tombée de la nuit ! »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Oui, grand chef du village, si nous ne trouvons pas où dormir, cela pourrait être dangereux ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Quelqu’un a une idée ? »",picture:"christ",zoom:"Hommeauchapeau"},{character:"",text:"",picture:"christ",click:"Barbegriseprofil"},{character:"Barbegriseprofil",text:"« Si on construit ma grange, elle sera assez grande pour que nous puissions tous dormir dedans, ce sera rapide et utile ! »",picture:"christ",zoom:"Barbegriseprofil"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« N’oubliez pas le prisonnier, il faut construire une prison en priorité ! Et le bâtiment sera assez grand. »",picture:"christ",zoom:"GardeCenter"},{character:"",text:"",picture:"christ",click:"HommeLouche"},{character:"HommeLouche",text:"« Excusez-moi, mais ils nous faut des chambres séparées. Plusieurs cabanes feront l’affaire. »",picture:"christ",zoom:"HommeLouche"},{character:"FemmeLouche",text:"« Je ne supporte pas la paille. Sans compter qu’on mourra de froid dans une prison. »",picture:"christ",zoom:"FemmeLouche"},{character:"FemmeDenudée",text:"« Il faut qu’une personne neutre tranche. »",picture:"christ",zoom:"FemmeDenudée"},{character:"HommeDuFond",text:"« Puis-je aider ? »",picture:"christ",zoom:"HommeDuFond"},{character:"Hommeauchapeau",text:"« Euh, pourquoi pas... Donnons la parole au plus reclud de notre groupe. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Alors, que le prisonnier décide ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« Il en est hors de question ! »",picture:"christ",zoom:"GardeCenter"},{character:"Hommeauchapeau",text:"« Il nous faut un regard extérieur, il est donc le mieux placé. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"HommeDuFond",text:"« Hé bien, je pense qu'avec le temps dont nous disposons, dormir dans la paille, dans une grange, est la meilleure solution. »",picture:"christ",zoom:"HommeDuFond"},{character:"Camille",text:'<span style="font-weight: 800">Camille :</span> Et ils purent dormir tous au chaud !',picture:"children"},{character:"Leo",text:'<span style="font-weight: 800">Léo :</span> Moi, je préfère mon histoire, elle était plus simple !',picture:"children"},{character:"André",text:'<span style="font-weight: 800">André :</span> Oui, elle était sympa mais, la mienne était plus sérieuse.',picture:"children"},{character:"Camille",text:'<span style="font-weight: 800">Camille :</span> Je préfère celle de Léo, mais avouez que la mienne est la plus intéressante.',picture:"children"},{character:"Intervenante",text:'<span style="font-weight: 800">Guide :</span> Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...',picture:"Intervenante"},{character:"Leo",text:'<span style="font-weight: 800">Léo :</span> Oui, mais nous ne sommes pas d\'accord sur l’histoire que le tableau raconte…',picture:"children"},{character:"Intervenante",text:'<span style="font-weight: 800">Guide :</span> Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et il en narre une partie.',picture:"Intervenante"},{character:"Intervenante",text:'<span style="font-weight: 800">Guide :</span> Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.',picture:"Intervenante"}],X={Leo:{icon:"Leo.png",size:"normal"},"André":{icon:"Andre.png",size:"normal"},Camille:{icon:"Camille.png",size:"normal"},Barbegrisebandeau:{icon:"Barbegrisebandeau.png",size:"small"},Barbegriseprofil:{icon:"barbegriseprofil.png",size:"small"},Dameauxperles:{icon:"Dameauxperles.png",size:"small"},"FemmeDenudée":{icon:"FemmeDenudée.png",size:"small"},FemmeLouche:{icon:"FemmeLouche.png",size:"small"},Femmevoilerose:{icon:"Femmevoilerose.png",size:"small"},Garde:{icon:"garde.png",size:"small"},Hommeauchapeau:{icon:"Hommeauchapeau.png",size:"small"},HommeDuFond:{icon:"HommeDuFond.png",size:"small"},HommeLouche:{icon:"HommeLouche.png",size:"small"},Hommeorange:{icon:"Hommeorange.png",size:"small"},Hommeturbanfond:{icon:"Hommeturbanfond.png",size:"small"},Jesus:{icon:"Jesus.png",size:"small"},Intervenante:{icon:"Intervenante_fondue.png",size:"normal"}};const K=[];function Y(t,n=e){let r;const s=new Set;function i(e){if(a(t,e)&&(t=e,r)){const e=!K.length;for(const e of s)e[1](),K.push(e,t);if(e){for(let e=0;e<K.length;e+=2)K[e][0](K[e+1]);K.length=0}}}return{set:i,update:function(e){i(e(t))},subscribe:function(a,c=e){const o=[a,c];return s.add(o),1===s.size&&(r=n(i)||e),a(t),()=>{s.delete(o),0===s.size&&(r(),r=null)}}}}const ee=Y(10),te=Y(null),ne=Y((()=>{let e=u(ee);te.set(e),ee.set(e+1)})),re=Y((()=>{let e=u(ee);e>0&&(te.set(e),ee.set(e-1))})),se=Y(!1),ae=Y(!1),ie=Y(!1),ce=Y([]),oe=Y({menuClick:null,eric:null});function le(e){let t,n,r;return{c(){t=g("img"),$(t,"class",n=p(X[Q[e[1]].character].size)+" svelte-1a9bf50"),o(t.src,r="img/characters/"+X[Q[e[1]].character].icon)||$(t,"src",r),$(t,"alt","")},m(e,n){h(e,t,n)},p(e,s){2&s&&n!==(n=p(X[Q[e[1]].character].size)+" svelte-1a9bf50")&&$(t,"class",n),2&s&&!o(t.src,r="img/characters/"+X[Q[e[1]].character].icon)&&$(t,"src",r)},d(e){e&&v(t)}}}function ue(t){let n,r,s,a,i,c,l,u,m,p,d,x,y=Q[t[1]].text+"",H=""!==Q[t[1]].character&&le(t);return{c(){n=g("div"),r=g("div"),s=g("div"),H&&H.c(),a=b(),i=g("p"),c=b(),l=g("div"),l.innerHTML='<p class="font-cinzel nextButton svelte-1a9bf50">SUIVANT</p> \n      <div class="underline svelte-1a9bf50"></div>',u=b(),m=g("img"),$(s,"class","character svelte-1a9bf50"),$(i,"class","font-montserrat text svelte-1a9bf50"),z(l,"width","fit-content"),$(l,"class","nextButtonContainer svelte-1a9bf50"),_(l,"canContinue",t[0]),$(r,"class","content svelte-1a9bf50"),$(m,"class","decoration svelte-1a9bf50"),o(m.src,p="img/deco/cadre_decors.png")||$(m,"src","img/deco/cadre_decors.png"),$(m,"alt",""),$(n,"class","dialog svelte-1a9bf50")},m(e,o){h(e,n,o),f(n,r),f(r,s),H&&H.m(s,null),f(r,a),f(r,i),i.innerHTML=y,f(r,c),f(r,l),f(n,u),f(n,m),d||(x=w(n,"click",t[2]),d=!0)},p(e,[t]){""!==Q[e[1]].character?H?H.p(e,t):(H=le(e),H.c(),H.m(s,null)):H&&(H.d(1),H=null),2&t&&y!==(y=Q[e[1]].text+"")&&(i.innerHTML=y),1&t&&_(l,"canContinue",e[0])},i:e,o:e,d(e){e&&v(n),H&&H.d(),d=!1,x()}}}function me(e,t,n){let r,s,a;m(e,se,(e=>n(4,r=e))),m(e,ne,(e=>n(5,s=e))),m(e,ee,(e=>n(1,a=e)));let{first:i}=t;d(ee,a=i,a);let c=!0;return e.$$set=e=>{"first"in e&&n(3,i=e.first)},[c,a,function(){c&&(a<Q.length-1?(s(),n(0,c=!1),setTimeout((()=>{n(0,c=!0)}),1100)):d(se,r=!1,r))},i]}class pe extends Z{constructor(e){super(),W(this,e,me,ue,a,{first:3})}}var de={museum_outside:"museum_outside.jpg",children:"Enfants_2.png",framed:"framed.png",christ:"christ.png",Intervenante:"Intervenante.png"},fe={Barbegrisebandeau:{x:23.59,y:55,w:12.32,h:31.25,transform:"scale(3) translate(21vw, 10vw)"},Hommeorange:{x:10.59,y:45,w:18.32,h:35.25,transform:"scale(3) translate(30vw, 6vw)"},Jesus:{transform:"scale(3) translate(6vw, 10vw)"},MaindelHommeOrange:{x:24.25,y:27,w:12.32,h:23.25,transform:"scale(3) translate(20vw, -5vw)"},MaindelHommeOrangeZoom:{x:39.25,y:23,w:25.32,h:34.25},"FemmeDenudée":{x:72.25,y:27,w:24.32,h:55.25,transform:"scale(3) translate(-27vw, 7vw)"},HommeDuFond:{x:63.25,y:77,w:12.32,h:23.25,transform:"scale(5) translate(-19vw, 35vh)"},HommeDuFondCenter:{transform:"scale(5) translate(-19vw, 35vh)"},Dameauxperles:{x:58,y:65,w:11.32,h:23.25,transform:"scale(4) translate(-14vw, 23vh)"},Garde:{x:82.25,y:49,w:10.32,h:24.25,transform:"scale(3) translate(-31vw, 6vw)"},Femmevoilerose:{transform:"scale(4) translate(-22vw, 20vh)"},"FemmeDenudéeTop":{transform:"scale(3) translate(-27vw, 0vh)"},Hommeauchapeau:{x:61.25,y:54,w:11.32,h:27.25,transform:"scale(3) translate(-17vw, 7vw)"},Barbegriseprofil:{x:.25,y:54,w:12.32,h:29.25,transform:"scale(3) translate(32vw, 8vw)"},GardeCenter:{x:82.25,y:62,w:11.32,h:27.25,transform:"scale(3) translate(-30vw, 12vw)"},HommeLouche:{x:48.25,y:59,w:9.32,h:24.25,transform:"scale(3) translate(-3vw, 8vw)"},FemmeLouche:{transform:"scale(3) translate(-8vw, 8vw)"}};const he=e=>new Promise(((t,n)=>{setTimeout((()=>{t()}),e)})),ve=e=>e>=28&&e<=40||56==e||62==e?"top":"center",ge=e=>{void 0===e.audioCtx&&be(e),e.audioGain.gain.value="0",e.play();let t=setInterval((function(){let n=e.audioGain.gain.value+.1;n>=1&&(n=1,clearInterval(t)),e.audioGain.gain.value=n}),300);void 0!==e.fadeInterval?(clearInterval(e.fadeInterval),e.fadeInterval=t):Object.defineProperty(e,"fadeInterval",{value:t,writable:!0})},xe=e=>{void 0===e.audioCtx&&be(e);let t=setInterval((function(){let n=e.audioGain.gain.value-.1;n<=0&&(n=0,e.pause(),clearInterval(t)),e.audioGain.gain.value=n}),300);void 0!==e.fadeInterval?(clearInterval(e.fadeInterval),e.fadeInterval=t):Object.defineProperty(e,"fadeInterval",{value:t,writable:!0})};function be(e){Object.defineProperty(e,"audioCtx",{value:new AudioContext,writable:!0}),Object.defineProperty(e,"audioSource",{value:e.audioCtx.createMediaElementSource(e),writable:!0}),Object.defineProperty(e,"audioGain",{value:e.audioCtx.createGain(),writable:!0}),e.audioSource.connect(e.audioGain),e.audioGain.connect(e.audioCtx.destination)}function ye(e){let t,n,r;return{c(){t=g("div"),n=g("img"),o(n.src,r="/img/pictures/"+e[6])||$(n,"src",r),$(n,"alt",""),$(n,"class","svelte-19bmcey"),_(n,"center","center"===e[9]),$(t,"class","pictureBg svelte-19bmcey")},m(e,r){h(e,t,r),f(t,n)},p(e,t){64&t&&!o(n.src,r="/img/pictures/"+e[6])&&$(n,"src",r),512&t&&_(n,"center","center"===e[9])},d(e){e&&v(t)}}}function we(t){let n,r,s;return{c(){n=g("div"),n.innerHTML='<img src="/img/deco/backArrow.svg" alt="" class="svelte-19bmcey"/>',$(n,"class","backArrow svelte-19bmcey")},m(e,a){h(e,n,a),r||(s=w(n,"click",t[14]),r=!0)},p:e,d(e){e&&v(n),r=!1,s()}}}function $e(t){let n,r,s;return{c(){n=g("div"),$(n,"class","clickDiv svelte-19bmcey"),z(n,"width",t[10].w+"%"),z(n,"height",t[10].h+"%"),z(n,"bottom",t[10].y+"%"),z(n,"left",t[10].x+"%")},m(e,a){h(e,n,a),r||(s=w(n,"click",t[13]),r=!0)},p(e,t){1024&t&&z(n,"width",e[10].w+"%"),1024&t&&z(n,"height",e[10].h+"%"),1024&t&&z(n,"bottom",e[10].y+"%"),1024&t&&z(n,"left",e[10].x+"%")},i:e,o:e,d(e){e&&v(n),r=!1,s()}}}function ze(e){let t,n;return t=new pe({props:{first:e[2]}}),{c(){J(t.$$.fragment)},m(e,r){N(t,e,r),n=!0},p(e,n){const r={};4&n&&(r.first=e[2]),t.$set(r)},i(e){n||(S(t.$$.fragment,e),n=!0)},o(e){P(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function _e(e){let t,n,r,s,a,i,c,l,u,m,p,d,x,w,H=e[6]&&ye(e),L=e[2]>0&&we(e);const M=[ze,$e],C=[];function A(e,t){return""!==Q[e[2]].text?0:e[12]?1:-1}return~(p=A(e))&&(d=C[p]=M[p](e)),{c(){H&&H.c(),t=b(),n=g("div"),r=g("img"),a=b(),i=g("div"),c=g("img"),u=b(),L&&L.c(),m=b(),d&&d.c(),x=y(),o(r.src,s="/img/pictures/"+e[5])||$(r,"src",s),$(r,"alt",""),$(r,"class","svelte-19bmcey"),_(r,"opacityTransition",e[11]),_(r,"center","center"===e[7]),$(n,"class","pictureBg svelte-19bmcey"),o(c.src,l="/img/pictures/"+e[0])||$(c,"src",l),$(c,"alt",""),$(c,"class","svelte-19bmcey"),_(c,"center","center"===e[8]),$(i,"class","pictureBg svelte-19bmcey"),z(i,"--transform",e[1]),_(i,"opacityTransition",e[11])},m(s,o){H&&H.m(s,o),h(s,t,o),h(s,n,o),f(n,r),e[15](n),h(s,a,o),h(s,i,o),f(i,c),e[16](i),h(s,u,o),L&&L.m(s,o),h(s,m,o),~p&&C[p].m(s,o),h(s,x,o),w=!0},p(e,[n]){e[6]?H?H.p(e,n):(H=ye(e),H.c(),H.m(t.parentNode,t)):H&&(H.d(1),H=null),(!w||32&n&&!o(r.src,s="/img/pictures/"+e[5]))&&$(r,"src",s),2048&n&&_(r,"opacityTransition",e[11]),128&n&&_(r,"center","center"===e[7]),(!w||1&n&&!o(c.src,l="/img/pictures/"+e[0]))&&$(c,"src",l),256&n&&_(c,"center","center"===e[8]),(!w||2&n)&&z(i,"--transform",e[1]),2048&n&&_(i,"opacityTransition",e[11]),e[2]>0?L?L.p(e,n):(L=we(e),L.c(),L.m(m.parentNode,m)):L&&(L.d(1),L=null);let a=p;p=A(e),p===a?~p&&C[p].p(e,n):(d&&(B(),P(C[a],1,1,(()=>{C[a]=null})),O()),~p?(d=C[p],d?d.p(e,n):(d=C[p]=M[p](e),d.c()),S(d,1),d.m(x.parentNode,x)):d=null)},i(e){w||(S(d),w=!0)},o(e){P(d),w=!1},d(r){H&&H.d(r),r&&v(t),r&&v(n),e[15](null),r&&v(a),r&&v(i),e[16](null),r&&v(u),L&&L.d(r),r&&v(m),~p&&C[p].d(r),r&&v(x)}}}function He(e,t){let n=t.offsetWidth,r=t.offsetHeight,s=parseFloat(e);return"vw"==e.slice(-2)?n*(s/100)+"px":"vh"==e.slice(-2)?r*(s/100)+"px":e}function Le(e,t,n){let r,s,a,i,c,o,l;m(e,ee,(e=>n(2,r=e))),m(e,te,(e=>n(17,s=e))),m(e,re,(e=>n(18,a=e))),m(e,ne,(e=>n(19,i=e))),m(e,ce,(e=>n(20,c=e)));let u=de[Q[r+1].picture],p=de[Q[r].picture],f=null,h=ve(r+1),v=ve(r),g=null,x=null,b=!1,y="scale(1) translate(0vw, 0vw)",w=!1;return e.$$.update=()=>{if(4&e.$$.dirty&&(!async function(){try{de[Q[r].picture]!==p?(n(11,b=!0),n(3,o.style.opacity=0,o),r<s&&n(4,l.style.opacity=0,l),await he(1e3),n(11,b=!1),n(0,p=de[Q[r].picture]),n(8,v=ve(r)),await he(100),n(3,o.style.opacity=null,o),n(4,l.style.opacity=null,l)):n(8,v=ve(r));let e=Q[r+1];e&&e.picture&&(n(5,u=de[e.picture]),n(7,h=ve(r+1)));let t=Q[r-1];t&&t.picture&&(n(6,f=de[t.picture]),n(9,g=ve(r-1)))}catch(e){}}(),r>=0&&r<3?d(ce,c=["musicMuseeExt","musicMuseeExtAmbiance"],c):r>=3&&r<10?d(ce,c=["musicMuseeExt","musicMuseeAmbiance"],c):r>=10&&r<25?d(ce,c=["musicLeo"],c):r>=25&&r<28?d(ce,c=["musicMuseeExt","musicMuseeAmbiance"],c):r>=28&&r<41?d(ce,c=["musicAndre"],c):r>=41&&r<44?d(ce,c=["musicMuseeExt","musicMuseeAmbiance"],c):r>=44&&r<63?d(ce,c=["musicCamille"],c):r>=63&&r<67?d(ce,c=["musicMuseeExt","musicMuseeAmbiance"],c):r>=67&&d(ce,c=["musicIntervenante","musicMuseeAmbiance"],c)),7&e.$$.dirty){let e=y;if(void 0!==Q[r].zoom){let e=fe[Q[r].zoom].transform,t=e.split(" translate")[0],s=e.split("translate(")[1].split(",")[0],a=e.split(", ")[1].split(")")[0],i=document.querySelector("main");n(1,y=`${t} translate(${He(s,i)}, ${He(a,i)})`)}else n(1,y="scale(1) translate(0vw, 0vw)");void 0!==Q[r].click?(n(10,x=fe[Q[r].click]),e!==y?setTimeout((()=>{n(12,w=!0)}),2e3):de[Q[r].picture]!==p?setTimeout((()=>{n(12,w=!0)}),1e3):n(12,w=!0)):(n(10,x=null),n(12,w=!1))}},[p,y,r,o,l,u,f,h,v,g,x,b,w,function(){n(12,w=!1),i()},function(){a()},function(e){M[e?"unshift":"push"]((()=>{l=e,n(4,l)}))},function(e){M[e?"unshift":"push"]((()=>{o=e,n(3,o)}))}]}class Me extends Z{constructor(e){super(),W(this,e,Le,_e,a,{})}}function Ce(t){let n;return{c(){n=g("div"),n.innerHTML='<img src="/img/deco/refresh-ccw.svg" alt="" class="svelte-1nqwcr1"/> \n  <p class="font-cinzel svelte-1nqwcr1">Tournez votre écran</p>',$(n,"class","mustTurn svelte-1nqwcr1")},m(e,t){h(e,n,t)},p:e,i:e,o:e,d(e){e&&v(n)}}}class Ae extends Z{constructor(e){super(),W(this,e,null,Ce,a,{})}}function De(t){let n,s,a,i,c,o,l,u,m,p,d,x,y,z,_,H,L,M;return{c(){n=g("div"),s=g("div"),a=b(),i=g("div"),c=g("div"),o=g("p"),o.textContent="CREDITS",l=b(),u=g("div"),m=b(),p=g("div"),d=g("h1"),d.textContent="REGARDS",x=b(),y=g("div"),z=g("p"),z.textContent="VIVRE L'EXPÉRIENCE",_=b(),H=g("div"),$(s,"class","dark svelte-16ttej1"),$(o,"class","font-cinzel svelte-16ttej1"),$(u,"class","underline svelte-16ttej1"),$(c,"class","button svelte-16ttej1"),$(i,"class","top svelte-16ttej1"),$(d,"class","font-cinzel svelte-16ttej1"),$(z,"class","font-cinzel svelte-16ttej1"),$(H,"class","underline svelte-16ttej1"),$(y,"class","button svelte-16ttej1"),$(p,"class","bottom svelte-16ttej1"),$(n,"class","home svelte-16ttej1")},m(e,r){h(e,n,r),f(n,s),f(n,a),f(n,i),f(i,c),f(c,o),f(c,l),f(c,u),f(n,m),f(n,p),f(p,d),f(p,x),f(p,y),f(y,z),f(y,_),f(y,H),L||(M=[w(o,"click",t[2]),w(z,"click",t[1])],L=!0)},p:e,i:e,o:e,d(e){e&&v(n),L=!1,r(M)}}}function ke(e,t,n){let r,s,a,i;m(e,se,(e=>n(3,r=e))),m(e,oe,(e=>n(4,s=e))),m(e,ce,(e=>n(5,a=e))),m(e,ae,(e=>n(0,i=e))),d(ce,a=["musicMenu"],a);return[i,function(){s.menuClick?.play(),d(se,r=!0,r)},()=>{d(ae,i=!0,i)}]}class Ee extends Z{constructor(e){super(),W(this,e,ke,De,a,{})}}function Ie(t){let n,r,s,a,i,c,l,u,m;return{c(){n=g("div"),r=g("img"),a=b(),i=g("div"),i.innerHTML='<div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">le Christ et la femme adultère</h2> \n      <p class="svelte-bxepaf">PORTA dit SALVIATI Le Jeune Giuseppe Della</p> \n      <p class="svelte-bxepaf">16e siècle</p></div> \n\n    <div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">Portrait de Philippe Durand-Dassier</h2> \n      <p class="svelte-bxepaf">Charles Emile Auguste DURAND dit CAROLUS-DURAN</p> \n      <p class="svelte-bxepaf">1876</p></div>',c=b(),l=g("div"),l.innerHTML='<div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">Portrait de femme</h2> \n      <p class="svelte-bxepaf">DUPAIN Edmond Louis</p> \n      <p class="svelte-bxepaf">1886</p></div> \n\n    <div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">Jeune pèlerin</h2> \n      <p class="svelte-bxepaf">GRIMOU Alexis</p> \n      <p class="svelte-bxepaf">1732</p></div> \n\n    <div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">Tête de fillette</h2> \n      <p class="svelte-bxepaf">LARÉE Antoine Marc Gustave</p> \n      <p class="svelte-bxepaf">1906</p></div>',$(r,"class","arrow"),o(r.src,s="/img/deco/creditsLeft.svg")||$(r,"src","/img/deco/creditsLeft.svg"),$(r,"alt",""),$(n,"class","left arrow svelte-bxepaf"),$(i,"class","middle svelte-bxepaf"),$(l,"class","right svelte-bxepaf")},m(e,s){h(e,n,s),f(n,r),h(e,a,s),h(e,i,s),h(e,c,s),h(e,l,s),u||(m=w(r,"click",t[4]),u=!0)},p:e,d(e){e&&v(n),e&&v(a),e&&v(i),e&&v(c),e&&v(l),u=!1,m()}}}function Fe(t){let n,r,s,a,i,c,l,u,m;return{c(){n=g("div"),n.innerHTML='<div class="block svelte-bxepaf"><div class="columns svelte-bxepaf"><div class="column"><h2 class="svelte-bxepaf">Notre équipe</h2> \n          <p class="svelte-bxepaf">Maxime LASSERRE</p> \n          <p class="svelte-bxepaf">Samuel LABAGNERE</p> \n          <p class="svelte-bxepaf">Naja DALMAGNE</p> \n          <p class="svelte-bxepaf">Martin DUCONSEIL</p></div> \n\n        <div class="column"><p class="mmi svelte-bxepaf"><img src="/img/deco/mmi.svg" alt="" class="svelte-bxepaf"/>Bordeaux</p> \n          <p class="svelte-bxepaf">Léa RAULT</p> \n          <p class="svelte-bxepaf">Emma FOUILLAT</p> \n          <p class="svelte-bxepaf">Enzo DURET</p></div></div></div> \n\n    <div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">Remerciements</h2> \n      <p class="svelte-bxepaf">Musée des beaux-arts &amp; sara la dame du musée</p> \n      <p class="svelte-bxepaf">Alexis Benoit, Clément Casanas, Thibault Charron &amp; Bastien De L’hermite</p></div>',r=b(),s=g("div"),s.innerHTML='<h2 class="svelte-bxepaf">Musiques</h2> \n    <div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">4 saisons - l&#39;Hiver - Largo</h2> \n      <p class="svelte-bxepaf">Vivaldi</p></div> \n\n    <div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">Les 13 scènes d&#39;enfants</h2> \n      <p class="svelte-bxepaf">Schumann</p></div> \n\n    <div class="block svelte-bxepaf"><h2 class="svelte-bxepaf">Symphonie inachevée</h2> \n      <p class="svelte-bxepaf">Schubert</p></div>',a=b(),i=g("div"),c=g("img"),$(n,"class","left svelte-bxepaf"),$(s,"class","middle svelte-bxepaf"),o(c.src,l="/img/deco/creditsRight.svg")||$(c,"src","/img/deco/creditsRight.svg"),$(c,"alt",""),$(i,"class","right arrow svelte-bxepaf")},m(e,o){h(e,n,o),h(e,r,o),h(e,s,o),h(e,a,o),h(e,i,o),f(i,c),u||(m=w(c,"click",t[3]),u=!0)},p:e,d(e){e&&v(n),e&&v(r),e&&v(s),e&&v(a),e&&v(i),u=!1,m()}}}function Te(t){let n,r,s,a,i,c,o,l,u,m,p,d,x,y;function z(e,t){return 1===e[0]?Fe:2===e[0]?Ie:void 0}let _=z(t),H=_&&_(t);return{c(){n=g("div"),r=g("div"),s=b(),a=g("div"),i=g("h1"),i.textContent="Crédits",c=b(),o=g("div"),l=g("p"),l.textContent="Retour",u=b(),m=g("div"),p=b(),d=g("div"),H&&H.c(),$(r,"class","dark svelte-bxepaf"),$(i,"class","svelte-bxepaf"),$(l,"class","svelte-bxepaf"),$(m,"class","underline svelte-bxepaf"),$(o,"class","button svelte-bxepaf"),$(a,"class","top font-cinzel svelte-bxepaf"),$(d,"class","bottom svelte-bxepaf"),$(n,"class","credits svelte-bxepaf")},m(e,v){h(e,n,v),f(n,r),f(n,s),f(n,a),f(a,i),f(a,c),f(a,o),f(o,l),f(o,u),f(o,m),f(n,p),f(n,d),H&&H.m(d,null),x||(y=w(l,"click",t[2]),x=!0)},p(e,[t]){_===(_=z(e))&&H?H.p(e,t):(H&&H.d(1),H=_&&_(e),H&&(H.c(),H.m(d,null)))},i:e,o:e,d(e){e&&v(n),H&&H.d(),x=!1,y()}}}function qe(e,t,n){let r;m(e,ae,(e=>n(1,r=e)));let s=1;return[s,r,()=>{d(ae,r=!1,r)},()=>{n(0,s=2)},()=>{n(0,s=1)}]}class je extends Z{constructor(e){super(),W(this,e,qe,Te,a,{})}}function Ge(t){let n,r;return{c(){n=g("div"),r=g("p"),$(r,"class","font-cinzel svelte-wikrvt"),$(n,"class","final svelte-wikrvt")},m(e,s){h(e,n,s),f(n,r),t[2](r)},p:e,i:e,o:e,d(e){e&&v(n),t[2](null)}}}function Be(e,t,n){let r,s,a;m(e,ee,(e=>n(3,r=e))),m(e,oe,(e=>n(1,s=e))),m(e,ce,(e=>n(4,a=e))),d(ce,a=["musicCitation"],a);let i="“ La richesse d’une œuvre d’art est aussi un ensemble d’interprétations variées, à travers différents . . . „".split(""),c=null;return e.$$.update=()=>{if(2&e.$$.dirty&&s.eric?.play(),1&e.$$.dirty&&c){for(const e of i){let t=document.createElement("span");t.style.opacity=0,t.style.transition="opacity 1s",t.innerHTML=e,c.appendChild(t)}!async function(){let e=c.querySelectorAll("span");for(let t=0;t<i.length;t++)await he(50),e[t].style.opacity=1;await he(2e3),d(ee,r=0,r)}()}},[c,s,function(e){M[e?"unshift":"push"]((()=>{c=e,n(0,c)}))}]}class Oe extends Z{constructor(e){super(),W(this,e,Be,Ge,a,{})}}function Se(t){let n,r,s,a,i,c,l,u,m;return{c(){n=g("div"),r=g("img"),a=b(),i=g("p"),i.textContent="Pour une meilleure expérience, munissez vous d’écouteurs.",c=b(),l=g("div"),l.textContent="Compris",o(r.src,s="/img/deco/casque.png")||$(r,"src","/img/deco/casque.png"),$(r,"alt",""),$(r,"class","svelte-u9g782"),$(i,"class","font-montserrat svelte-u9g782"),$(l,"class","button font-montserrat svelte-u9g782"),$(n,"class","confirmMusic svelte-u9g782")},m(e,s){h(e,n,s),f(n,r),f(n,a),f(n,i),f(n,c),f(n,l),u||(m=w(l,"click",t[0]),u=!0)},p:e,i:e,o:e,d(e){e&&v(n),u=!1,m()}}}function Pe(e,t,n){let r;return m(e,ie,(e=>n(1,r=e))),[function(){d(ie,r=!0,r)}]}class Re extends Z{constructor(e){super(),W(this,e,Pe,Se,a,{})}}const{window:Je}=R;function Ne(t){let n,r;return n=new Re({}),{c(){J(n.$$.fragment)},m(e,t){N(n,e,t),r=!0},p:e,i(e){r||(S(n.$$.fragment,e),r=!0)},o(e){P(n.$$.fragment,e),r=!1},d(e){U(n,e)}}}function Ue(e){let t,n,r,s;const a=[Xe,Qe,Ze,We],i=[];function c(e,t){return e[4]?0:e[5]?1:e[6]===Q.length-1?2:3}return t=c(e),n=i[t]=a[t](e),{c(){n.c(),r=y()},m(e,n){i[t].m(e,n),h(e,r,n),s=!0},p(e,s){let o=t;t=c(e),t!==o&&(B(),P(i[o],1,1,(()=>{i[o]=null})),O(),n=i[t],n||(n=i[t]=a[t](e),n.c()),S(n,1),n.m(r.parentNode,r))},i(e){s||(S(n),s=!0)},o(e){P(n),s=!1},d(e){i[t].d(e),e&&v(r)}}}function Ve(t){let n,r;return n=new Ae({}),{c(){J(n.$$.fragment)},m(e,t){N(n,e,t),r=!0},p:e,i(e){r||(S(n.$$.fragment,e),r=!0)},o(e){P(n.$$.fragment,e),r=!1},d(e){U(n,e)}}}function We(e){let t,n;return t=new Ee({}),{c(){J(t.$$.fragment)},m(e,r){N(t,e,r),n=!0},i(e){n||(S(t.$$.fragment,e),n=!0)},o(e){P(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Ze(e){let t,n;return t=new Oe({}),{c(){J(t.$$.fragment)},m(e,r){N(t,e,r),n=!0},i(e){n||(S(t.$$.fragment,e),n=!0)},o(e){P(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Qe(e){let t,n;return t=new je({}),{c(){J(t.$$.fragment)},m(e,r){N(t,e,r),n=!0},i(e){n||(S(t.$$.fragment,e),n=!0)},o(e){P(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Xe(e){let t,n;return t=new Me({}),{c(){J(t.$$.fragment)},m(e,r){N(t,e,r),n=!0},i(e){n||(S(t.$$.fragment,e),n=!0)},o(e){P(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Ke(e){let t,n,s,a,i,c,o,l,u,m,p,d,f,x,y,z,H,L,M,C,A,D,k,E,I,F,T,q;const j=[Ve,Ue,Ne],G=[];function R(e,t){return e[1]?0:e[3]?1:2}return E=R(e),I=G[E]=j[E](e),{c(){t=g("audio"),t.innerHTML='<source src="/audio/Eric.mp3" type="audio/mpeg"/>',n=b(),s=g("audio"),s.innerHTML='<source src="/audio/1_-_Menu_-_click_(touche_clavier).mp3" type="audio/mpeg"/>',a=b(),i=g("audio"),i.innerHTML='<source src="/audio/1_-_Menu_-_musique.mp3" type="audio/mpeg"/>',c=b(),o=g("audio"),o.innerHTML='<source src="/audio/2_-_Musee_exterieur_-_ambiance_de_fond.mp3" type="audio/mpeg"/>',l=b(),u=g("audio"),u.innerHTML='<source src="/audio/2_-_Musee_exterieur_-_musique.mp3" type="audio/mpeg"/>',m=b(),p=g("audio"),p.innerHTML='<source src="/audio/3_-_Musee_-_ambiance_de_fond.mp3" type="audio/mpeg"/>',d=b(),f=g("audio"),f.innerHTML='<source src="/audio/3_-_Musee_-_andre.mp3" type="audio/mpeg"/>',x=b(),y=g("audio"),y.innerHTML='<source src="/audio/3_-_Musee_-_camille.mp3" type="audio/mpeg"/>',z=b(),H=g("audio"),H.innerHTML='<source src="/audio/3_-_Musee_-_leo.mp3" type="audio/mpeg"/>',L=b(),M=g("audio"),M.innerHTML='<source src="/audio/4_-_Fin_-_citation_-_musique.mp3" type="audio/mpeg"/>',C=b(),A=g("audio"),A.innerHTML='<source src="/audio/4_-_Fin_-_sequence_intervenante_-_musique.mp3" type="audio/mpeg"/>',D=b(),k=g("main"),I.c(),i.loop=!0,o.loop=!0,u.loop=!0,p.loop=!0,f.loop=!0,y.loop=!0,H.loop=!0,A.loop=!0,$(k,"class","svelte-a7f768"),_(k,"mustTurn",e[1])},m(r,v){h(r,t,v),e[10](t),h(r,n,v),h(r,s,v),e[11](s),h(r,a,v),h(r,i,v),e[12](i),h(r,c,v),h(r,o,v),e[13](o),h(r,l,v),h(r,u,v),e[14](u),h(r,m,v),h(r,p,v),e[15](p),h(r,d,v),h(r,f,v),e[16](f),h(r,x,v),h(r,y,v),e[17](y),h(r,z,v),h(r,H,v),e[18](H),h(r,L,v),h(r,M,v),e[19](M),h(r,C,v),h(r,A,v),e[20](A),h(r,D,v),h(r,k,v),G[E].m(k,null),F=!0,T||(q=[w(Je,"resize",e[7]),w(k,"click",Ye)],T=!0)},p(e,[t]){let n=E;E=R(e),E===n?G[E].p(e,t):(B(),P(G[n],1,1,(()=>{G[n]=null})),O(),I=G[E],I?I.p(e,t):(I=G[E]=j[E](e),I.c()),S(I,1),I.m(k,null)),2&t&&_(k,"mustTurn",e[1])},i(e){F||(S(I),F=!0)},o(e){P(I),F=!1},d(h){h&&v(t),e[10](null),h&&v(n),h&&v(s),e[11](null),h&&v(a),h&&v(i),e[12](null),h&&v(c),h&&v(o),e[13](null),h&&v(l),h&&v(u),e[14](null),h&&v(m),h&&v(p),e[15](null),h&&v(d),h&&v(f),e[16](null),h&&v(x),h&&v(y),e[17](null),h&&v(z),h&&v(H),e[18](null),h&&v(L),h&&v(M),e[19](null),h&&v(C),h&&v(A),e[20](null),h&&v(D),h&&v(k),G[E].d(),T=!1,r(q)}}}function Ye(){"function"==typeof document.body.requestFullscreen&&window.innerHeight<=420&&window.innerWidth<=920&&document.body.requestFullscreen()}function et(e,t,n){let r,s,a,i,c,o;m(e,ce,(e=>n(9,r=e))),m(e,oe,(e=>n(2,s=e))),m(e,ie,(e=>n(3,a=e))),m(e,se,(e=>n(4,i=e))),m(e,ae,(e=>n(5,c=e))),m(e,ee,(e=>n(6,o=e)));let l,u={musicMenu:null,musicMuseeExtAmbiance:null,musicMuseeExt:null,musicMuseeAmbiance:null,musicAndre:null,musicCamille:null,musicLeo:null,musicCitation:null,musicIntervenante:null},p=!1;function d(){let e=.01*window.innerHeight;document.documentElement.style.setProperty("--vh",`${e}px`),window.innerHeight>window.innerWidth?n(1,l=!0):n(1,l=!1)}return d(),e.$$.update=()=>{if(1&e.$$.dirty){const e=Object.entries(u);let t;for(t=0;t<e.length&&e[t][1];t++);t===e.length&&n(8,p=!0)}if(769&e.$$.dirty&&p)for(const[e,t]of Object.entries(u))r.includes(e)?t.paused&&ge(t):t.paused||xe(t)},[u,l,s,a,i,c,o,d,p,r,function(e){M[e?"unshift":"push"]((()=>{s.eric=e,oe.set(s)}))},function(e){M[e?"unshift":"push"]((()=>{s.menuClick=e,oe.set(s)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicMenu=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicMuseeExtAmbiance=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicMuseeExt=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicMuseeAmbiance=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicAndre=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicCamille=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicLeo=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicCitation=e,n(0,u)}))},function(e){M[e?"unshift":"push"]((()=>{u.musicIntervenante=e,n(0,u)}))}]}return new class extends Z{constructor(e){super(),W(this,e,et,Ke,a,{})}}({target:document.getElementById("svelte")})}();
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    let src_url_equal_anchor;
+    function src_url_equal(element_src, url) {
+        if (!src_url_equal_anchor) {
+            src_url_equal_anchor = document.createElement('a');
+        }
+        src_url_equal_anchor.href = url;
+        return element_src === src_url_equal_anchor.href;
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function validate_store(store, name) {
+        if (store != null && typeof store.subscribe !== 'function') {
+            throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+        }
+    }
+    function subscribe(store, ...callbacks) {
+        if (store == null) {
+            return noop;
+        }
+        const unsub = store.subscribe(...callbacks);
+        return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+    }
+    function get_store_value(store) {
+        let value;
+        subscribe(store, _ => value = _)();
+        return value;
+    }
+    function component_subscribe(component, store, callback) {
+        component.$$.on_destroy.push(subscribe(store, callback));
+    }
+    function null_to_empty(value) {
+        return value == null ? '' : value;
+    }
+    function set_store_value(store, ret, value) {
+        store.set(value);
+        return ret;
+    }
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
+    }
+    function children$1(element) {
+        return Array.from(element.childNodes);
+    }
+    function set_style(node, key, value, important) {
+        if (value === null) {
+            node.style.removeProperty(key);
+        }
+        else {
+            node.style.setProperty(key, value, important ? 'important' : '');
+        }
+    }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
+    function custom_event(type, detail, bubbles = false) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, bubbles, false, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    // flush() calls callbacks in this order:
+    // 1. All beforeUpdate callbacks, in order: parents before children
+    // 2. All bind:this callbacks, in reverse order: children before parents.
+    // 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+    //    for afterUpdates called during the initial onMount, which are called in
+    //    reverse order: children before parents.
+    // Since callbacks might update component values, which could trigger another
+    // call to flush(), the following steps guard against this:
+    // 1. During beforeUpdate, any updated components will be added to the
+    //    dirty_components array and will cause a reentrant call to flush(). Because
+    //    the flush index is kept outside the function, the reentrant call will pick
+    //    up where the earlier call left off and go through all dirty components. The
+    //    current_component value is saved and restored so that the reentrant call will
+    //    not interfere with the "parent" flush() call.
+    // 2. bind:this callbacks cannot trigger new flush() calls.
+    // 3. During afterUpdate, any updated components will NOT have their afterUpdate
+    //    callback called a second time; the seen_callbacks set, outside the flush()
+    //    function, guarantees this behavior.
+    const seen_callbacks = new Set();
+    let flushidx = 0; // Do *not* move this inside the flush() function
+    function flush() {
+        const saved_component = current_component;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (flushidx < dirty_components.length) {
+                const component = dirty_components[flushidx];
+                flushidx++;
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            flushidx = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        seen_callbacks.clear();
+        set_current_component(saved_component);
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    let outros;
+    function group_outros() {
+        outros = {
+            r: 0,
+            c: [],
+            p: outros // parent group
+        };
+    }
+    function check_outros() {
+        if (!outros.r) {
+            run_all(outros.c);
+        }
+        outros = outros.p;
+    }
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function transition_out(block, local, detach, callback) {
+        if (block && block.o) {
+            if (outroing.has(block))
+                return;
+            outroing.add(block);
+            outros.c.push(() => {
+                outroing.delete(block);
+                if (callback) {
+                    if (detach)
+                        block.d(1);
+                    callback();
+                }
+            });
+            block.o(local);
+        }
+    }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
+    function create_component(block) {
+        block && block.c();
+    }
+    function mount_component(component, target, anchor, customElement) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(() => {
+                const new_on_destroy = on_mount.map(run).filter(is_function);
+                if (on_destroy) {
+                    on_destroy.push(...new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, append_styles, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false,
+            root: options.target || parent_component.$$.root
+        };
+        append_styles && append_styles($$.root);
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children$1(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.46.4' }, detail), true));
+    }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev('SvelteDOMRemove', { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+        else
+            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    /**
+     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+     */
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error("'target' is a required option");
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn('Component was already destroyed'); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    var dialogs = [{character:"",text:" Un beau matin de printemps s’annonce à Bordeaux. Au musée des Beaux-Arts, trois frères et sœurs visitent l’aile sud du bâtiment.",picture:"museum_outside"},{character:"",text:"Voici Léo, André et Camille…",picture:"children"},{character:"",text:"Alors qu'ils déambulent dans le musée, un tableau retient leur attention...",picture:"children"},{character:"",text:"Face à eux, accroché en hauteur, un tableau d’une taille imposante se dresse...",picture:"framed"},{character:"",text:"Un sentiment très particulier les anime alors...",picture:"children"},{character:"",text:"À ce moment précis, une chose est certaine, cette oeuvre à su attirer leur attention...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Il est drôle celui-là, on dirait qu’il se passe plein de choses à la fois.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Ils se regardent tous comme s'ils discutaient entre eux.",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> L’homme avec une grande barbe grise semble cacher quelque chose...",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, j’ai l'impression que…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Barbegrisebandeau"},{character:"Barbegrisebandeau",text:"« Je sais que c’est vous ! Je vous ai vu ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Hommeorange",text:"« Comment osez-vous ?! »",picture:"christ",zoom:"Hommeorange"},{character:"Jesus",text:"« Mes frères, celui qui a volé doit se dénoncer ! »",picture:"christ"},{character:"Jesus",text:"« Le bien de cette dame doit lui être rendu ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"Hommeorange"},{character:"Hommeorange",text:"« Très bien, j’avoue, J’ai vu cet homme voler la bourse ! C’est lui le fourbe ! »",picture:"christ",zoom:"Hommeorange"},{character:"Barbegrisebandeau",text:"« Comment osez-vous ? Il est possible d’identifier le voleur d’un simple regard ! »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"Jesus",text:"« Mais comment saviez-vous que c’est une bourse qui a été volée ? »",picture:"christ",zoom:"Jesus"},{character:"Hommeorange",text:"« Euuuh et bien… »",picture:"christ",zoom:"Barbegrisebandeau"},{character:"",text:"",picture:"christ",click:"MaindelHommeOrange"},{character:"",text:"",picture:"christ",zoom:"MaindelHommeOrange",click:"MaindelHommeOrangeZoom"},{character:"Jesus",text:"« Ah ah ! Pris la main dans le sac ! »",picture:"christ"},{character:"",text:"",picture:"christ",click:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Oooh merci ! Je suis heureuse que vous ayez retrouvé le voleur ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Ppfffffft n’importe quoi ton histoire !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Regarde plutôt l’homme au fond. Il paraît louche.",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Pour moi l’histoire de ce tableau, c’est clairement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"HommeDuFond"},{character:"HommeDuFond",text:"« Cet homme possède une arme ! Il  prépare un mauvais coup. »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« Je pense qu’il s'apprête à tuer ! »",picture:"christ",zoom:"HommeDuFond"},{character:"HommeDuFond",text:"« La commère du village, derrière, en saura forcément plus. »",picture:"christ",zoom:"HommeDuFond"},{character:"",text:"",picture:"christ",click:"Dameauxperles"},{character:"Dameauxperles",text:"« Oui, je sais tout. C’est sûr ! Il veut tuer la femme. C’est sûr ! D’ailleurs, regardez-le, il a l’air coupable ! »",picture:"christ",zoom:"Dameauxperles"},{character:"Dameauxperles",text:"« Il faut prévenir les gardes ! »",picture:"christ",zoom:"Dameauxperles"},{character:"",text:"",picture:"christ",click:"Garde"},{character:"Garde",text:"« Ne vous inquiétez pas madame, je ne laisserai personne mourir ! »",picture:"christ",zoom:"Garde"},{character:"Garde",text:"« Halte-là ! Vous ne ferez de mal à personne aujourd'hui ! »",picture:"christ"},{character:"Femmevoilerose",text:"« Lâchez-moi garde ! Je suis innocent ! Cette femme est une voleuse. Elle ne m’a jamais remboursée ! »",picture:"christ",zoom:"Femmevoilerose"},{character:"Garde",text:"« Silence malotru ! Je vais te jeter au cachot ! Il ne pourra plus vous faire de mal madame. »",picture:"christ",zoom:"Garde"},{character:"FemmeDenudée",text:"« Me voilà soulagée ! Merci garde ! »",picture:"christ",zoom:"FemmeDenudéeTop"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Et heureusement, elle est sauvée et n’a plus de dettes.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Mais non, gros bêta, ils sont en train de débattre pour construire un village.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Donc ce qu’il se passe réellement…",picture:"framed"},{character:"",text:"",picture:"christ",click:"Hommeauchapeau"},{character:"Hommeauchapeau",text:"« Ecoutez-moi ! Nous devons prendre une décision avant la tombée de la nuit ! »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Oui, grand chef du village, si nous ne trouvons pas où dormir, cela pourrait être dangereux ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"FemmeDenudée",text:"« Quelqu’un a une idée ? »",picture:"christ",zoom:"Hommeauchapeau"},{character:"",text:"",picture:"christ",click:"Barbegriseprofil"},{character:"Barbegriseprofil",text:"« Si on construit ma grange, elle sera assez grande pour que nous puissions tous dormir dedans, ce sera rapide et utile ! »",picture:"christ",zoom:"Barbegriseprofil"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« N’oubliez pas le prisonnier, il faut construire une prison en priorité ! Et le bâtiment sera assez grand. »",picture:"christ",zoom:"GardeCenter"},{character:"",text:"",picture:"christ",click:"HommeLouche"},{character:"HommeLouche",text:"« Excusez-moi, mais ils nous faut des chambres séparées. Plusieurs cabanes feront l’affaire. »",picture:"christ",zoom:"HommeLouche"},{character:"FemmeLouche",text:"« Je ne supporte pas la paille. Sans compter qu’on mourra de froid dans une prison. »",picture:"christ",zoom:"FemmeLouche"},{character:"FemmeDenudée",text:"« Il faut qu’une personne neutre tranche. »",picture:"christ",zoom:"FemmeDenudée"},{character:"HommeDuFond",text:"« Puis-je aider ? »",picture:"christ",zoom:"HommeDuFond"},{character:"Hommeauchapeau",text:"« Euh, pourquoi pas... Donnons la parole au plus reclud de notre groupe. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"FemmeDenudée",text:"« Alors, que le prisonnier décide ! »",picture:"christ",zoom:"FemmeDenudée"},{character:"",text:"",picture:"christ",click:"GardeCenter"},{character:"Garde",text:"« Il en est hors de question ! »",picture:"christ",zoom:"GardeCenter"},{character:"Hommeauchapeau",text:"« Il nous faut un regard extérieur, il est donc le mieux placé. »",picture:"christ",zoom:"Hommeauchapeau"},{character:"HommeDuFond",text:"« Hé bien, je pense qu'avec le temps dont nous disposons, dormir dans la paille, dans une grange, est la meilleure solution. »",picture:"christ",zoom:"HommeDuFond"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Et ils purent dormir tous au chaud !",picture:"children"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Moi, je préfère mon histoire, elle était plus simple !",picture:"children"},{character:"André",text:"<span style=\"font-weight: 800\">André :</span> Oui, elle était sympa mais, la mienne était plus sérieuse.",picture:"children"},{character:"Camille",text:"<span style=\"font-weight: 800\">Camille :</span> Je préfère celle de Léo, mais avouez que la mienne est la plus intéressante.",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Guide :</span> Bonjour les enfants ! Ce tableau vous intrigue-t-il ?...",picture:"Intervenante"},{character:"Leo",text:"<span style=\"font-weight: 800\">Léo :</span> Oui, mais nous ne sommes pas d'accord sur l’histoire que le tableau raconte…",picture:"children"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Guide :</span> Je comprends, et c’est bien normal que vous ne tombiez pas d’accord… Ce tableau s’inspire de la Bible et il en narre une partie.",picture:"Intervenante"},{character:"Intervenante",text:"<span style=\"font-weight: 800\">Guide :</span> Mais ce n’est pas important, car chacune de vos interprétations à travers vos histoires est aussi intéressante que l’original.",picture:"Intervenante"}];
+
+    var Leo={icon:"Leo.png",size:"normal"};var Camille={icon:"Camille.png",size:"normal"};var Barbegrisebandeau$1={icon:"Barbegrisebandeau.png",size:"small"};var Barbegriseprofil$1={icon:"barbegriseprofil.png",size:"small"};var Dameauxperles$1={icon:"Dameauxperles.png",size:"small"};var FemmeLouche$1={icon:"FemmeLouche.png",size:"small"};var Femmevoilerose$1={icon:"Femmevoilerose.png",size:"small"};var Garde$1={icon:"garde.png",size:"small"};var Hommeauchapeau$1={icon:"Hommeauchapeau.png",size:"small"};var HommeDuFond$1={icon:"HommeDuFond.png",size:"small"};var HommeLouche$1={icon:"HommeLouche.png",size:"small"};var Hommeorange$1={icon:"Hommeorange.png",size:"small"};var Hommeturbanfond={icon:"Hommeturbanfond.png",size:"small"};var Jesus$1={icon:"Jesus.png",size:"small"};var Intervenante$1={icon:"Intervenante_fondue.png",size:"normal"};var characters = {Leo:Leo,"André":{icon:"Andre.png",size:"normal"},Camille:Camille,Barbegrisebandeau:Barbegrisebandeau$1,Barbegriseprofil:Barbegriseprofil$1,Dameauxperles:Dameauxperles$1,"FemmeDenudée":{icon:"FemmeDenudée.png",size:"small"},FemmeLouche:FemmeLouche$1,Femmevoilerose:Femmevoilerose$1,Garde:Garde$1,Hommeauchapeau:Hommeauchapeau$1,HommeDuFond:HommeDuFond$1,HommeLouche:HommeLouche$1,Hommeorange:Hommeorange$1,Hommeturbanfond:Hommeturbanfond,Jesus:Jesus$1,Intervenante:Intervenante$1};
+
+    const subscriber_queue = [];
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=}start start and stop notifications for subscriptions
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = new Set();
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (stop) { // store is ready
+                    const run_queue = !subscriber_queue.length;
+                    for (const subscriber of subscribers) {
+                        subscriber[1]();
+                        subscriber_queue.push(subscriber, value);
+                    }
+                    if (run_queue) {
+                        for (let i = 0; i < subscriber_queue.length; i += 2) {
+                            subscriber_queue[i][0](subscriber_queue[i + 1]);
+                        }
+                        subscriber_queue.length = 0;
+                    }
+                }
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.add(subscriber);
+            if (subscribers.size === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                subscribers.delete(subscriber);
+                if (subscribers.size === 0) {
+                    stop();
+                    stop = null;
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
+
+    const currentDialogIndex = writable(0);
+    const prevDialogIndex = writable(null);
+    const forwardDialog = writable(() => {
+      let index = get_store_value(currentDialogIndex);
+      prevDialogIndex.set(index);
+      currentDialogIndex.set(index + 1);
+    });
+    const backwardDialog = writable(() => {
+      let index = get_store_value(currentDialogIndex);
+      if(index > 0){
+        prevDialogIndex.set(index);
+        currentDialogIndex.set(index - 1);
+      }
+    });
+
+    const isAdventure = writable(false);
+    const isCredits = writable(false);
+    const confirmedMusic = writable(false);
+
+    const currentMusics = writable([]);
+    const soundEffects = writable({
+      menuClick: null,
+      eric: null,
+    });
+
+    /* src/components/Dialog.svelte generated by Svelte v3.46.4 */
+    const file$7 = "src/components/Dialog.svelte";
+
+    // (29:6) {#if dialogs[$currentDialogIndex].character !== ""}
+    function create_if_block$3(ctx) {
+    	let img;
+    	let img_class_value;
+    	let img_src_value;
+
+    	const block = {
+    		c: function create() {
+    			img = element("img");
+    			attr_dev(img, "class", img_class_value = "" + (null_to_empty(characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].size) + " svelte-1a9bf50"));
+    			if (!src_url_equal(img.src, img_src_value = "img/characters/" + characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].icon)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			add_location(img, file$7, 29, 8, 721);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, img, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*$currentDialogIndex*/ 2 && img_class_value !== (img_class_value = "" + (null_to_empty(characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].size) + " svelte-1a9bf50"))) {
+    				attr_dev(img, "class", img_class_value);
+    			}
+
+    			if (dirty & /*$currentDialogIndex*/ 2 && !src_url_equal(img.src, img_src_value = "img/characters/" + characters[dialogs[/*$currentDialogIndex*/ ctx[1]].character].icon)) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(img);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$3.name,
+    		type: "if",
+    		source: "(29:6) {#if dialogs[$currentDialogIndex].character !== \\\"\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$7(ctx) {
+    	let div4;
+    	let div3;
+    	let div0;
+    	let t0;
+    	let p0;
+    	let raw_value = dialogs[/*$currentDialogIndex*/ ctx[1]].text + "";
+    	let t1;
+    	let div2;
+    	let p1;
+    	let t3;
+    	let div1;
+    	let t4;
+    	let img;
+    	let img_src_value;
+    	let mounted;
+    	let dispose;
+    	let if_block = dialogs[/*$currentDialogIndex*/ ctx[1]].character !== "" && create_if_block$3(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div4 = element("div");
+    			div3 = element("div");
+    			div0 = element("div");
+    			if (if_block) if_block.c();
+    			t0 = space();
+    			p0 = element("p");
+    			t1 = space();
+    			div2 = element("div");
+    			p1 = element("p");
+    			p1.textContent = "SUIVANT";
+    			t3 = space();
+    			div1 = element("div");
+    			t4 = space();
+    			img = element("img");
+    			attr_dev(div0, "class", "character svelte-1a9bf50");
+    			add_location(div0, file$7, 27, 4, 631);
+    			attr_dev(p0, "class", "font-montserrat text svelte-1a9bf50");
+    			add_location(p0, file$7, 32, 4, 906);
+    			attr_dev(p1, "class", "font-cinzel nextButton svelte-1a9bf50");
+    			add_location(p1, file$7, 34, 6, 1088);
+    			attr_dev(div1, "class", "underline svelte-1a9bf50");
+    			add_location(div1, file$7, 35, 6, 1140);
+    			set_style(div2, "width", "fit-content");
+    			attr_dev(div2, "class", "nextButtonContainer svelte-1a9bf50");
+    			toggle_class(div2, "canContinue", /*canContinue*/ ctx[0]);
+    			add_location(div2, file$7, 33, 4, 988);
+    			attr_dev(div3, "class", "content svelte-1a9bf50");
+    			add_location(div3, file$7, 26, 2, 605);
+    			attr_dev(img, "class", "decoration svelte-1a9bf50");
+    			if (!src_url_equal(img.src, img_src_value = "img/deco/cadre_decors.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			add_location(img, file$7, 38, 2, 1192);
+    			attr_dev(div4, "class", "dialog svelte-1a9bf50");
+    			add_location(div4, file$7, 25, 0, 566);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div3);
+    			append_dev(div3, div0);
+    			if (if_block) if_block.m(div0, null);
+    			append_dev(div3, t0);
+    			append_dev(div3, p0);
+    			p0.innerHTML = raw_value;
+    			append_dev(div3, t1);
+    			append_dev(div3, div2);
+    			append_dev(div2, p1);
+    			append_dev(div2, t3);
+    			append_dev(div2, div1);
+    			append_dev(div4, t4);
+    			append_dev(div4, img);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div4, "click", /*next*/ ctx[2], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dialogs[/*$currentDialogIndex*/ ctx[1]].character !== "") {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block$3(ctx);
+    					if_block.c();
+    					if_block.m(div0, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*$currentDialogIndex*/ 2 && raw_value !== (raw_value = dialogs[/*$currentDialogIndex*/ ctx[1]].text + "")) p0.innerHTML = raw_value;
+    			if (dirty & /*canContinue*/ 1) {
+    				toggle_class(div2, "canContinue", /*canContinue*/ ctx[0]);
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div4);
+    			if (if_block) if_block.d();
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$7.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$7($$self, $$props, $$invalidate) {
+    	let $isAdventure;
+    	let $forwardDialog;
+    	let $currentDialogIndex;
+    	validate_store(isAdventure, 'isAdventure');
+    	component_subscribe($$self, isAdventure, $$value => $$invalidate(4, $isAdventure = $$value));
+    	validate_store(forwardDialog, 'forwardDialog');
+    	component_subscribe($$self, forwardDialog, $$value => $$invalidate(5, $forwardDialog = $$value));
+    	validate_store(currentDialogIndex, 'currentDialogIndex');
+    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(1, $currentDialogIndex = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Dialog', slots, []);
+    	let { first } = $$props;
+    	set_store_value(currentDialogIndex, $currentDialogIndex = first, $currentDialogIndex);
+    	let canContinue = true;
+
+    	function next() {
+    		if (canContinue) {
+    			if ($currentDialogIndex < dialogs.length - 1) {
+    				$forwardDialog();
+    				$$invalidate(0, canContinue = false);
+
+    				setTimeout(
+    					() => {
+    						$$invalidate(0, canContinue = true);
+    					},
+    					1100
+    				);
+    			} else {
+    				set_store_value(isAdventure, $isAdventure = false, $isAdventure);
+    			}
+    		}
+    	}
+
+    	const writable_props = ['first'];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Dialog> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$$set = $$props => {
+    		if ('first' in $$props) $$invalidate(3, first = $$props.first);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		dialogs,
+    		characters,
+    		currentDialogIndex,
+    		isAdventure,
+    		forwardDialog,
+    		first,
+    		canContinue,
+    		next,
+    		$isAdventure,
+    		$forwardDialog,
+    		$currentDialogIndex
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('first' in $$props) $$invalidate(3, first = $$props.first);
+    		if ('canContinue' in $$props) $$invalidate(0, canContinue = $$props.canContinue);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [canContinue, $currentDialogIndex, next, first];
+    }
+
+    class Dialog extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { first: 3 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Dialog",
+    			options,
+    			id: create_fragment$7.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*first*/ ctx[3] === undefined && !('first' in props)) {
+    			console.warn("<Dialog> was created without expected prop 'first'");
+    		}
+    	}
+
+    	get first() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set first(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    var museum_outside="museum_outside.jpg";var children="Enfants_2.png";var framed="framed.png";var christ="christ.png";var Intervenante="Intervenante.png";var pictures = {museum_outside:museum_outside,children:children,framed:framed,christ:christ,Intervenante:Intervenante};
+
+    var Barbegrisebandeau={x:23.59,y:55,w:12.32,h:31.25,transform:"scale(3) translate(21vw, 10vw)"};var Hommeorange={x:10.59,y:45,w:18.32,h:35.25,transform:"scale(3) translate(30vw, 6vw)"};var Jesus={transform:"scale(3) translate(6vw, 10vw)"};var MaindelHommeOrange={x:24.25,y:27,w:12.32,h:23.25,transform:"scale(3) translate(20vw, -5vw)"};var MaindelHommeOrangeZoom={x:39.25,y:23,w:25.32,h:34.25};var HommeDuFond={x:63.25,y:77,w:12.32,h:23.25,transform:"scale(5) translate(-19vw, 35vh)"};var HommeDuFondCenter={transform:"scale(5) translate(-19vw, 35vh)"};var Dameauxperles={x:58,y:65,w:11.32,h:23.25,transform:"scale(4) translate(-14vw, 23vh)"};var Garde={x:82.25,y:49,w:10.32,h:24.25,transform:"scale(3) translate(-31vw, 6vw)"};var Femmevoilerose={transform:"scale(4) translate(-22vw, 20vh)"};var Hommeauchapeau={x:61.25,y:54,w:11.32,h:27.25,transform:"scale(3) translate(-17vw, 7vw)"};var Barbegriseprofil={x:0.25,y:54,w:12.32,h:29.25,transform:"scale(3) translate(32vw, 8vw)"};var GardeCenter={x:82.25,y:62,w:11.32,h:27.25,transform:"scale(3) translate(-30vw, 12vw)"};var HommeLouche={x:48.25,y:59,w:9.32,h:24.25,transform:"scale(3) translate(-3vw, 8vw)"};var FemmeLouche={transform:"scale(3) translate(-8vw, 8vw)"};var coordinates = {Barbegrisebandeau:Barbegrisebandeau,Hommeorange:Hommeorange,Jesus:Jesus,MaindelHommeOrange:MaindelHommeOrange,MaindelHommeOrangeZoom:MaindelHommeOrangeZoom,"FemmeDenudée":{x:72.25,y:27,w:24.32,h:55.25,transform:"scale(3) translate(-27vw, 7vw)"},HommeDuFond:HommeDuFond,HommeDuFondCenter:HommeDuFondCenter,Dameauxperles:Dameauxperles,Garde:Garde,Femmevoilerose:Femmevoilerose,"FemmeDenudéeTop":{transform:"scale(3) translate(-27vw, 0vh)"},Hommeauchapeau:Hommeauchapeau,Barbegriseprofil:Barbegriseprofil,GardeCenter:GardeCenter,HommeLouche:HommeLouche,FemmeLouche:FemmeLouche};
+
+    const wait = (ms) => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, ms);
+    });
+
+    const dialogIndexToBgpos = (index) => {
+      if((index >= 28 && index <= 40) || index == 56 || index == 62){
+        return "top";
+      }else {
+        return "center";
+      }
+    };
+
+    const audioFadeIn = (audio) => {
+      if(typeof audio.audioCtx === "undefined"){
+        setupAudioContext(audio);
+      }
+      audio.audioGain.gain.value = "0";
+      audio.play();
+      let interval = setInterval(function(){
+        let newVolume = audio.audioGain.gain.value + 0.1;
+        if(newVolume >= 1){
+          newVolume = 1;
+          clearInterval(interval);
+        }
+        audio.audioGain.gain.value = newVolume;
+      }, 300);
+      if(typeof audio.fadeInterval !== "undefined"){
+        clearInterval(audio.fadeInterval);
+        audio.fadeInterval = interval;
+      }else {
+        Object.defineProperty(audio, "fadeInterval", {
+          value: interval,
+          writable: true
+        });
+      }
+    };
+
+    const audioFadeOut = (audio) => {
+      if(typeof audio.audioCtx === "undefined"){
+        setupAudioContext(audio);
+      }
+      let interval = setInterval(function(){
+        let newVolume = audio.audioGain.gain.value - 0.1;
+        if(newVolume <= 0){
+          newVolume = 0;
+          audio.pause();
+          clearInterval(interval);
+        }
+        audio.audioGain.gain.value = newVolume;
+      }, 300);
+      if(typeof audio.fadeInterval !== "undefined"){
+        clearInterval(audio.fadeInterval);
+        audio.fadeInterval = interval;
+      }else {
+        Object.defineProperty(audio, "fadeInterval", {
+          value: interval,
+          writable: true
+        });
+      }
+    };
+
+    function setupAudioContext(audio){
+      Object.defineProperty(audio, "audioCtx", {
+        value: new AudioContext(),
+        writable: true
+      });
+      Object.defineProperty(audio, "audioSource", {
+        value: audio.audioCtx.createMediaElementSource(audio),
+        writable: true
+      });
+      Object.defineProperty(audio, "audioGain", {
+        value: audio.audioCtx.createGain(),
+        writable: true
+      });
+      audio.audioSource.connect(audio.audioGain);
+      audio.audioGain.connect(audio.audioCtx.destination);
+    }
+
+    /* src/components/Adventure.svelte generated by Svelte v3.46.4 */
+
+    const { console: console_1 } = globals;
+    const file$6 = "src/components/Adventure.svelte";
+
+    // (148:0) {#if prevPictureSafe}
+    function create_if_block_3$1(ctx) {
+    	let div;
+    	let img;
+    	let img_src_value;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			img = element("img");
+    			if (!src_url_equal(img.src, img_src_value = "/img/pictures/" + /*prevPictureSafe*/ ctx[6])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			attr_dev(img, "class", "svelte-19bmcey");
+    			toggle_class(img, "center", /*prevImgPos*/ ctx[9] === "center");
+    			add_location(img, file$6, 149, 2, 4970);
+    			attr_dev(div, "class", "pictureBg svelte-19bmcey");
+    			add_location(div, file$6, 148, 1, 4944);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*prevPictureSafe*/ 64 && !src_url_equal(img.src, img_src_value = "/img/pictures/" + /*prevPictureSafe*/ ctx[6])) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (dirty & /*prevImgPos*/ 512) {
+    				toggle_class(img, "center", /*prevImgPos*/ ctx[9] === "center");
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3$1.name,
+    		type: "if",
+    		source: "(148:0) {#if prevPictureSafe}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (159:0) {#if $currentDialogIndex > 0}
+    function create_if_block_2$1(ctx) {
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			img = element("img");
+    			if (!src_url_equal(img.src, img_src_value = "/img/deco/backArrow.svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			attr_dev(img, "class", "svelte-19bmcey");
+    			add_location(img, file$6, 160, 2, 5571);
+    			attr_dev(div, "class", "backArrow svelte-19bmcey");
+    			add_location(div, file$6, 159, 1, 5518);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div, "click", /*handleBackArrow*/ ctx[14], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2$1.name,
+    		type: "if",
+    		source: "(159:0) {#if $currentDialogIndex > 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (166:26) 
+    function create_if_block_1$2(ctx) {
+    	let div;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			attr_dev(div, "class", "clickDiv svelte-19bmcey");
+    			set_style(div, "width", /*clickCoords*/ ctx[10].w + "%");
+    			set_style(div, "height", /*clickCoords*/ ctx[10].h + "%");
+    			set_style(div, "bottom", /*clickCoords*/ ctx[10].y + "%");
+    			set_style(div, "left", /*clickCoords*/ ctx[10].x + "%");
+    			add_location(div, file$6, 166, 1, 5740);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div, "click", /*handleClickDiv*/ ctx[13], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*clickCoords*/ 1024) {
+    				set_style(div, "width", /*clickCoords*/ ctx[10].w + "%");
+    			}
+
+    			if (dirty & /*clickCoords*/ 1024) {
+    				set_style(div, "height", /*clickCoords*/ ctx[10].h + "%");
+    			}
+
+    			if (dirty & /*clickCoords*/ 1024) {
+    				set_style(div, "bottom", /*clickCoords*/ ctx[10].y + "%");
+    			}
+
+    			if (dirty & /*clickCoords*/ 1024) {
+    				set_style(div, "left", /*clickCoords*/ ctx[10].x + "%");
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$2.name,
+    		type: "if",
+    		source: "(166:26) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (164:0) {#if dialogs[$currentDialogIndex].text !== ""}
+    function create_if_block$2(ctx) {
+    	let dialog;
+    	let current;
+
+    	dialog = new Dialog({
+    			props: { first: /*$currentDialogIndex*/ ctx[2] },
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(dialog.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(dialog, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const dialog_changes = {};
+    			if (dirty & /*$currentDialogIndex*/ 4) dialog_changes.first = /*$currentDialogIndex*/ ctx[2];
+    			dialog.$set(dialog_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(dialog.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(dialog.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(dialog, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$2.name,
+    		type: "if",
+    		source: "(164:0) {#if dialogs[$currentDialogIndex].text !== \\\"\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$6(ctx) {
+    	let t0;
+    	let div0;
+    	let img0;
+    	let img0_src_value;
+    	let t1;
+    	let div1;
+    	let img1;
+    	let img1_src_value;
+    	let t2;
+    	let t3;
+    	let current_block_type_index;
+    	let if_block2;
+    	let if_block2_anchor;
+    	let current;
+    	let if_block0 = /*prevPictureSafe*/ ctx[6] && create_if_block_3$1(ctx);
+    	let if_block1 = /*$currentDialogIndex*/ ctx[2] > 0 && create_if_block_2$1(ctx);
+    	const if_block_creators = [create_if_block$2, create_if_block_1$2];
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (dialogs[/*$currentDialogIndex*/ ctx[2]].text !== "") return 0;
+    		if (/*displayClickDiv*/ ctx[12]) return 1;
+    		return -1;
+    	}
+
+    	if (~(current_block_type_index = select_block_type(ctx))) {
+    		if_block2 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			if (if_block0) if_block0.c();
+    			t0 = space();
+    			div0 = element("div");
+    			img0 = element("img");
+    			t1 = space();
+    			div1 = element("div");
+    			img1 = element("img");
+    			t2 = space();
+    			if (if_block1) if_block1.c();
+    			t3 = space();
+    			if (if_block2) if_block2.c();
+    			if_block2_anchor = empty();
+    			if (!src_url_equal(img0.src, img0_src_value = "/img/pictures/" + /*nextPictureSafe*/ ctx[5])) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "");
+    			attr_dev(img0, "class", "svelte-19bmcey");
+    			toggle_class(img0, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
+    			toggle_class(img0, "center", /*nextImgPos*/ ctx[7] === "center");
+    			add_location(img0, file$6, 153, 1, 5120);
+    			attr_dev(div0, "class", "pictureBg svelte-19bmcey");
+    			add_location(div0, file$6, 152, 0, 5071);
+    			if (!src_url_equal(img1.src, img1_src_value = "/img/pictures/" + /*pictureSafe*/ ctx[0])) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "");
+    			attr_dev(img1, "class", "svelte-19bmcey");
+    			toggle_class(img1, "center", /*currentImgPos*/ ctx[8] === "center");
+    			add_location(img1, file$6, 156, 1, 5394);
+    			attr_dev(div1, "class", "pictureBg svelte-19bmcey");
+    			set_style(div1, "--transform", /*transform*/ ctx[1]);
+    			toggle_class(div1, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
+    			add_location(div1, file$6, 155, 0, 5262);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, img0);
+    			/*div0_binding*/ ctx[15](div0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, img1);
+    			/*div1_binding*/ ctx[16](div1);
+    			insert_dev(target, t2, anchor);
+    			if (if_block1) if_block1.m(target, anchor);
+    			insert_dev(target, t3, anchor);
+
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].m(target, anchor);
+    			}
+
+    			insert_dev(target, if_block2_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (/*prevPictureSafe*/ ctx[6]) {
+    				if (if_block0) {
+    					if_block0.p(ctx, dirty);
+    				} else {
+    					if_block0 = create_if_block_3$1(ctx);
+    					if_block0.c();
+    					if_block0.m(t0.parentNode, t0);
+    				}
+    			} else if (if_block0) {
+    				if_block0.d(1);
+    				if_block0 = null;
+    			}
+
+    			if (!current || dirty & /*nextPictureSafe*/ 32 && !src_url_equal(img0.src, img0_src_value = "/img/pictures/" + /*nextPictureSafe*/ ctx[5])) {
+    				attr_dev(img0, "src", img0_src_value);
+    			}
+
+    			if (dirty & /*opacityTransitionOn*/ 2048) {
+    				toggle_class(img0, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
+    			}
+
+    			if (dirty & /*nextImgPos*/ 128) {
+    				toggle_class(img0, "center", /*nextImgPos*/ ctx[7] === "center");
+    			}
+
+    			if (!current || dirty & /*pictureSafe*/ 1 && !src_url_equal(img1.src, img1_src_value = "/img/pictures/" + /*pictureSafe*/ ctx[0])) {
+    				attr_dev(img1, "src", img1_src_value);
+    			}
+
+    			if (dirty & /*currentImgPos*/ 256) {
+    				toggle_class(img1, "center", /*currentImgPos*/ ctx[8] === "center");
+    			}
+
+    			if (!current || dirty & /*transform*/ 2) {
+    				set_style(div1, "--transform", /*transform*/ ctx[1]);
+    			}
+
+    			if (dirty & /*opacityTransitionOn*/ 2048) {
+    				toggle_class(div1, "opacityTransition", /*opacityTransitionOn*/ ctx[11]);
+    			}
+
+    			if (/*$currentDialogIndex*/ ctx[2] > 0) {
+    				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+    				} else {
+    					if_block1 = create_if_block_2$1(ctx);
+    					if_block1.c();
+    					if_block1.m(t3.parentNode, t3);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if (~current_block_type_index) {
+    					if_blocks[current_block_type_index].p(ctx, dirty);
+    				}
+    			} else {
+    				if (if_block2) {
+    					group_outros();
+
+    					transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    						if_blocks[previous_block_index] = null;
+    					});
+
+    					check_outros();
+    				}
+
+    				if (~current_block_type_index) {
+    					if_block2 = if_blocks[current_block_type_index];
+
+    					if (!if_block2) {
+    						if_block2 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    						if_block2.c();
+    					} else {
+    						if_block2.p(ctx, dirty);
+    					}
+
+    					transition_in(if_block2, 1);
+    					if_block2.m(if_block2_anchor.parentNode, if_block2_anchor);
+    				} else {
+    					if_block2 = null;
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block2);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block2);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (if_block0) if_block0.d(detaching);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div0);
+    			/*div0_binding*/ ctx[15](null);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div1);
+    			/*div1_binding*/ ctx[16](null);
+    			if (detaching) detach_dev(t2);
+    			if (if_block1) if_block1.d(detaching);
+    			if (detaching) detach_dev(t3);
+
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].d(detaching);
+    			}
+
+    			if (detaching) detach_dev(if_block2_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$6.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function vToPx(val, refElem) {
+    	let mw = refElem.offsetWidth;
+    	let mh = refElem.offsetHeight;
+    	let valFloat = parseFloat(val);
+
+    	if (val.slice(-2) == "vw") {
+    		return `${mw * (valFloat / 100)}px`;
+    	} else if (val.slice(-2) == "vh") {
+    		return `${mh * (valFloat / 100)}px`;
+    	} else {
+    		return val;
+    	}
+    }
+
+    function instance$6($$self, $$props, $$invalidate) {
+    	let $currentDialogIndex;
+    	let $prevDialogIndex;
+    	let $backwardDialog;
+    	let $forwardDialog;
+    	let $currentMusics;
+    	validate_store(currentDialogIndex, 'currentDialogIndex');
+    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(2, $currentDialogIndex = $$value));
+    	validate_store(prevDialogIndex, 'prevDialogIndex');
+    	component_subscribe($$self, prevDialogIndex, $$value => $$invalidate(17, $prevDialogIndex = $$value));
+    	validate_store(backwardDialog, 'backwardDialog');
+    	component_subscribe($$self, backwardDialog, $$value => $$invalidate(18, $backwardDialog = $$value));
+    	validate_store(forwardDialog, 'forwardDialog');
+    	component_subscribe($$self, forwardDialog, $$value => $$invalidate(19, $forwardDialog = $$value));
+    	validate_store(currentMusics, 'currentMusics');
+    	component_subscribe($$self, currentMusics, $$value => $$invalidate(20, $currentMusics = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Adventure', slots, []);
+    	let frontPicture, nextPicture;
+    	let nextPictureSafe = pictures[dialogs[$currentDialogIndex + 1].picture];
+    	let pictureSafe = pictures[dialogs[$currentDialogIndex].picture];
+    	let prevPictureSafe = null;
+    	let nextImgPos = dialogIndexToBgpos($currentDialogIndex + 1);
+    	let currentImgPos = dialogIndexToBgpos($currentDialogIndex);
+    	let prevImgPos = null;
+    	let clickCoords = null;
+    	let opacityTransitionOn = false;
+    	let transform = "scale(1) translate(0vw, 0vw)";
+    	let displayClickDiv = false;
+
+    	function handleClickDiv() {
+    		$$invalidate(12, displayClickDiv = false);
+    		$forwardDialog();
+    	}
+
+    	function handleBackArrow() {
+    		$backwardDialog();
+    	} // calcCoords();
+
+    	function calcCoords() {
+    		let posX = 28.81;
+    		let posY = 35.78;
+    		let img = frontPicture.querySelector("img");
+    		let translateX = window.innerWidth * ((50 - posX) / 100);
+    		let translateY = img.offsetHeight * ((50 - posY) / 100);
+    		console.log(`translate(${translateX}px, ${translateY}px)`);
+    	}
+
+    	async function pictureTransition() {
+    		try {
+    			if (pictures[dialogs[$currentDialogIndex].picture] !== pictureSafe) {
+    				$$invalidate(11, opacityTransitionOn = true);
+    				$$invalidate(3, frontPicture.style.opacity = 0, frontPicture);
+
+    				if ($currentDialogIndex < $prevDialogIndex) {
+    					$$invalidate(4, nextPicture.style.opacity = 0, nextPicture);
+    				}
+
+    				await wait(1000);
+    				$$invalidate(11, opacityTransitionOn = false);
+    				$$invalidate(0, pictureSafe = pictures[dialogs[$currentDialogIndex].picture]);
+    				$$invalidate(8, currentImgPos = dialogIndexToBgpos($currentDialogIndex));
+    				await wait(100); // fix flash on transition
+    				$$invalidate(3, frontPicture.style.opacity = null, frontPicture);
+    				$$invalidate(4, nextPicture.style.opacity = null, nextPicture);
+    			} else {
+    				$$invalidate(8, currentImgPos = dialogIndexToBgpos($currentDialogIndex));
+    			}
+
+    			let nextDialog = dialogs[$currentDialogIndex + 1];
+
+    			if (nextDialog) {
+    				if (nextDialog.picture) {
+    					$$invalidate(5, nextPictureSafe = pictures[nextDialog.picture]);
+    					$$invalidate(7, nextImgPos = dialogIndexToBgpos($currentDialogIndex + 1));
+    				}
+    			}
+
+    			let prevDialog = dialogs[$currentDialogIndex - 1];
+
+    			if (prevDialog) {
+    				if (prevDialog.picture) {
+    					$$invalidate(6, prevPictureSafe = pictures[prevDialog.picture]);
+    					$$invalidate(9, prevImgPos = dialogIndexToBgpos($currentDialogIndex - 1));
+    				}
+    			}
+    		} catch(err) {
+    			
+    		}
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Adventure> was created with unknown prop '${key}'`);
+    	});
+
+    	function div0_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			nextPicture = $$value;
+    			$$invalidate(4, nextPicture);
+    		});
+    	}
+
+    	function div1_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			frontPicture = $$value;
+    			$$invalidate(3, frontPicture);
+    		});
+    	}
+
+    	$$self.$capture_state = () => ({
+    		Dialog,
+    		pictures,
+    		dialogs,
+    		coordinates,
+    		currentDialogIndex,
+    		prevDialogIndex,
+    		currentMusics,
+    		forwardDialog,
+    		backwardDialog,
+    		wait,
+    		dialogIndexToBgpos,
+    		frontPicture,
+    		nextPicture,
+    		nextPictureSafe,
+    		pictureSafe,
+    		prevPictureSafe,
+    		nextImgPos,
+    		currentImgPos,
+    		prevImgPos,
+    		clickCoords,
+    		opacityTransitionOn,
+    		transform,
+    		displayClickDiv,
+    		vToPx,
+    		handleClickDiv,
+    		handleBackArrow,
+    		calcCoords,
+    		pictureTransition,
+    		$currentDialogIndex,
+    		$prevDialogIndex,
+    		$backwardDialog,
+    		$forwardDialog,
+    		$currentMusics
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('frontPicture' in $$props) $$invalidate(3, frontPicture = $$props.frontPicture);
+    		if ('nextPicture' in $$props) $$invalidate(4, nextPicture = $$props.nextPicture);
+    		if ('nextPictureSafe' in $$props) $$invalidate(5, nextPictureSafe = $$props.nextPictureSafe);
+    		if ('pictureSafe' in $$props) $$invalidate(0, pictureSafe = $$props.pictureSafe);
+    		if ('prevPictureSafe' in $$props) $$invalidate(6, prevPictureSafe = $$props.prevPictureSafe);
+    		if ('nextImgPos' in $$props) $$invalidate(7, nextImgPos = $$props.nextImgPos);
+    		if ('currentImgPos' in $$props) $$invalidate(8, currentImgPos = $$props.currentImgPos);
+    		if ('prevImgPos' in $$props) $$invalidate(9, prevImgPos = $$props.prevImgPos);
+    		if ('clickCoords' in $$props) $$invalidate(10, clickCoords = $$props.clickCoords);
+    		if ('opacityTransitionOn' in $$props) $$invalidate(11, opacityTransitionOn = $$props.opacityTransitionOn);
+    		if ('transform' in $$props) $$invalidate(1, transform = $$props.transform);
+    		if ('displayClickDiv' in $$props) $$invalidate(12, displayClickDiv = $$props.displayClickDiv);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*$currentDialogIndex*/ 4) {
+    			{
+    				pictureTransition();
+
+    				if ($currentDialogIndex >= 0 && $currentDialogIndex < 3) {
+    					set_store_value(currentMusics, $currentMusics = ["musicMuseeExt", "musicMuseeExtAmbiance"], $currentMusics);
+    				} else if ($currentDialogIndex >= 3 && $currentDialogIndex < 10) {
+    					set_store_value(currentMusics, $currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"], $currentMusics);
+    				} else if ($currentDialogIndex >= 10 && $currentDialogIndex < 25) {
+    					set_store_value(currentMusics, $currentMusics = ["musicLeo"], $currentMusics);
+    				} else if ($currentDialogIndex >= 25 && $currentDialogIndex < 28) {
+    					set_store_value(currentMusics, $currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"], $currentMusics);
+    				} else if ($currentDialogIndex >= 28 && $currentDialogIndex < 41) {
+    					set_store_value(currentMusics, $currentMusics = ["musicAndre"], $currentMusics);
+    				} else if ($currentDialogIndex >= 41 && $currentDialogIndex < 44) {
+    					set_store_value(currentMusics, $currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"], $currentMusics);
+    				} else if ($currentDialogIndex >= 44 && $currentDialogIndex < 63) {
+    					set_store_value(currentMusics, $currentMusics = ["musicCamille"], $currentMusics);
+    				} else if ($currentDialogIndex >= 63 && $currentDialogIndex < 67) {
+    					set_store_value(currentMusics, $currentMusics = ["musicMuseeExt", "musicMuseeAmbiance"], $currentMusics);
+    				} else if ($currentDialogIndex >= 67) {
+    					set_store_value(currentMusics, $currentMusics = ["musicIntervenante", "musicMuseeAmbiance"], $currentMusics);
+    				}
+    			}
+    		}
+
+    		if ($$self.$$.dirty & /*transform, $currentDialogIndex, pictureSafe*/ 7) {
+    			{
+    				let prevTransform = transform;
+
+    				if (typeof dialogs[$currentDialogIndex].zoom !== "undefined") {
+    					let transformBrut = coordinates[dialogs[$currentDialogIndex].zoom].transform;
+    					let scale = transformBrut.split(" translate")[0];
+    					let translateX = transformBrut.split("translate(")[1].split(",")[0];
+    					let translateY = transformBrut.split(", ")[1].split(")")[0];
+    					let main = document.querySelector("main");
+    					$$invalidate(1, transform = `${scale} translate(${vToPx(translateX, main)}, ${vToPx(translateY, main)})`);
+    				} else {
+    					$$invalidate(1, transform = "scale(1) translate(0vw, 0vw)");
+    				}
+
+    				if (typeof dialogs[$currentDialogIndex].click !== "undefined") {
+    					$$invalidate(10, clickCoords = coordinates[dialogs[$currentDialogIndex].click]);
+
+    					if (prevTransform !== transform) {
+    						setTimeout(
+    							() => {
+    								$$invalidate(12, displayClickDiv = true);
+    							},
+    							2000
+    						);
+    					} else if (pictures[dialogs[$currentDialogIndex].picture] !== pictureSafe) {
+    						setTimeout(
+    							() => {
+    								$$invalidate(12, displayClickDiv = true);
+    							},
+    							1000
+    						);
+    					} else {
+    						$$invalidate(12, displayClickDiv = true);
+    					}
+    				} else {
+    					$$invalidate(10, clickCoords = null);
+    					$$invalidate(12, displayClickDiv = false);
+    				}
+    			}
+    		}
+    	};
+
+    	return [
+    		pictureSafe,
+    		transform,
+    		$currentDialogIndex,
+    		frontPicture,
+    		nextPicture,
+    		nextPictureSafe,
+    		prevPictureSafe,
+    		nextImgPos,
+    		currentImgPos,
+    		prevImgPos,
+    		clickCoords,
+    		opacityTransitionOn,
+    		displayClickDiv,
+    		handleClickDiv,
+    		handleBackArrow,
+    		div0_binding,
+    		div1_binding
+    	];
+    }
+
+    class Adventure extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Adventure",
+    			options,
+    			id: create_fragment$6.name
+    		});
+    	}
+    }
+
+    /* src/components/PleaseTurn.svelte generated by Svelte v3.46.4 */
+
+    const file$5 = "src/components/PleaseTurn.svelte";
+
+    function create_fragment$5(ctx) {
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			img = element("img");
+    			t0 = space();
+    			p = element("p");
+    			p.textContent = "Tournez votre écran";
+    			if (!src_url_equal(img.src, img_src_value = "/img/deco/refresh-ccw.svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			attr_dev(img, "class", "svelte-oalibu");
+    			add_location(img, file$5, 1, 2, 25);
+    			attr_dev(p, "class", "font-cinzel svelte-oalibu");
+    			add_location(p, file$5, 2, 2, 72);
+    			attr_dev(div, "class", "mustTurn svelte-oalibu");
+    			add_location(div, file$5, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+    			append_dev(div, t0);
+    			append_dev(div, p);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$5.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$5($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('PleaseTurn', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<PleaseTurn> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class PleaseTurn extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "PleaseTurn",
+    			options,
+    			id: create_fragment$5.name
+    		});
+    	}
+    }
+
+    /* src/components/HomePage.svelte generated by Svelte v3.46.4 */
+
+    const file$4 = "src/components/HomePage.svelte";
+
+    function create_fragment$4(ctx) {
+    	let div7;
+    	let div0;
+    	let t0;
+    	let div3;
+    	let div2;
+    	let p0;
+    	let t2;
+    	let div1;
+    	let t3;
+    	let div6;
+    	let h1;
+    	let t5;
+    	let div5;
+    	let p1;
+    	let t7;
+    	let div4;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div7 = element("div");
+    			div0 = element("div");
+    			t0 = space();
+    			div3 = element("div");
+    			div2 = element("div");
+    			p0 = element("p");
+    			p0.textContent = "CREDITS";
+    			t2 = space();
+    			div1 = element("div");
+    			t3 = space();
+    			div6 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "REGARDS";
+    			t5 = space();
+    			div5 = element("div");
+    			p1 = element("p");
+    			p1.textContent = "VIVRE L'EXPÉRIENCE";
+    			t7 = space();
+    			div4 = element("div");
+    			attr_dev(div0, "class", "dark svelte-16ttej1");
+    			add_location(div0, file$4, 12, 2, 256);
+    			attr_dev(p0, "class", "font-cinzel svelte-16ttej1");
+    			add_location(p0, file$4, 15, 6, 332);
+    			attr_dev(div1, "class", "underline svelte-16ttej1");
+    			add_location(div1, file$4, 16, 6, 411);
+    			attr_dev(div2, "class", "button svelte-16ttej1");
+    			add_location(div2, file$4, 14, 4, 305);
+    			attr_dev(div3, "class", "top svelte-16ttej1");
+    			add_location(div3, file$4, 13, 2, 283);
+    			attr_dev(h1, "class", "font-cinzel svelte-16ttej1");
+    			add_location(h1, file$4, 20, 4, 488);
+    			attr_dev(p1, "class", "font-cinzel svelte-16ttej1");
+    			add_location(p1, file$4, 22, 6, 556);
+    			attr_dev(div4, "class", "underline svelte-16ttej1");
+    			add_location(div4, file$4, 23, 6, 631);
+    			attr_dev(div5, "class", "button svelte-16ttej1");
+    			add_location(div5, file$4, 21, 4, 529);
+    			attr_dev(div6, "class", "bottom svelte-16ttej1");
+    			add_location(div6, file$4, 19, 2, 463);
+    			attr_dev(div7, "class", "home svelte-16ttej1");
+    			add_location(div7, file$4, 11, 0, 235);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div7, anchor);
+    			append_dev(div7, div0);
+    			append_dev(div7, t0);
+    			append_dev(div7, div3);
+    			append_dev(div3, div2);
+    			append_dev(div2, p0);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			append_dev(div7, t3);
+    			append_dev(div7, div6);
+    			append_dev(div6, h1);
+    			append_dev(div6, t5);
+    			append_dev(div6, div5);
+    			append_dev(div5, p1);
+    			append_dev(div5, t7);
+    			append_dev(div5, div4);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(p0, "click", /*click_handler*/ ctx[2], false, false, false),
+    					listen_dev(p1, "click", /*handleStart*/ ctx[1], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div7);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$4.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let $isAdventure;
+    	let $soundEffects;
+    	let $currentMusics;
+    	let $isCredits;
+    	validate_store(isAdventure, 'isAdventure');
+    	component_subscribe($$self, isAdventure, $$value => $$invalidate(3, $isAdventure = $$value));
+    	validate_store(soundEffects, 'soundEffects');
+    	component_subscribe($$self, soundEffects, $$value => $$invalidate(4, $soundEffects = $$value));
+    	validate_store(currentMusics, 'currentMusics');
+    	component_subscribe($$self, currentMusics, $$value => $$invalidate(5, $currentMusics = $$value));
+    	validate_store(isCredits, 'isCredits');
+    	component_subscribe($$self, isCredits, $$value => $$invalidate(0, $isCredits = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('HomePage', slots, []);
+    	set_store_value(currentMusics, $currentMusics = ["musicMenu"], $currentMusics);
+
+    	function handleStart() {
+    		$soundEffects.menuClick?.play();
+    		set_store_value(isAdventure, $isAdventure = true, $isAdventure);
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<HomePage> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = () => {
+    		set_store_value(isCredits, $isCredits = true, $isCredits);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		isAdventure,
+    		isCredits,
+    		soundEffects,
+    		currentMusics,
+    		handleStart,
+    		$isAdventure,
+    		$soundEffects,
+    		$currentMusics,
+    		$isCredits
+    	});
+
+    	return [$isCredits, handleStart, click_handler];
+    }
+
+    class HomePage extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "HomePage",
+    			options,
+    			id: create_fragment$4.name
+    		});
+    	}
+    }
+
+    /* src/components/Credits.svelte generated by Svelte v3.46.4 */
+    const file$3 = "src/components/Credits.svelte";
+
+    // (71:23) 
+    function create_if_block_1$1(ctx) {
+    	let div0;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let div3;
+    	let div1;
+    	let h20;
+    	let t2;
+    	let p0;
+    	let t4;
+    	let p1;
+    	let t6;
+    	let div2;
+    	let h21;
+    	let t8;
+    	let p2;
+    	let t10;
+    	let p3;
+    	let t12;
+    	let div7;
+    	let div4;
+    	let h22;
+    	let t14;
+    	let p4;
+    	let t16;
+    	let p5;
+    	let t18;
+    	let div5;
+    	let h23;
+    	let t20;
+    	let p6;
+    	let t22;
+    	let p7;
+    	let t24;
+    	let div6;
+    	let h24;
+    	let t26;
+    	let p8;
+    	let t28;
+    	let p9;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			div3 = element("div");
+    			div1 = element("div");
+    			h20 = element("h2");
+    			h20.textContent = "le Christ et la femme adultère";
+    			t2 = space();
+    			p0 = element("p");
+    			p0.textContent = "PORTA dit SALVIATI Le Jeune Giuseppe Della";
+    			t4 = space();
+    			p1 = element("p");
+    			p1.textContent = "16e siècle";
+    			t6 = space();
+    			div2 = element("div");
+    			h21 = element("h2");
+    			h21.textContent = "Portrait de Philippe Durand-Dassier";
+    			t8 = space();
+    			p2 = element("p");
+    			p2.textContent = "Charles Emile Auguste DURAND dit CAROLUS-DURAN";
+    			t10 = space();
+    			p3 = element("p");
+    			p3.textContent = "1876";
+    			t12 = space();
+    			div7 = element("div");
+    			div4 = element("div");
+    			h22 = element("h2");
+    			h22.textContent = "Portrait de femme";
+    			t14 = space();
+    			p4 = element("p");
+    			p4.textContent = "DUPAIN Edmond Louis";
+    			t16 = space();
+    			p5 = element("p");
+    			p5.textContent = "1886";
+    			t18 = space();
+    			div5 = element("div");
+    			h23 = element("h2");
+    			h23.textContent = "Jeune pèlerin";
+    			t20 = space();
+    			p6 = element("p");
+    			p6.textContent = "GRIMOU Alexis";
+    			t22 = space();
+    			p7 = element("p");
+    			p7.textContent = "1732";
+    			t24 = space();
+    			div6 = element("div");
+    			h24 = element("h2");
+    			h24.textContent = "Tête de fillette";
+    			t26 = space();
+    			p8 = element("p");
+    			p8.textContent = "LARÉE Antoine Marc Gustave";
+    			t28 = space();
+    			p9 = element("p");
+    			p9.textContent = "1906";
+    			attr_dev(img, "class", "arrow");
+    			if (!src_url_equal(img.src, img_src_value = "/img/deco/creditsLeft.svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			add_location(img, file$3, 73, 4, 1616);
+    			attr_dev(div0, "class", "left arrow svelte-bxepaf");
+    			add_location(div0, file$3, 72, 2, 1587);
+    			attr_dev(h20, "class", "svelte-bxepaf");
+    			add_location(h20, file$3, 78, 6, 1764);
+    			attr_dev(p0, "class", "svelte-bxepaf");
+    			add_location(p0, file$3, 79, 6, 1810);
+    			attr_dev(p1, "class", "svelte-bxepaf");
+    			add_location(p1, file$3, 80, 6, 1866);
+    			attr_dev(div1, "class", "block svelte-bxepaf");
+    			add_location(div1, file$3, 77, 4, 1738);
+    			attr_dev(h21, "class", "svelte-bxepaf");
+    			add_location(h21, file$3, 84, 6, 1926);
+    			attr_dev(p2, "class", "svelte-bxepaf");
+    			add_location(p2, file$3, 85, 6, 1977);
+    			attr_dev(p3, "class", "svelte-bxepaf");
+    			add_location(p3, file$3, 86, 6, 2037);
+    			attr_dev(div2, "class", "block svelte-bxepaf");
+    			add_location(div2, file$3, 83, 4, 1900);
+    			attr_dev(div3, "class", "middle svelte-bxepaf");
+    			add_location(div3, file$3, 76, 2, 1713);
+    			attr_dev(h22, "class", "svelte-bxepaf");
+    			add_location(h22, file$3, 92, 6, 2122);
+    			attr_dev(p4, "class", "svelte-bxepaf");
+    			add_location(p4, file$3, 93, 6, 2155);
+    			attr_dev(p5, "class", "svelte-bxepaf");
+    			add_location(p5, file$3, 94, 6, 2188);
+    			attr_dev(div4, "class", "block svelte-bxepaf");
+    			add_location(div4, file$3, 91, 4, 2096);
+    			attr_dev(h23, "class", "svelte-bxepaf");
+    			add_location(h23, file$3, 98, 6, 2242);
+    			attr_dev(p6, "class", "svelte-bxepaf");
+    			add_location(p6, file$3, 99, 6, 2271);
+    			attr_dev(p7, "class", "svelte-bxepaf");
+    			add_location(p7, file$3, 100, 6, 2298);
+    			attr_dev(div5, "class", "block svelte-bxepaf");
+    			add_location(div5, file$3, 97, 4, 2216);
+    			attr_dev(h24, "class", "svelte-bxepaf");
+    			add_location(h24, file$3, 104, 6, 2352);
+    			attr_dev(p8, "class", "svelte-bxepaf");
+    			add_location(p8, file$3, 105, 6, 2384);
+    			attr_dev(p9, "class", "svelte-bxepaf");
+    			add_location(p9, file$3, 106, 6, 2424);
+    			attr_dev(div6, "class", "block svelte-bxepaf");
+    			add_location(div6, file$3, 103, 4, 2326);
+    			attr_dev(div7, "class", "right svelte-bxepaf");
+    			add_location(div7, file$3, 90, 2, 2072);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, img);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div1);
+    			append_dev(div1, h20);
+    			append_dev(div1, t2);
+    			append_dev(div1, p0);
+    			append_dev(div1, t4);
+    			append_dev(div1, p1);
+    			append_dev(div3, t6);
+    			append_dev(div3, div2);
+    			append_dev(div2, h21);
+    			append_dev(div2, t8);
+    			append_dev(div2, p2);
+    			append_dev(div2, t10);
+    			append_dev(div2, p3);
+    			insert_dev(target, t12, anchor);
+    			insert_dev(target, div7, anchor);
+    			append_dev(div7, div4);
+    			append_dev(div4, h22);
+    			append_dev(div4, t14);
+    			append_dev(div4, p4);
+    			append_dev(div4, t16);
+    			append_dev(div4, p5);
+    			append_dev(div7, t18);
+    			append_dev(div7, div5);
+    			append_dev(div5, h23);
+    			append_dev(div5, t20);
+    			append_dev(div5, p6);
+    			append_dev(div5, t22);
+    			append_dev(div5, p7);
+    			append_dev(div7, t24);
+    			append_dev(div7, div6);
+    			append_dev(div6, h24);
+    			append_dev(div6, t26);
+    			append_dev(div6, p8);
+    			append_dev(div6, t28);
+    			append_dev(div6, p9);
+
+    			if (!mounted) {
+    				dispose = listen_dev(img, "click", /*click_handler_2*/ ctx[4], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(t12);
+    			if (detaching) detach_dev(div7);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(71:23) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (20:2) {#if page === 1}
+    function create_if_block$1(ctx) {
+    	let div5;
+    	let div3;
+    	let div2;
+    	let div0;
+    	let h20;
+    	let t1;
+    	let p0;
+    	let t3;
+    	let p1;
+    	let t5;
+    	let p2;
+    	let t7;
+    	let p3;
+    	let t9;
+    	let div1;
+    	let p4;
+    	let img0;
+    	let img0_src_value;
+    	let t10;
+    	let t11;
+    	let p5;
+    	let t13;
+    	let p6;
+    	let t15;
+    	let p7;
+    	let t17;
+    	let div4;
+    	let h21;
+    	let t19;
+    	let p8;
+    	let t21;
+    	let p9;
+    	let t23;
+    	let div9;
+    	let h22;
+    	let t25;
+    	let div6;
+    	let h23;
+    	let t27;
+    	let p10;
+    	let t29;
+    	let div7;
+    	let h24;
+    	let t31;
+    	let p11;
+    	let t33;
+    	let div8;
+    	let h25;
+    	let t35;
+    	let p12;
+    	let t37;
+    	let div10;
+    	let img1;
+    	let img1_src_value;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div5 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			h20 = element("h2");
+    			h20.textContent = "Notre équipe";
+    			t1 = space();
+    			p0 = element("p");
+    			p0.textContent = "Maxime LASSERRE";
+    			t3 = space();
+    			p1 = element("p");
+    			p1.textContent = "Samuel LABAGNERE";
+    			t5 = space();
+    			p2 = element("p");
+    			p2.textContent = "Naja DALMAGNE";
+    			t7 = space();
+    			p3 = element("p");
+    			p3.textContent = "Martin DUCONSEIL";
+    			t9 = space();
+    			div1 = element("div");
+    			p4 = element("p");
+    			img0 = element("img");
+    			t10 = text("Bordeaux");
+    			t11 = space();
+    			p5 = element("p");
+    			p5.textContent = "Léa RAULT";
+    			t13 = space();
+    			p6 = element("p");
+    			p6.textContent = "Emma FOUILLAT";
+    			t15 = space();
+    			p7 = element("p");
+    			p7.textContent = "Enzo DURET";
+    			t17 = space();
+    			div4 = element("div");
+    			h21 = element("h2");
+    			h21.textContent = "Remerciements";
+    			t19 = space();
+    			p8 = element("p");
+    			p8.textContent = "Musée des beaux-arts & sara la dame du musée";
+    			t21 = space();
+    			p9 = element("p");
+    			p9.textContent = "Alexis Benoit, Clément Casanas, Thibault Charron & Bastien De L’hermite";
+    			t23 = space();
+    			div9 = element("div");
+    			h22 = element("h2");
+    			h22.textContent = "Musiques";
+    			t25 = space();
+    			div6 = element("div");
+    			h23 = element("h2");
+    			h23.textContent = "4 saisons - l'Hiver - Largo";
+    			t27 = space();
+    			p10 = element("p");
+    			p10.textContent = "Vivaldi";
+    			t29 = space();
+    			div7 = element("div");
+    			h24 = element("h2");
+    			h24.textContent = "Les 13 scènes d'enfants";
+    			t31 = space();
+    			p11 = element("p");
+    			p11.textContent = "Schumann";
+    			t33 = space();
+    			div8 = element("div");
+    			h25 = element("h2");
+    			h25.textContent = "Symphonie inachevée";
+    			t35 = space();
+    			p12 = element("p");
+    			p12.textContent = "Schubert";
+    			t37 = space();
+    			div10 = element("div");
+    			img1 = element("img");
+    			attr_dev(h20, "class", "svelte-bxepaf");
+    			add_location(h20, file$3, 25, 10, 485);
+    			attr_dev(p0, "class", "svelte-bxepaf");
+    			add_location(p0, file$3, 26, 10, 517);
+    			attr_dev(p1, "class", "svelte-bxepaf");
+    			add_location(p1, file$3, 27, 10, 550);
+    			attr_dev(p2, "class", "svelte-bxepaf");
+    			add_location(p2, file$3, 28, 10, 584);
+    			attr_dev(p3, "class", "svelte-bxepaf");
+    			add_location(p3, file$3, 29, 10, 615);
+    			attr_dev(div0, "class", "column");
+    			add_location(div0, file$3, 24, 8, 454);
+    			if (!src_url_equal(img0.src, img0_src_value = "/img/deco/mmi.svg")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "");
+    			attr_dev(img0, "class", "svelte-bxepaf");
+    			add_location(img0, file$3, 33, 25, 709);
+    			attr_dev(p4, "class", "mmi svelte-bxepaf");
+    			add_location(p4, file$3, 33, 10, 694);
+    			attr_dev(p5, "class", "svelte-bxepaf");
+    			add_location(p5, file$3, 34, 10, 765);
+    			attr_dev(p6, "class", "svelte-bxepaf");
+    			add_location(p6, file$3, 35, 10, 792);
+    			attr_dev(p7, "class", "svelte-bxepaf");
+    			add_location(p7, file$3, 36, 10, 823);
+    			attr_dev(div1, "class", "column");
+    			add_location(div1, file$3, 32, 8, 663);
+    			attr_dev(div2, "class", "columns svelte-bxepaf");
+    			add_location(div2, file$3, 23, 6, 424);
+    			attr_dev(div3, "class", "block svelte-bxepaf");
+    			add_location(div3, file$3, 22, 4, 398);
+    			attr_dev(h21, "class", "svelte-bxepaf");
+    			add_location(h21, file$3, 42, 6, 911);
+    			attr_dev(p8, "class", "svelte-bxepaf");
+    			add_location(p8, file$3, 43, 6, 940);
+    			attr_dev(p9, "class", "svelte-bxepaf");
+    			add_location(p9, file$3, 44, 6, 998);
+    			attr_dev(div4, "class", "block svelte-bxepaf");
+    			add_location(div4, file$3, 41, 4, 885);
+    			attr_dev(div5, "class", "left svelte-bxepaf");
+    			add_location(div5, file$3, 21, 2, 375);
+    			attr_dev(h22, "class", "svelte-bxepaf");
+    			add_location(h22, file$3, 49, 4, 1125);
+    			attr_dev(h23, "class", "svelte-bxepaf");
+    			add_location(h23, file$3, 51, 6, 1173);
+    			attr_dev(p10, "class", "svelte-bxepaf");
+    			add_location(p10, file$3, 52, 6, 1216);
+    			attr_dev(div6, "class", "block svelte-bxepaf");
+    			add_location(div6, file$3, 50, 4, 1147);
+    			attr_dev(h24, "class", "svelte-bxepaf");
+    			add_location(h24, file$3, 56, 6, 1273);
+    			attr_dev(p11, "class", "svelte-bxepaf");
+    			add_location(p11, file$3, 57, 6, 1312);
+    			attr_dev(div7, "class", "block svelte-bxepaf");
+    			add_location(div7, file$3, 55, 4, 1247);
+    			attr_dev(h25, "class", "svelte-bxepaf");
+    			add_location(h25, file$3, 61, 6, 1370);
+    			attr_dev(p12, "class", "svelte-bxepaf");
+    			add_location(p12, file$3, 62, 6, 1405);
+    			attr_dev(div8, "class", "block svelte-bxepaf");
+    			add_location(div8, file$3, 60, 4, 1344);
+    			attr_dev(div9, "class", "middle svelte-bxepaf");
+    			add_location(div9, file$3, 48, 2, 1100);
+    			if (!src_url_equal(img1.src, img1_src_value = "/img/deco/creditsRight.svg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "");
+    			add_location(img1, file$3, 67, 4, 1474);
+    			attr_dev(div10, "class", "right arrow svelte-bxepaf");
+    			add_location(div10, file$3, 66, 2, 1444);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div3);
+    			append_dev(div3, div2);
+    			append_dev(div2, div0);
+    			append_dev(div0, h20);
+    			append_dev(div0, t1);
+    			append_dev(div0, p0);
+    			append_dev(div0, t3);
+    			append_dev(div0, p1);
+    			append_dev(div0, t5);
+    			append_dev(div0, p2);
+    			append_dev(div0, t7);
+    			append_dev(div0, p3);
+    			append_dev(div2, t9);
+    			append_dev(div2, div1);
+    			append_dev(div1, p4);
+    			append_dev(p4, img0);
+    			append_dev(p4, t10);
+    			append_dev(div1, t11);
+    			append_dev(div1, p5);
+    			append_dev(div1, t13);
+    			append_dev(div1, p6);
+    			append_dev(div1, t15);
+    			append_dev(div1, p7);
+    			append_dev(div5, t17);
+    			append_dev(div5, div4);
+    			append_dev(div4, h21);
+    			append_dev(div4, t19);
+    			append_dev(div4, p8);
+    			append_dev(div4, t21);
+    			append_dev(div4, p9);
+    			insert_dev(target, t23, anchor);
+    			insert_dev(target, div9, anchor);
+    			append_dev(div9, h22);
+    			append_dev(div9, t25);
+    			append_dev(div9, div6);
+    			append_dev(div6, h23);
+    			append_dev(div6, t27);
+    			append_dev(div6, p10);
+    			append_dev(div9, t29);
+    			append_dev(div9, div7);
+    			append_dev(div7, h24);
+    			append_dev(div7, t31);
+    			append_dev(div7, p11);
+    			append_dev(div9, t33);
+    			append_dev(div9, div8);
+    			append_dev(div8, h25);
+    			append_dev(div8, t35);
+    			append_dev(div8, p12);
+    			insert_dev(target, t37, anchor);
+    			insert_dev(target, div10, anchor);
+    			append_dev(div10, img1);
+
+    			if (!mounted) {
+    				dispose = listen_dev(img1, "click", /*click_handler_1*/ ctx[3], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div5);
+    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(div9);
+    			if (detaching) detach_dev(t37);
+    			if (detaching) detach_dev(div10);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(20:2) {#if page === 1}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$3(ctx) {
+    	let div5;
+    	let div0;
+    	let t0;
+    	let div3;
+    	let h1;
+    	let t2;
+    	let div2;
+    	let p;
+    	let t4;
+    	let div1;
+    	let t5;
+    	let div4;
+    	let mounted;
+    	let dispose;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*page*/ ctx[0] === 1) return create_if_block$1;
+    		if (/*page*/ ctx[0] === 2) return create_if_block_1$1;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type && current_block_type(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div5 = element("div");
+    			div0 = element("div");
+    			t0 = space();
+    			div3 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "Crédits";
+    			t2 = space();
+    			div2 = element("div");
+    			p = element("p");
+    			p.textContent = "Retour";
+    			t4 = space();
+    			div1 = element("div");
+    			t5 = space();
+    			div4 = element("div");
+    			if (if_block) if_block.c();
+    			attr_dev(div0, "class", "dark svelte-bxepaf");
+    			add_location(div0, file$3, 7, 2, 109);
+    			attr_dev(h1, "class", "svelte-bxepaf");
+    			add_location(h1, file$3, 10, 4, 171);
+    			attr_dev(p, "class", "svelte-bxepaf");
+    			add_location(p, file$3, 12, 6, 219);
+    			attr_dev(div1, "class", "underline svelte-bxepaf");
+    			add_location(div1, file$3, 13, 6, 278);
+    			attr_dev(div2, "class", "button svelte-bxepaf");
+    			add_location(div2, file$3, 11, 4, 192);
+    			attr_dev(div3, "class", "top font-cinzel svelte-bxepaf");
+    			add_location(div3, file$3, 9, 2, 137);
+    			attr_dev(div4, "class", "bottom svelte-bxepaf");
+    			add_location(div4, file$3, 17, 2, 331);
+    			attr_dev(div5, "class", "credits svelte-bxepaf");
+    			add_location(div5, file$3, 6, 0, 85);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div0);
+    			append_dev(div5, t0);
+    			append_dev(div5, div3);
+    			append_dev(div3, h1);
+    			append_dev(div3, t2);
+    			append_dev(div3, div2);
+    			append_dev(div2, p);
+    			append_dev(div2, t4);
+    			append_dev(div2, div1);
+    			append_dev(div5, t5);
+    			append_dev(div5, div4);
+    			if (if_block) if_block.m(div4, null);
+
+    			if (!mounted) {
+    				dispose = listen_dev(p, "click", /*click_handler*/ ctx[2], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if (if_block) if_block.d(1);
+    				if_block = current_block_type && current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(div4, null);
+    				}
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div5);
+
+    			if (if_block) {
+    				if_block.d();
+    			}
+
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$3.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let $isCredits;
+    	validate_store(isCredits, 'isCredits');
+    	component_subscribe($$self, isCredits, $$value => $$invalidate(1, $isCredits = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Credits', slots, []);
+    	let page = 1;
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Credits> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = () => {
+    		set_store_value(isCredits, $isCredits = false, $isCredits);
+    	};
+
+    	const click_handler_1 = () => {
+    		$$invalidate(0, page = 2);
+    	};
+
+    	const click_handler_2 = () => {
+    		$$invalidate(0, page = 1);
+    	};
+
+    	$$self.$capture_state = () => ({ isCredits, page, $isCredits });
+
+    	$$self.$inject_state = $$props => {
+    		if ('page' in $$props) $$invalidate(0, page = $$props.page);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [page, $isCredits, click_handler, click_handler_1, click_handler_2];
+    }
+
+    class Credits extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Credits",
+    			options,
+    			id: create_fragment$3.name
+    		});
+    	}
+    }
+
+    /* src/components/Final.svelte generated by Svelte v3.46.4 */
+    const file$2 = "src/components/Final.svelte";
+
+    function create_fragment$2(ctx) {
+    	let div;
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			p = element("p");
+    			attr_dev(p, "class", "font-cinzel svelte-wikrvt");
+    			add_location(p, file$2, 39, 2, 958);
+    			attr_dev(div, "class", "final svelte-wikrvt");
+    			add_location(div, file$2, 38, 0, 936);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, p);
+    			/*p_binding*/ ctx[2](p);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			/*p_binding*/ ctx[2](null);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$2.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$2($$self, $$props, $$invalidate) {
+    	let $currentDialogIndex;
+    	let $soundEffects;
+    	let $currentMusics;
+    	validate_store(currentDialogIndex, 'currentDialogIndex');
+    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(3, $currentDialogIndex = $$value));
+    	validate_store(soundEffects, 'soundEffects');
+    	component_subscribe($$self, soundEffects, $$value => $$invalidate(1, $soundEffects = $$value));
+    	validate_store(currentMusics, 'currentMusics');
+    	component_subscribe($$self, currentMusics, $$value => $$invalidate(4, $currentMusics = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Final', slots, []);
+    	set_store_value(currentMusics, $currentMusics = ["musicCitation"], $currentMusics);
+    	let text = "“ La richesse d’une œuvre d’art est aussi un ensemble d’interprétations variées, à travers différents . . . „";
+    	let arrText = text.split("");
+    	let pText = null;
+
+    	async function writeText() {
+    		let spans = pText.querySelectorAll("span");
+
+    		for (let i = 0; i < arrText.length; i++) {
+    			await wait(50);
+    			spans[i].style.opacity = 1;
+    		}
+
+    		await wait(2000);
+    		set_store_value(currentDialogIndex, $currentDialogIndex = 0, $currentDialogIndex);
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Final> was created with unknown prop '${key}'`);
+    	});
+
+    	function p_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			pText = $$value;
+    			$$invalidate(0, pText);
+    		});
+    	}
+
+    	$$self.$capture_state = () => ({
+    		wait,
+    		currentDialogIndex,
+    		currentMusics,
+    		soundEffects,
+    		text,
+    		arrText,
+    		pText,
+    		writeText,
+    		$currentDialogIndex,
+    		$soundEffects,
+    		$currentMusics
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('text' in $$props) text = $$props.text;
+    		if ('arrText' in $$props) $$invalidate(6, arrText = $$props.arrText);
+    		if ('pText' in $$props) $$invalidate(0, pText = $$props.pText);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*$soundEffects*/ 2) {
+    			{
+    				$soundEffects.eric?.play();
+    			}
+    		}
+
+    		if ($$self.$$.dirty & /*pText*/ 1) {
+    			{
+    				if (pText) {
+    					for (const char of arrText) {
+    						let span = document.createElement("span");
+    						span.style.opacity = 0;
+    						span.style.transition = "opacity 1s";
+    						span.innerHTML = char;
+    						pText.appendChild(span);
+    					}
+
+    					writeText();
+    				}
+    			}
+    		}
+    	};
+
+    	return [pText, $soundEffects, p_binding];
+    }
+
+    class Final extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Final",
+    			options,
+    			id: create_fragment$2.name
+    		});
+    	}
+    }
+
+    /* src/components/ConfirmMusic.svelte generated by Svelte v3.46.4 */
+    const file$1 = "src/components/ConfirmMusic.svelte";
+
+    function create_fragment$1(ctx) {
+    	let div1;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let p;
+    	let t2;
+    	let div0;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			p = element("p");
+    			p.textContent = "Pour une meilleure expérience, munissez vous d’écouteurs.";
+    			t2 = space();
+    			div0 = element("div");
+    			div0.textContent = "Compris";
+    			if (!src_url_equal(img.src, img_src_value = "/img/deco/casque.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			attr_dev(img, "class", "svelte-u9g782");
+    			add_location(img, file$1, 9, 2, 162);
+    			attr_dev(p, "class", "font-montserrat svelte-u9g782");
+    			add_location(p, file$1, 10, 2, 201);
+    			attr_dev(div0, "class", "button font-montserrat svelte-u9g782");
+    			add_location(div0, file$1, 11, 2, 292);
+    			attr_dev(div1, "class", "confirmMusic svelte-u9g782");
+    			add_location(div1, file$1, 8, 0, 133);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, img);
+    			append_dev(div1, t0);
+    			append_dev(div1, p);
+    			append_dev(div1, t2);
+    			append_dev(div1, div0);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div0, "click", /*handleClick*/ ctx[0], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div1);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$1.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
+    	let $confirmedMusic;
+    	validate_store(confirmedMusic, 'confirmedMusic');
+    	component_subscribe($$self, confirmedMusic, $$value => $$invalidate(1, $confirmedMusic = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('ConfirmMusic', slots, []);
+
+    	function handleClick() {
+    		set_store_value(confirmedMusic, $confirmedMusic = true, $confirmedMusic);
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<ConfirmMusic> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({
+    		confirmedMusic,
+    		handleClick,
+    		$confirmedMusic
+    	});
+
+    	return [handleClick];
+    }
+
+    class ConfirmMusic extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "ConfirmMusic",
+    			options,
+    			id: create_fragment$1.name
+    		});
+    	}
+    }
+
+    /* src/App.svelte generated by Svelte v3.46.4 */
+
+    const { Object: Object_1, window: window_1 } = globals;
+    const file = "src/App.svelte";
+
+    // (130:1) {#if mustTurn}
+    function create_if_block_4(ctx) {
+    	let pleaseturn;
+    	let current;
+    	pleaseturn = new PleaseTurn({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(pleaseturn.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(pleaseturn, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(pleaseturn.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(pleaseturn.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(pleaseturn, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_4.name,
+    		type: "if",
+    		source: "(130:1) {#if mustTurn}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (143:1) {:else}
+    function create_else_block_1(ctx) {
+    	let confirmmusic;
+    	let current;
+    	confirmmusic = new ConfirmMusic({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(confirmmusic.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(confirmmusic, target, anchor);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(confirmmusic.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(confirmmusic.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(confirmmusic, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block_1.name,
+    		type: "else",
+    		source: "(143:1) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (133:1) {#if $confirmedMusic}
+    function create_if_block(ctx) {
+    	let current_block_type_index;
+    	let if_block;
+    	let if_block_anchor;
+    	let current;
+    	const if_block_creators = [create_if_block_1, create_if_block_2, create_if_block_3, create_else_block];
+    	const if_blocks = [];
+
+    	function select_block_type_1(ctx, dirty) {
+    		if (/*$isAdventure*/ ctx[4]) return 0;
+    		if (/*$isCredits*/ ctx[5]) return 1;
+    		if (/*$currentDialogIndex*/ ctx[6] === dialogs.length - 1) return 2;
+    		return 3;
+    	}
+
+    	current_block_type_index = select_block_type_1(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	const block = {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if_blocks[current_block_type_index].m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type_1(ctx);
+
+    			if (current_block_type_index !== previous_block_index) {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if_blocks[current_block_type_index].d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(133:1) {#if $confirmedMusic}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (140:2) {:else}
+    function create_else_block(ctx) {
+    	let homepage;
+    	let current;
+    	homepage = new HomePage({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(homepage.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(homepage, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(homepage.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(homepage.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(homepage, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(140:2) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (138:54) 
+    function create_if_block_3(ctx) {
+    	let final;
+    	let current;
+    	final = new Final({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(final.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(final, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(final.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(final.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(final, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3.name,
+    		type: "if",
+    		source: "(138:54) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (136:23) 
+    function create_if_block_2(ctx) {
+    	let credits;
+    	let current;
+    	credits = new Credits({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(credits.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(credits, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(credits.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(credits.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(credits, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(136:23) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (134:2) {#if $isAdventure}
+    function create_if_block_1(ctx) {
+    	let adventure;
+    	let current;
+    	adventure = new Adventure({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(adventure.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(adventure, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(adventure.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(adventure.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(adventure, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(134:2) {#if $isAdventure}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let audio0;
+    	let source0;
+    	let source0_src_value;
+    	let t0;
+    	let audio1;
+    	let source1;
+    	let source1_src_value;
+    	let t1;
+    	let audio2;
+    	let source2;
+    	let source2_src_value;
+    	let t2;
+    	let audio3;
+    	let source3;
+    	let source3_src_value;
+    	let t3;
+    	let audio4;
+    	let source4;
+    	let source4_src_value;
+    	let t4;
+    	let audio5;
+    	let source5;
+    	let source5_src_value;
+    	let t5;
+    	let audio6;
+    	let source6;
+    	let source6_src_value;
+    	let t6;
+    	let audio7;
+    	let source7;
+    	let source7_src_value;
+    	let t7;
+    	let audio8;
+    	let source8;
+    	let source8_src_value;
+    	let t8;
+    	let audio9;
+    	let source9;
+    	let source9_src_value;
+    	let t9;
+    	let audio10;
+    	let source10;
+    	let source10_src_value;
+    	let t10;
+    	let main;
+    	let t11;
+    	let current_block_type_index;
+    	let if_block1;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	let if_block0 = /*mustTurn*/ ctx[1] && create_if_block_4(ctx);
+    	const if_block_creators = [create_if_block, create_else_block_1];
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*$confirmedMusic*/ ctx[3]) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	const block = {
+    		c: function create() {
+    			audio0 = element("audio");
+    			source0 = element("source");
+    			t0 = space();
+    			audio1 = element("audio");
+    			source1 = element("source");
+    			t1 = space();
+    			audio2 = element("audio");
+    			source2 = element("source");
+    			t2 = space();
+    			audio3 = element("audio");
+    			source3 = element("source");
+    			t3 = space();
+    			audio4 = element("audio");
+    			source4 = element("source");
+    			t4 = space();
+    			audio5 = element("audio");
+    			source5 = element("source");
+    			t5 = space();
+    			audio6 = element("audio");
+    			source6 = element("source");
+    			t6 = space();
+    			audio7 = element("audio");
+    			source7 = element("source");
+    			t7 = space();
+    			audio8 = element("audio");
+    			source8 = element("source");
+    			t8 = space();
+    			audio9 = element("audio");
+    			source9 = element("source");
+    			t9 = space();
+    			audio10 = element("audio");
+    			source10 = element("source");
+    			t10 = space();
+    			main = element("main");
+    			if (if_block0) if_block0.c();
+    			t11 = space();
+    			if_block1.c();
+    			if (!src_url_equal(source0.src, source0_src_value = "/audio/Eric.mp3")) attr_dev(source0, "src", source0_src_value);
+    			attr_dev(source0, "type", "audio/mpeg");
+    			add_location(source0, file, 85, 1, 1866);
+    			add_location(audio0, file, 84, 0, 1826);
+    			if (!src_url_equal(source1.src, source1_src_value = "/audio/1_-_Menu_-_click_(touche_clavier).mp3")) attr_dev(source1, "src", source1_src_value);
+    			attr_dev(source1, "type", "audio/mpeg");
+    			add_location(source1, file, 89, 1, 1970);
+    			add_location(audio1, file, 88, 0, 1925);
+    			if (!src_url_equal(source2.src, source2_src_value = "/audio/1_-_Menu_-_musique.mp3")) attr_dev(source2, "src", source2_src_value);
+    			attr_dev(source2, "type", "audio/mpeg");
+    			add_location(source2, file, 93, 1, 2101);
+    			audio2.loop = true;
+    			add_location(audio2, file, 92, 0, 2058);
+    			if (!src_url_equal(source3.src, source3_src_value = "/audio/2_-_Musee_exterieur_-_ambiance_de_fond.mp3")) attr_dev(source3, "src", source3_src_value);
+    			attr_dev(source3, "type", "audio/mpeg");
+    			add_location(source3, file, 97, 1, 2229);
+    			audio3.loop = true;
+    			add_location(audio3, file, 96, 0, 2174);
+    			if (!src_url_equal(source4.src, source4_src_value = "/audio/2_-_Musee_exterieur_-_musique.mp3")) attr_dev(source4, "src", source4_src_value);
+    			attr_dev(source4, "type", "audio/mpeg");
+    			add_location(source4, file, 101, 1, 2369);
+    			audio4.loop = true;
+    			add_location(audio4, file, 100, 0, 2322);
+    			if (!src_url_equal(source5.src, source5_src_value = "/audio/3_-_Musee_-_ambiance_de_fond.mp3")) attr_dev(source5, "src", source5_src_value);
+    			attr_dev(source5, "type", "audio/mpeg");
+    			add_location(source5, file, 105, 1, 2505);
+    			audio5.loop = true;
+    			add_location(audio5, file, 104, 0, 2453);
+    			if (!src_url_equal(source6.src, source6_src_value = "/audio/3_-_Musee_-_andre.mp3")) attr_dev(source6, "src", source6_src_value);
+    			attr_dev(source6, "type", "audio/mpeg");
+    			add_location(source6, file, 109, 1, 2632);
+    			audio6.loop = true;
+    			add_location(audio6, file, 108, 0, 2588);
+    			if (!src_url_equal(source7.src, source7_src_value = "/audio/3_-_Musee_-_camille.mp3")) attr_dev(source7, "src", source7_src_value);
+    			attr_dev(source7, "type", "audio/mpeg");
+    			add_location(source7, file, 113, 1, 2750);
+    			audio7.loop = true;
+    			add_location(audio7, file, 112, 0, 2704);
+    			if (!src_url_equal(source8.src, source8_src_value = "/audio/3_-_Musee_-_leo.mp3")) attr_dev(source8, "src", source8_src_value);
+    			attr_dev(source8, "type", "audio/mpeg");
+    			add_location(source8, file, 117, 1, 2866);
+    			audio8.loop = true;
+    			add_location(audio8, file, 116, 0, 2824);
+    			if (!src_url_equal(source9.src, source9_src_value = "/audio/4_-_Fin_-_citation_-_musique.mp3")) attr_dev(source9, "src", source9_src_value);
+    			attr_dev(source9, "type", "audio/mpeg");
+    			add_location(source9, file, 121, 1, 2978);
+    			add_location(audio9, file, 120, 0, 2936);
+    			if (!src_url_equal(source10.src, source10_src_value = "/audio/4_-_Fin_-_sequence_intervenante_-_musique.mp3")) attr_dev(source10, "src", source10_src_value);
+    			attr_dev(source10, "type", "audio/mpeg");
+    			add_location(source10, file, 125, 1, 3112);
+    			audio10.loop = true;
+    			add_location(audio10, file, 124, 0, 3061);
+    			attr_dev(main, "class", "svelte-a7f768");
+    			toggle_class(main, "mustTurn", /*mustTurn*/ ctx[1]);
+    			add_location(main, file, 128, 0, 3208);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, audio0, anchor);
+    			append_dev(audio0, source0);
+    			/*audio0_binding*/ ctx[10](audio0);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, audio1, anchor);
+    			append_dev(audio1, source1);
+    			/*audio1_binding*/ ctx[11](audio1);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, audio2, anchor);
+    			append_dev(audio2, source2);
+    			/*audio2_binding*/ ctx[12](audio2);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, audio3, anchor);
+    			append_dev(audio3, source3);
+    			/*audio3_binding*/ ctx[13](audio3);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, audio4, anchor);
+    			append_dev(audio4, source4);
+    			/*audio4_binding*/ ctx[14](audio4);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, audio5, anchor);
+    			append_dev(audio5, source5);
+    			/*audio5_binding*/ ctx[15](audio5);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, audio6, anchor);
+    			append_dev(audio6, source6);
+    			/*audio6_binding*/ ctx[16](audio6);
+    			insert_dev(target, t6, anchor);
+    			insert_dev(target, audio7, anchor);
+    			append_dev(audio7, source7);
+    			/*audio7_binding*/ ctx[17](audio7);
+    			insert_dev(target, t7, anchor);
+    			insert_dev(target, audio8, anchor);
+    			append_dev(audio8, source8);
+    			/*audio8_binding*/ ctx[18](audio8);
+    			insert_dev(target, t8, anchor);
+    			insert_dev(target, audio9, anchor);
+    			append_dev(audio9, source9);
+    			/*audio9_binding*/ ctx[19](audio9);
+    			insert_dev(target, t9, anchor);
+    			insert_dev(target, audio10, anchor);
+    			append_dev(audio10, source10);
+    			/*audio10_binding*/ ctx[20](audio10);
+    			insert_dev(target, t10, anchor);
+    			insert_dev(target, main, anchor);
+    			if (if_block0) if_block0.m(main, null);
+    			append_dev(main, t11);
+    			if_blocks[current_block_type_index].m(main, null);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(window_1, "resize", /*checkScreen*/ ctx[7], false, false, false),
+    					listen_dev(main, "click", fullscreen, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (/*mustTurn*/ ctx[1]) {
+    				if (if_block0) {
+    					if (dirty & /*mustTurn*/ 2) {
+    						transition_in(if_block0, 1);
+    					}
+    				} else {
+    					if_block0 = create_if_block_4(ctx);
+    					if_block0.c();
+    					transition_in(if_block0, 1);
+    					if_block0.m(main, t11);
+    				}
+    			} else if (if_block0) {
+    				group_outros();
+
+    				transition_out(if_block0, 1, 1, () => {
+    					if_block0 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block1 = if_blocks[current_block_type_index];
+
+    				if (!if_block1) {
+    					if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block1.c();
+    				} else {
+    					if_block1.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block1, 1);
+    				if_block1.m(main, null);
+    			}
+
+    			if (dirty & /*mustTurn*/ 2) {
+    				toggle_class(main, "mustTurn", /*mustTurn*/ ctx[1]);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block0);
+    			transition_in(if_block1);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block0);
+    			transition_out(if_block1);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(audio0);
+    			/*audio0_binding*/ ctx[10](null);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(audio1);
+    			/*audio1_binding*/ ctx[11](null);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(audio2);
+    			/*audio2_binding*/ ctx[12](null);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(audio3);
+    			/*audio3_binding*/ ctx[13](null);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(audio4);
+    			/*audio4_binding*/ ctx[14](null);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(audio5);
+    			/*audio5_binding*/ ctx[15](null);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(audio6);
+    			/*audio6_binding*/ ctx[16](null);
+    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(audio7);
+    			/*audio7_binding*/ ctx[17](null);
+    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(audio8);
+    			/*audio8_binding*/ ctx[18](null);
+    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(audio9);
+    			/*audio9_binding*/ ctx[19](null);
+    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(audio10);
+    			/*audio10_binding*/ ctx[20](null);
+    			if (detaching) detach_dev(t10);
+    			if (detaching) detach_dev(main);
+    			if (if_block0) if_block0.d();
+    			if_blocks[current_block_type_index].d();
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function fullscreen() {
+    	if (typeof document.body.requestFullscreen == "function" && window.innerHeight <= 420 && window.innerWidth <= 920) {
+    		document.body.requestFullscreen();
+    	}
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let $currentMusics;
+    	let $soundEffects;
+    	let $confirmedMusic;
+    	let $isAdventure;
+    	let $isCredits;
+    	let $currentDialogIndex;
+    	validate_store(currentMusics, 'currentMusics');
+    	component_subscribe($$self, currentMusics, $$value => $$invalidate(9, $currentMusics = $$value));
+    	validate_store(soundEffects, 'soundEffects');
+    	component_subscribe($$self, soundEffects, $$value => $$invalidate(2, $soundEffects = $$value));
+    	validate_store(confirmedMusic, 'confirmedMusic');
+    	component_subscribe($$self, confirmedMusic, $$value => $$invalidate(3, $confirmedMusic = $$value));
+    	validate_store(isAdventure, 'isAdventure');
+    	component_subscribe($$self, isAdventure, $$value => $$invalidate(4, $isAdventure = $$value));
+    	validate_store(isCredits, 'isCredits');
+    	component_subscribe($$self, isCredits, $$value => $$invalidate(5, $isCredits = $$value));
+    	validate_store(currentDialogIndex, 'currentDialogIndex');
+    	component_subscribe($$self, currentDialogIndex, $$value => $$invalidate(6, $currentDialogIndex = $$value));
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('App', slots, []);
+
+    	let audios = {
+    		musicMenu: null,
+    		musicMuseeExtAmbiance: null,
+    		musicMuseeExt: null,
+    		musicMuseeAmbiance: null,
+    		musicAndre: null,
+    		musicCamille: null,
+    		musicLeo: null,
+    		musicCitation: null,
+    		musicIntervenante: null
+    	};
+
+    	let audiosReady = false;
+    	let mustTurn;
+    	checkScreen();
+
+    	function checkScreen() {
+    		let vh = window.innerHeight * 0.01;
+    		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    		if (window.innerHeight > window.innerWidth) {
+    			$$invalidate(1, mustTurn = true);
+    		} else {
+    			$$invalidate(1, mustTurn = false);
+    		}
+    	}
+
+    	const writable_props = [];
+
+    	Object_1.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	function audio0_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			$soundEffects.eric = $$value;
+    			soundEffects.set($soundEffects);
+    		});
+    	}
+
+    	function audio1_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			$soundEffects.menuClick = $$value;
+    			soundEffects.set($soundEffects);
+    		});
+    	}
+
+    	function audio2_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicMenu = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio3_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicMuseeExtAmbiance = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio4_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicMuseeExt = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio5_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicMuseeAmbiance = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio6_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicAndre = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio7_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicCamille = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio8_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicLeo = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio9_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicCitation = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	function audio10_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			audios.musicIntervenante = $$value;
+    			$$invalidate(0, audios);
+    		});
+    	}
+
+    	$$self.$capture_state = () => ({
+    		Adventure,
+    		PleaseTurn,
+    		HomePage,
+    		Credits,
+    		Final,
+    		ConfirmMusic,
+    		isAdventure,
+    		isCredits,
+    		currentDialogIndex,
+    		confirmedMusic,
+    		currentMusics,
+    		soundEffects,
+    		audioFadeIn,
+    		audioFadeOut,
+    		dialogs,
+    		audios,
+    		audiosReady,
+    		mustTurn,
+    		checkScreen,
+    		fullscreen,
+    		$currentMusics,
+    		$soundEffects,
+    		$confirmedMusic,
+    		$isAdventure,
+    		$isCredits,
+    		$currentDialogIndex
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('audios' in $$props) $$invalidate(0, audios = $$props.audios);
+    		if ('audiosReady' in $$props) $$invalidate(8, audiosReady = $$props.audiosReady);
+    		if ('mustTurn' in $$props) $$invalidate(1, mustTurn = $$props.mustTurn);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*audios*/ 1) {
+    			{
+    				const entries = Object.entries(audios);
+    				let i;
+
+    				for (i = 0; i < entries.length; i++) {
+    					if (!entries[i][1]) {
+    						break;
+    					}
+    				}
+
+    				if (i === entries.length) {
+    					$$invalidate(8, audiosReady = true);
+    				}
+    			}
+    		}
+
+    		if ($$self.$$.dirty & /*audiosReady, audios, $currentMusics*/ 769) {
+    			{
+    				if (audiosReady) {
+    					for (const [audioName, audio] of Object.entries(audios)) {
+    						if ($currentMusics.includes(audioName)) {
+    							if (audio.paused) {
+    								audioFadeIn(audio);
+    							}
+    						} else {
+    							if (!audio.paused) {
+    								audioFadeOut(audio);
+    							}
+    						}
+    					}
+    				}
+    			}
+    		}
+    	};
+
+    	return [
+    		audios,
+    		mustTurn,
+    		$soundEffects,
+    		$confirmedMusic,
+    		$isAdventure,
+    		$isCredits,
+    		$currentDialogIndex,
+    		checkScreen,
+    		audiosReady,
+    		$currentMusics,
+    		audio0_binding,
+    		audio1_binding,
+    		audio2_binding,
+    		audio3_binding,
+    		audio4_binding,
+    		audio5_binding,
+    		audio6_binding,
+    		audio7_binding,
+    		audio8_binding,
+    		audio9_binding,
+    		audio10_binding
+    	];
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "App",
+    			options,
+    			id: create_fragment.name
+    		});
+    	}
+    }
+
+    const app = new App({
+    	target: document.getElementById("svelte")
+    });
+
+    return app;
+
+})();
 //# sourceMappingURL=bundle.js.map

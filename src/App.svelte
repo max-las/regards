@@ -129,20 +129,19 @@
 <main on:click={fullscreen} class:mustTurn={mustTurn}>
 	{#if mustTurn}
 		<PleaseTurn />
-	{:else}
-		{#if $confirmedMusic}
-			{#if $isAdventure}
-				<Adventure />
-			{:else if $isCredits}
-				<Credits />
-			{:else if $currentDialogIndex === dialogs.length -1}
-				<Final />
-			{:else}
-				<HomePage />
-			{/if}
+	{/if}
+	{#if $confirmedMusic}
+		{#if $isAdventure}
+			<Adventure />
+		{:else if $isCredits}
+			<Credits />
+		{:else if $currentDialogIndex === dialogs.length -1}
+			<Final />
 		{:else}
-			<ConfirmMusic />
+			<HomePage />
 		{/if}
+	{:else}
+		<ConfirmMusic />
 	{/if}
 </main>
 

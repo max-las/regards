@@ -14,6 +14,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		position: fixed;
+		z-index: 90;
 		
 		img {
 			width: 123px;
