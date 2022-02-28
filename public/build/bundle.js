@@ -1693,27 +1693,27 @@ var app = (function () {
     			p1.textContent = "VIVRE L'EXPÉRIENCE";
     			t7 = space();
     			div4 = element("div");
-    			attr_dev(div0, "class", "dark svelte-16ttej1");
+    			attr_dev(div0, "class", "dark svelte-1sspard");
     			add_location(div0, file$4, 12, 2, 256);
-    			attr_dev(p0, "class", "font-cinzel svelte-16ttej1");
+    			attr_dev(p0, "class", "font-cinzel svelte-1sspard");
     			add_location(p0, file$4, 15, 6, 332);
-    			attr_dev(div1, "class", "underline svelte-16ttej1");
+    			attr_dev(div1, "class", "underline svelte-1sspard");
     			add_location(div1, file$4, 16, 6, 411);
-    			attr_dev(div2, "class", "button svelte-16ttej1");
+    			attr_dev(div2, "class", "button svelte-1sspard");
     			add_location(div2, file$4, 14, 4, 305);
-    			attr_dev(div3, "class", "top svelte-16ttej1");
+    			attr_dev(div3, "class", "top svelte-1sspard");
     			add_location(div3, file$4, 13, 2, 283);
-    			attr_dev(h1, "class", "font-cinzel svelte-16ttej1");
+    			attr_dev(h1, "class", "font-cinzel svelte-1sspard");
     			add_location(h1, file$4, 20, 4, 488);
-    			attr_dev(p1, "class", "font-cinzel svelte-16ttej1");
+    			attr_dev(p1, "class", "font-cinzel svelte-1sspard");
     			add_location(p1, file$4, 22, 6, 556);
-    			attr_dev(div4, "class", "underline svelte-16ttej1");
+    			attr_dev(div4, "class", "underline svelte-1sspard");
     			add_location(div4, file$4, 23, 6, 631);
-    			attr_dev(div5, "class", "button svelte-16ttej1");
+    			attr_dev(div5, "class", "button svelte-1sspard");
     			add_location(div5, file$4, 21, 4, 529);
-    			attr_dev(div6, "class", "bottom svelte-16ttej1");
+    			attr_dev(div6, "class", "bottom svelte-1sspard");
     			add_location(div6, file$4, 19, 2, 463);
-    			attr_dev(div7, "class", "home svelte-16ttej1");
+    			attr_dev(div7, "class", "home svelte-1sspard");
     			add_location(div7, file$4, 11, 0, 235);
     		},
     		l: function claim(nodes) {
